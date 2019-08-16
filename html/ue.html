@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>ue</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style type="text/css">
+    div.image-slider {
+        margin-top: 20px;
+        position: relative;
+        width: 881px;
+    }
+
+    .image-slider div {
+        width: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        overflow: hidden;
+    }
+
+    .image-slider img {
+        display: block;
+        user-select: none;
+        max-width: initial;
+    }
+
+    .image-slider>img {
+        width: 100%;
+    }
+
+    .image-slider>div>img {
+        height: 100%;
+    }
+
+    .image-slider:nth-of-type(1)>div {
+        max-width: 100%;
+        resize: horizontal;
+    }
+
+    .image-slider:nth-of-type(1)>div::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 12px;
+        height: 12px;
+        padding: 5px;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(-45deg, white 50%, transparent 51%);
+        background-clip: content-box;
+    }
+
+    .image-slider:nth-of-type(2) input {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    input[type=range] {
+        -webkit-appearance: none;
+        /* Hides the slider so that custom slider can be made */
+        width: 100%;
+        /* Specific width is required for Firefox. */
+        background: transparent;
+        /* Otherwise white in Chrome */
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        /*清除默认样式*/
+        margin-top: -8px;
+        cursor: ew-resize;
+        width: 0;
+        border: 8px solid transparent;
+        border-top: 0;
+        border-bottom-color: white;
+    }
+
+    input[type="range"]::-webkit-slider-runnable-track {
+        height: 0px;
+    }
+
+    input[type="range"]:focus {
+        outline: none;
+        /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+    }
+
+    input[type="range"]::-ms-track {
+        width: 100%;
+        cursor: pointer;
+
+        /* Hides the slider so custom styles can be added */
+        background: transparent;
+        border-color: transparent;
+        color: transparent;
+    }
+
+    div.checkstyle {
+        margin-top: 20px;
+        font: 14px / 1 Consolas, Monaco, monospace;
+        height: 80px;
+        align-items: center;
+        border-radius: 5px;
+        background-color: #fff;
+        padding: 0 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    }
+
+    .checkstyle input[type="checkbox"] {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+    }
+
+    .checkstyle input[type="checkbox"]+label {
+        cursor: pointer;
+        position: relative;
+        line-height: 12px;
+        user-select: none;
+    }
+
+    .checkstyle input[type="checkbox"]+label::before {
+        content: "";
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        width: 10px;
+        height: 10px;
+        margin-right: .2em;
+        vertical-align: top;
+        background-color: #fff;
+        transition: border-color .2s ease-in-out, background-color .2s ease-in-out;
+    }
+
+    .checkstyle input[type="checkbox"]+label::after {
+        content: "";
+        position: absolute;
+        left: 4px;
+        top: 1px;
+        width: 3px;
+        height: 7px;
+        border: 1px solid #999;
+        border-top: none;
+        border-left: none;
+        transform: rotateZ(45deg) scale(0);
+        transition: all .2s ease-in-out;
+    }
+
+    .checkstyle input[type="checkbox"]:checked+label {
+        color: #F36A6A;
+    }
+
+    .checkstyle input[type="checkbox"]:checked+label::before {
+        border-color: #F36A6A;
+        background-color: #F36A6A;
+    }
+
+    .checkstyle input[type="checkbox"]:checked+label::after {
+        border-color: #fff;
+        transform: rotateZ(45deg) scale(1);
+    }
+
+    .checkstyle input[type="checkbox"]:disabled+label::before,
+    .checkstyle input[type="checkbox"]:disabled:checked+label::before {
+        background-color: #f2f2f2;
+        border-color: #ccc;
+    }
+
+    .checkstyle input[type="checkbox"]:disabled+label {
+        color: #999;
+        cursor: not-allowed;
+    }
+
+    .checkstyle input[type="checkbox"]:disabled:checked+label::after {
+        border-color: #ccc;
+        transform: rotate(45deg) scale(1);
+    }
+
+    .checkstyle input[type="checkbox"]:not(:disabled)+label:hover::before {
+        border-color: #F36A6A;
+    }
+
+    div.radiostyle {
+        margin-top: 20px;
+        font: 14px / 1 Consolas, Monaco, monospace;
+        height: 80px;
+        align-items: center;
+        border-radius: 5px;
+        background-color: #fff;
+        padding: 0 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    }
+
+    .radiostyle input[type="radio"] {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+    }
+
+    .radiostyle input[type="radio"]+label {
+        position: relative;
+        cursor: pointer;
+    }
+
+    .radiostyle input[type="radio"]+label::before {
+        content: "";
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        background-color: #fff;
+        margin-right: .2em;
+        vertical-align: top;
+        transition: border-color .2s ease-in-out, background-color .2s ease-in-out;
+    }
+
+    .radiostyle input[type="radio"]+label::after {
+        content: "";
+        position: absolute;
+        display: inline-block;
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        left: 4px;
+        top: 4px;
+        background: #fff;
+        transform: scale(0);
+        transition: all .2s ease-in-out;
+    }
+
+    .radiostyle input[type="radio"]:checked+label {
+        color: #FE6A6A;
+    }
+
+    .radiostyle input[type="radio"]:checked+label::before {
+        border-color: #FE6A6A;
+        background-color: #FE6A6A;
+    }
+
+    .radiostyle input[type="radio"]:checked+label::after {
+        transform: scale(1);
+    }
+
+    .radiostyle input[type="radio"]:disabled+label {
+        color: #999;
+        cursor: not-allowed;
+    }
+
+    .radiostyle input[type="radio"]:disabled+label::before,
+    .radiostyle input[type="radio"]:disabled:checked+label::before {
+        border-color: #ccc;
+        background: #f2f2f2;
+    }
+
+    .radiostyle input[type="radio"]:disabled+label::after {
+        border-color: #999;
+    }
+
+    .radiostyle input[type="radio"]:not(:disabled)+label:hover::before {
+        border-color: #FE6A6A;
+    }
+
+    .radiostyle input[type="radio"]:checked:disabled+label::after {
+        background-color: #ccc;
+    }
+
+    div.switchstyle {
+        margin-top: 20px;
+        font: 14px / 1 Consolas, Monaco, monospace;
+        height: 80px;
+        align-items: center;
+        border-radius: 5px;
+        background-color: #fff;
+        padding: 0 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    }
+
+    .switchstyle input[type="checkbox"] {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+    }
+
+    .switchstyle input[type="checkbox"]+label {
+        position: relative;
+        width: 40px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: #d3d3d3;
+        transition: background-color .2s ease-in-out;
+    }
+
+    .switchstyle input[type="checkbox"]+label::before {
+        content: "关";
+        position: absolute;
+        font-size: 12px;
+        line-height: 20px;
+        left: 22px;
+        color: #fff;
+        transition: all .2s ease-in-out;
+    }
+
+    .switchstyle input[type="checkbox"]+label::after {
+        content: "";
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        width: 18px;
+        height: 18px;
+        border-radius: 9px;
+        background-color: #fff;
+        transition: all .2s ease-in-out;
+    }
+
+    .switchstyle input[type="checkbox"]:checked+label {
+        background-color: #fe6a6a;
+    }
+
+    .switchstyle input[type="checkbox"]:checked+label::before {
+        content: "开";
+        left: 6px;
+    }
+
+    .switchstyle input[type="checkbox"]:checked+label::after {
+        left: 21px;
+    }
+
+    .switchstyle input[type="checkbox"]:disabled+label {
+        cursor: not-allowed;
+        opacity: .5;
+    }
+
+    div.inputstyle {
+        margin-top: 20px;
+        font: 14px / 1 Consolas, Monaco, monospace;
+        height: 80px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        background-color: #fff;
+        padding: 0 20px;
+        margin-bottom: 20px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    }
+
+    .inputstyle input {
+        outline: none;
+        font-size: .9rem;
+        padding: .5rem;
+        color: #666;
+        border-radius: .2rem;
+        border: 1px solid #d3d3d3;
+    }
+
+    .inputstyle input::-webkit-input-placeholder {
+        line-height: 1.375rem;
+    }
+
+    .inputstyle input:hover {
+        border-color: #fe6a6a;
+    }
+
+    .inputstyle input:focus {
+        border-color: #fe6a6a;
+        box-shadow: 0 0 2px #fe6a6a;
+    }
+
+    section.maskstyle {
+        margin-top: 20px;
+        position: relative;
+        width: 80%;
+        border-radius: 10px;
+        overflow: hidden;
+        padding: 40px 20px;
+        font: 12px / 1.5 Consolas, Monaco, monospace;
+    }
+
+    section.maskstyle .overlay {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, .8);
+    }
+
+    section.maskstyle .lightbox {
+        position: absolute;
+        width: 60%;
+        border-radius: 10px;
+        top: 50%;
+        left: 50%;
+        padding: 24px 10px;
+        text-align: center;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+    }
+
+    section.maskstyle:nth-of-type(2) .lightbox {
+        box-shadow: 0 0 0 50vmax rgba(0, 0, 0, .8);
+    }
+
+    article.blurstyle {
+        margin: 20px 0;
+        position: relative;
+        border-radius: 10px;
+        background-color: #fff;
+        width: 80%;
+        padding: 20px 20px;
+        transition: filter .2s linear;
+        overflow: hidden;
+    }
+
+    article.blurstyle.blurfilter {
+        filter: blur(5px);
+    }
+
+    article.blurstyle+dialog {
+        width: 60%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        padding: 20px 10px;
+        border-radius: 4px;
+        text-align: center;
+        background-color: #fff;
+        box-shadow: 0 .1em .2em rgba(0, 0, 0, .5), 0 0 50vmax rgba(0, 0, 0, .3);
+    }
+
+    p.underline {
+        margin-top: 20px;
+        padding: 20px 10px;
+        width: 80%;
+        text-align: center;
+        background-color: #FFF;
+        border-radius: 5px;
+        box-shadow: 0 0 2px rgba(0, 0, 0, .5);
+    }
+
+    p.underline a,
+    p.underline a:hover {
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    /* box-shadow */
+    p.underline:nth-of-type(1) a {
+        box-shadow: 0 1px 0 0 #fe6a6a;
+    }
+
+    /* persudo border-bottom */
+    p.underline:nth-of-type(2) a {
+        position: relative;
+    }
+
+    p.underline:nth-of-type(2) a::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-bottom: 1px solid #fe6a6a;
+    }
+
+    /* linear-gradient */
+    p.underline:nth-of-type(3) a {
+        background: linear-gradient(#fe6a6a, #fe6a6a) no-repeat;
+        background-position: 0 1em;
+        background-size: 100% 1px;
+    }
+
+    p.underline:nth-of-type(3) a:hover {
+        background-position-x: -341px;
+        animation: text-underline-trans 1.2s linear infinite forwards;
+    }
+
+    /* linear-gradient text-shadow solid */
+    p.underline:nth-of-type(4) a {
+        background: linear-gradient(#fe6a6a, #fe6a6a) no-repeat;
+        background-position: 0 1em;
+        background-size: 100% 1px;
+        text-shadow: .05em 0 white, -.05em 0 white;
+        /* 避让超出基线以下的部分*/
+    }
+
+    p.underline:nth-of-type(4) a:hover {
+        background-position-x: -341px;
+        animation: text-underline-trans 1.2s linear infinite forwards;
+    }
+
+    /* linear-gradient text-shadow dash */
+    p.underline:nth-of-type(5) a {
+        background: linear-gradient(90deg, #fe6a6a 60%, transparent 0) repeat-x;
+        background-position: 0 1em;
+        background-size: .3em 1px;
+        text-shadow: .05em 0 white, -.05em 0 white;
+        /* 避让超出基线以下的部分*/
+    }
+
+    p.underline:nth-of-type(5) a:hover {
+        background-position-x: -341px;
+        animation: text-underline-trans 1.2s linear infinite forwards;
+    }
+
+    /* linear-gradient text-shadow wavy */
+    p.underline:nth-of-type(6) a {
+        background: linear-gradient(45deg, transparent 45%, #fe6a6a 45%, #fe6a6a 55%, transparent 0), linear-gradient(-45deg, transparent 45%, #fe6a6a 45%, #fe6a6a 55%, transparent 0);
+        background-repeat: repeat-x;
+        background-position: 0 1em, .15em 1em;
+        background-size: .3em .166em;
+        padding-bottom: .15em;
+        text-shadow: .05em 0 white, -.05em 0 white;
+        /* 避让超出基线以下的部分*/
+    }
+
+    @keyframes text-underline-trans {
+        from {
+            background-position-x: -341px;
+        }
+
+        50% {
+            background-position-x: 0;
+        }
+
+        to {
+            background-position-x: 341px;
+        }
+    }
+
+    p.scrollbar {
+        margin-top: 20px;
+        width: 80%;
+        height: 300px;
+        overflow: auto;
+        background: #fff;
+        white-space: nowrap;
+        font: 14px/1.5 Consolas, Monaco, monospace;
+        padding: 10px;
+    }
+
+    p.scrollbar::-webkit-scrollbar {
+        width: 6px;
+        height: 6px;
+        background: rgba(255, 255, 255, .5);
+    }
+
+    p.scrollbar::-webkit-scrollbar-thumb,
+    p.scrollbar::-webkit-scrollbar-track,
+    p.scrollbar::-webkit-scrollbar-corner {
+        border-radius: 3px;
+    }
+
+    p.scrollbar::-webkit-scrollbar-thumb {
+        background: rgba(254, 106, 106, .6);
+    }
+
+    p.scrollbar::-webkit-scrollbar-track {
+        background-color: rgba(105, 105, 105, .1);
+    }
+  </style>
+</head>
+
+<body>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/resize" target="_blank">resize</a>,
+    HTML &lt; <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/range" target="_blank">input[type=range]</a> &gt;
+  </p>
+  <div class="flex-box flex-column">
+    <div class="image-slider">
+      <div>
+        <img src="../images/south-china-sea2015.jpg" alt="BEFORE">
+      </div>
+      <img src="../images/south-china-sea2006.jpg" alt="AFTER">
+    </div>
+    <div id="container" class="image-slider">
+      <img id="sliderImg" src="../images/south-china-sea2015.jpg" alt="BEFORE">
+      <img src="../images/south-china-sea2006.jpg" alt="AFTER">
+    </div>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition" target="_blank">transition</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform" target="_blank">transform</a>
+  </p>
+  <div class="flex-box checkstyle">
+    <input type="checkbox" id="awesome1">
+    <label for="awesome1">Awesome</label>
+    <input type="checkbox" id="awesome2">
+    <label for="awesome2">Iconfont</label>
+    <input type="checkbox" id="awesome3" checked>
+    <label for="awesome3">Turner</label>
+    <input type="checkbox" id="awesome4" disabled>
+    <label for="awesome4">禁用</label>
+    <input type="checkbox" id="awesome5" disabled checked>
+    <label for="awesome5">选中禁用</label>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition" target="_blank">transition</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform" target="_blank">transform</a>
+  </p>
+  <div class="flex-box radiostyle">
+    <input type="radio" name="radio" id="radios1">
+    <label for="radios1">radios</label>
+    <input type="radio" name="radio" id="radios2">
+    <label for="radios2">Iconfont</label>
+    <input type="radio" name="radio" id="radios3" checked>
+    <label for="radios3">Turner</label>
+    <input type="radio" name="radio" id="radios4" disabled>
+    <label for="radios4">禁用</label>
+    <input type="radio" name="radio" id="radios5" disabled checked>
+    <label for="radios5">选中禁用</label>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition" target="_blank">transition</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements#%E4%BC%AA%E5%85%83%E7%B4%A0" target="_blank">伪元素</a>
+  </p>
+  <div class="flex-box switchstyle">
+    <input type="checkbox" id="switch1">
+    <label for="switch1"></label>
+    <input type="checkbox" id="switch2" disabled>
+    <label for="switch2"></label>
+    <input type="checkbox" id="switch3" checked disabled>
+    <label for="switch3"></label>
+  </div>
+  <div class="flex-box inputstyle">
+    <input type="text" placeholder="请填写手机号或姓名">
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/css-boxshadow" target="_blank">css-boxshadow</a>,
+    HTML &lt; <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/dialog" target="_blank">dialog</a> &gt;
+  </p>
+  <div class="flex-box flex-column">
+    <section class="maskstyle">
+      <p>Bacon ipsum dolor amet consectetur short loin ut tri-tip alcatra ground round jowl beef meatloaf in pork. Elit
+        chicken ea spare ribs. Shank andouille ex boudin picanha turkey esse. Do doner fugiat tongue.
+      </p>
+      <p>Chuck filet mignon flank pork chop mollit enim veniam sed pork loin aliquip sausage prosciutto in deserunt. Nostrud
+        porchetta non nulla sunt. Cupim et velit picanha laborum salami capicola exercitation alcatra sausage cillum
+        shoulder minim esse. Pig boudin aliquip aute, tail ut cow incididunt short loin aliqua.
+      </p>
+      <p>Doner alcatra pastrami pig, strip steak eu in frankfurter occaecat in filet mignon chuck short loin nulla meatloaf.
+        Adipisicing aliqua kielbasa nulla proident. Ground round meatloaf kevin, shank adipisicing pork frankfurter
+        t-bone spare ribs cupidatat. Sed ham non duis enim, in ipsum fugiat est tongue short ribs ad bresaola prosciutto.
+        Non minim picanha, ad in occaecat fugiat veniam dolor deserunt.
+      </p>
+      <div class="overlay">
+        <div class="lightbox">You-need-to-know-css-tricks</div>
+      </div>
+    </section>
+    <section class="maskstyle">
+      <p>Bacon ipsum dolor amet consectetur short loin ut tri-tip alcatra ground round jowl beef meatloaf in pork. Elit
+        chicken ea spare ribs. Shank andouille ex boudin picanha turkey esse. Do doner fugiat tongue.
+      </p>
+      <p>Chuck filet mignon flank pork chop mollit enim veniam sed pork loin aliquip sausage prosciutto in deserunt. Nostrud
+        porchetta non nulla sunt. Cupim et velit picanha laborum salami capicola exercitation alcatra sausage cillum
+        shoulder minim esse. Pig boudin aliquip aute, tail ut cow incididunt short loin aliqua.
+      </p>
+      <p>Doner alcatra pastrami pig, strip steak eu in frankfurter occaecat in filet mignon chuck short loin nulla meatloaf.
+        Adipisicing aliqua kielbasa nulla proident. Ground round meatloaf kevin, shank adipisicing pork frankfurter
+        t-bone spare ribs cupidatat. Sed ham non duis enim, in ipsum fugiat est tongue short ribs ad bresaola prosciutto.
+        Non minim picanha, ad in occaecat fugiat veniam dolor deserunt.
+      </p>
+      <div class="lightbox">You-need-to-know-css-tricks</div>
+    </section>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/css-boxshadow" target="_blank">css-boxshadow</a>,
+    HTML &lt; <a href="https://developer.mozilla.org/zh-CN/docs/Web/HTML/Element/dialog" target="_blank">dialog</a> &gt;
+  </p>
+  <div class="flex-box flex-column">
+    <article class="blurstyle" id="blurarticle">
+      <button class="btn" onclick="handleBtnClick()">Show dialog</button>
+      <p>Bacon ipsum dolor amet consectetur short loin ut tri-tip alcatra ground round jowl beef meatloaf in pork. Elit chicken
+        ea spare ribs. Shank andouille ex boudin picanha turkey esse. Do doner fugiat tongue.
+      </p>
+      <p>Chuck filet mignon flank pork chop mollit enim veniam sed pork loin aliquip sausage prosciutto in deserunt. Nostrud
+        porchetta non nulla sunt. Cupim et velit picanha laborum salami capicola exercitation alcatra sausage cillum
+        shoulder minim esse. Pig boudin aliquip aute, tail ut cow incididunt short loin aliqua.
+      </p>
+      <p>Doner alcatra pastrami pig, strip steak eu in frankfurter occaecat in filet mignon chuck short loin nulla meatloaf.
+        Adipisicing aliqua kielbasa nulla proident. Ground round meatloaf kevin, shank adipisicing pork frankfurter t-bone
+        spare ribs cupidatat. Sed ham non duis enim, in ipsum fugiat est tongue short ribs ad bresaola prosciutto. Non
+        minim picanha, ad in occaecat fugiat veniam dolor deserunt.
+      </p>
+    </article>
+    <dialog id="blurdialog" onclick="handleDialogClick()">
+      Hi~ I'm a dialog. Click to close.
+    </dialog>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/linear-gradient" target="_blank">linear-gradient</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-shadow" target="_blank">text-shadow</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-decoration" target="_blank">text-decoration</a>
+  </p>
+  <div class="flex-box flex-column">
+    <p class="underline"><a>CSS tricks web developerperpers need to know!</a></p>
+    <p class="underline"><a>CSS tricks web developerperpers need to know!</a></p>
+    <p class="underline"><a>CSS tricks web developerperpers need to know!</a></p>
+    <p class="underline"><a>CSS tricks web developerperpers need to know!</a></p>
+    <p class="underline"><a>CSS tricks web developerperpers need to know!</a></p>
+    <p class="underline"><a>CSS tricks web developerperpers need to know!</a></p>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow" target="_blank">box-shadow</a>,
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/::-webkit-scrollbar" target="_blank">::-webkit-scrollbar</a>
+  </p>
+  <div class="flex-box flex-column">
+    <p class="scrollbar"></p>
+  </div>
+</body>
+<script type="text/javascript">
+  // 图片对比
+  document.addEventListener("DOMContentLoaded", function () {
+    var container = document.getElementById('container');
+    var sliderImg = document.getElementById("sliderImg");
+    var div = document.createElement('div');
+    container.insertBefore(div, sliderImg);
+    div.appendChild(sliderImg);
+    var slider = document.createElement('input');
+    slider.type = 'range';
+    slider.addEventListener('input', function (event) {
+      div.style.width = event.target.value + '%';
+    });
+    container.appendChild(slider);
+  })
+
+  // 模糊遮罩
+  var blurdialog = document.getElementById('blurdialog');
+  var blurarticle = document.getElementById('blurarticle');
+
+  function handleBtnClick() {
+    blurdialog.show();
+    blurarticle.classList.add('blurfilter');
+  }
+
+  function handleDialogClick() {
+    blurdialog.close();
+    blurarticle.classList.remove('blurfilter');
+  }
+
+  // 滚动条
+  document.addEventListener("DOMContentLoaded", function () {
+    var scrollbar = document.getElementsByClassName("scrollbar")[0];
+    scrollbar.innerHTML = Array.from({ length: 56 }).map((v, i) => {
+      return Array(99).fill(i + 11).join(' ');
+    }).join("<br/>");
+  })
+</script>
+
+</html>

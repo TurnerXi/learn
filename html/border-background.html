@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Translucent borders</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    div.bgc {
+        margin: 20px auto;
+        padding: 12px;
+        background: #FE6A6A;
+        border: 15px solid rgba(255, 255, 255, .5);
+        font-size: 24px;
+        font-weight: 900;
+    }
+
+    div.pb {
+        background-clip: padding-box;
+    }
+
+    div.bb {
+        background-clip: border-box;
+    }
+
+    div.cb {
+        background-clip: content-box;
+    }
+
+    div.tb {
+        background: url('../images/background.jpg');
+        background-size: contain;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+
+    div.bds {
+        font-size: 16px;
+        margin: 100px 80px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: white;
+        box-shadow: 0 0 0 10px #FE6A6A, 0 0 0 20px #FE6A7B, 0 0 0 30px #FE6A8C, 0 0 0 40px #FE6A9D, 0 0 0 50px #FE6AAE, 0 0 0 60px #FE6ABF, 0 0 0 70px #FE6ABF, 0 0 1px 80px #FE6AAE;
+    }
+
+    div.otl {
+        background: #FFF;
+        width: 200px;
+        height: 120px;
+        padding: 10px;
+        border: 5px solid #FE6A6A;
+        outline: 1px dashed #000;
+        outline-offset: -10px;
+    }
+
+    div.irb {
+        background: #FFF;
+        width: 200px;
+        height: 120px;
+        padding: 10px;
+        outline: 6px solid #FE6A6A;
+        border-radius: 12px;
+        box-shadow: 0 0 0 5px #FE6A6A;
+    }
+
+    div.bdpos {
+        width: 229px;
+        height: 139px;
+        padding: 16px 28px 29px 20px;
+        margin: auto;
+        color: #f4f0ea;
+        background: #FE6A6A url('../images/background.png') no-repeat bottom right / 78px 21px;
+    }
+
+    div.bdp {
+        background-position: right 29px bottom 28px;
+    }
+
+    div.bdo {
+        background-origin: content-box;
+    }
+
+    div.bdc {
+        background-position: calc(100% - 29px) calc(100% - 28px);
+    }
+
+    div.prgs-outer {
+        margin: 20px auto;
+        width: 60%;
+        height: 20px;
+        border: 1px dashed #fff;
+        background: transparent;
+        overflow: hidden;
+        border-radius: 12px;
+    }
+
+    div.prgs-inner {
+        height: 12px;
+        background-color: #FE6A6A;
+        margin: 4px 5px;
+        border-radius: inherit;
+    }
+
+    div.prgs-bg {
+        width: 60%;
+        height: inherit;
+        border-radius: 6px;
+        background: repeating-linear-gradient(-45deg, red 0, red 25%, blue 25%, blue 50%, red 50%, red 75%, blue 75%, blue);
+        background-size: 16px 16px;
+        animation: panoramic 20s linear infinite;
+    }
+
+    @keyframes panoramic {
+        to {
+            background-position: 200% 0;
+        }
+    }
+
+    div.card {
+        width: 200px;
+        height: 250px;
+        padding-top: 20px;
+        background-image: radial-gradient(circle at 100px -8px, transparent 20px, #FE6A6A 21px);
+    }
+
+    div.card .title {
+        color: #fff;
+        font-size: 14px;
+        text-align: center;
+        padding-top: 20px;
+        letter-spacing: 1px;
+    }
+
+    div.card .title-num {
+        font-size: 18px;
+    }
+
+    div.card .title-num>strong {
+        font-size: 40px;
+        font-weight: 100;
+    }
+
+    div.card .date {
+        font-size: 14px;
+        text-align: center;
+        line-height: 14px;
+        margin: 15px 0 10px;
+    }
+
+    div.card .border {
+        border-bottom: 6px dotted #fff;
+    }
+
+    div.card .desc {
+        position: relative;
+        height: 150px;
+        background: #fff;
+        margin-top: -3px;
+        padding: 10px;
+    }
+
+    div.card .inner-desc {
+        font-size: 14px;
+        color: #333;
+        line-height: 24px;
+        overflow: hidden;
+        word-break: break-all;
+        text-overflow: clip;
+    }
+
+    div.card .inner-desc b {
+        font-weight: 100;
+        color: #000;
+    }
+
+    div.card .desc .btn {
+        position: absolute;
+        bottom: 20px;
+        border-radius: 17px;
+        padding: 8px 15px;
+        height: 34px;
+        border: 1px solid #8be7e7;
+        color: #8be7e7;
+        background: #fff;
+        transform: translateX(50%);
+        transform-origin: 50% 50%;
+    }
+
+    div.card:hover {
+        filter: drop-shadow(0 0 3px rgba(0, 0, 0, .5));
+    }
+
+    div.card .desc .btn:hover {
+        color: #fff;
+        background: #8be7e7;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <p class="warn">
+      <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+      <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-clip" target="_blank">background-clip</a>
+    </p>
+    <div class="flex-box">
+      <div class="bgc pb">background-clip:border-box;默认，背景覆盖到边框边界</div>
+      <div class="bgc bb">background-clip:padding-box;背景覆盖到padding边界</div>
+      <div class="bgc cb">background-clip:content-box;背景覆盖到内容边界</div>
+      <div class="bgc tb">background-clip:text;文字背景效果，实验性功能</div>
+    </div>
+    <p class="warn">
+      <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+      <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow" target="_blank">box-shadow</a>,
+      <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/outline" target="_blank">outline</a>,
+      <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/outline-offset" target="_blank">outline-offset</a>
+    </p>
+    <div class="flex-box">
+      <div class="bds">border-shadow多层边框</div>
+      <div class="otl">outline-offset内置虚线边框</div>
+      <div class="irb">border-shadow内圆角边框</div>
+    </div>
+    <p class="warn">
+      <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+      <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-position" target="_blank">background-position</a>,
+      <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/background-origin" target="_blank">background-origin</a>,
+      <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/calc" target="_blank">calc</a>
+    </p>
+    <div class="flex-box">
+      <div class="bdpos bdp">background-position</div>
+      <div class="bdpos bdo">background-origin</div>
+      <div class="bdpos bdc">calc</div>
+    </div>
+    <p class="warn">
+      <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+      <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient" target="_blank">gradient</a>,
+      <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/linear-gradient" target="_blank">linear-gradient</a>,
+      <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/radial-gradient" target="_blank">radial-gradient</a>,
+      <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/repeating-linear-gradient" target="_blank">repeating-linear-gradient</a>
+    </p>
+    <div class="flex-box">
+      <div class="prgs-outer">
+        <div class="prgs-inner">
+          <div class="prgs-bg"></div>
+        </div>
+      </div>
+    </div>
+    <div class="flex-box flex-column">
+      <div class="card">
+        <p class="title"> <span class="title-num"><strong>2</strong>%</span> 加息劵 </p>
+        <p class="date">2019-11-07 23:59:59到期</p>
+        <div class="border"></div>
+        <div class="desc">
+          <p class="inner-desc"><b>来源：</b>2019年会员签到加2%</p>
+          <p class="inner-desc"><b>说明：</b>由管理员根据投资金</p>
+          <button class="btn">立即使用</button>
+        </div>
+      </div>
+    </div>
+  </main>
+</body>
+
+</html>

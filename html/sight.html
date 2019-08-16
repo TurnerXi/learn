@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>sight</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    div.shadow {
+        margin-top: 20px;
+        width: 150px;
+        height: 150px;
+        background-color: #F36A6A;
+        border-radius: 3px;
+    }
+
+    .shadow:nth-of-type(1) {
+        box-shadow: 0 0 16px rgba(243, 106, 106, .6);
+    }
+
+    .shadow:nth-of-type(2) {
+        box-shadow: 0 18px 16px -16px rgba(243, 106, 106, .6);
+    }
+
+    .shadow:nth-of-type(3) {
+        box-shadow: 18px 18px 16px -16px rgba(243, 106, 106, .6);
+    }
+
+    .shadow:nth-of-type(4) {
+        box-shadow: 18px 0 16px -16px rgba(243, 106, 106, .6), -18px 0 16px -16px rgba(243, 106, 106, .6);
+    }
+
+    .shadow:nth-of-type(5) {
+        box-shadow: 0 0 0 1px rgba(180, 160, 120, .6);
+    }
+
+    div.irregular-shadow {
+        margin-top: 20px;
+        width: 150px;
+        height: 150px;
+    }
+
+    .irregular-shadow:nth-of-type(1) {
+        position: relative;
+        background-color: #F36A6A;
+        border-radius: 5px;
+        filter: drop-shadow(2px 2px 2px rgba(243, 106, 106, .8));
+    }
+
+    .irregular-shadow:nth-of-type(1)::before {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 0;
+        left: 100%;
+        top: 55px;
+        border: 20px solid transparent;
+        border-right: 0;
+        border-left-color: #F36A6A;
+    }
+
+    .irregular-shadow:nth-of-type(2) {
+        border-radius: 5px;
+        background: radial-gradient(circle at bottom right, transparent 29px, #F36A6A 30px) bottom right;
+        filter: drop-shadow(2px 2px 2px rgba(243, 106, 106, .8));
+    }
+
+    .irregular-shadow:nth-of-type(3) {
+        border-radius: 5px;
+        background-color: transparent;
+        border: 6px dotted #F36A6A;
+        filter: drop-shadow(2px 2px 2px rgba(243, 106, 106, .8));
+    }
+
+    .irregular-shadow:nth-of-type(4) {
+        border-radius: 5px;
+        background: linear-gradient(-45deg, transparent 29px, #F36A6A 30px) bottom right;
+        filter: drop-shadow(2px 2px 2px rgba(243, 106, 106, .8));
+    }
+
+    div.gross-glass {
+        width: 80%;
+        margin: 20px auto;
+        border-radius: 10px;
+        padding: 59px 29px;
+        color: white;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, .5);
+        font: italic 24px/150% Baskerville, Palatino, serif;
+        z-index: 0;
+    }
+
+    .gross-glass>div {
+        position: relative;
+        padding: 30px;
+        background: rgba(255, 255, 255, .5);
+        color: #000;
+        overflow: hidden;
+    }
+
+    .gross-glass,
+    .gross-glass>div:before {
+        background: url('../images/timg.jpg') fixed 0 / cover;
+    }
+
+    .gross-glass>div:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        filter: blur(5px);
+        z-index: -1;
+    }
+
+    .gross-glass>div cite {
+        font-style: normal;
+    }
+
+    .gross-glass>div footer {
+        text-align: right;
+    }
+
+    div.zibra-stripes {
+        margin-top: 20px;
+        width: 100%;
+        background-color: #fff;
+    }
+
+    div.zibra-stripes>pre {
+        background-color: #f4f4f4;
+        background-image: linear-gradient(rgba(206, 206, 206, .5) 50%, transparent 0);
+        background-size: auto 48px;
+        font: 14px/24px Consolas, Monaco, monospace;
+    }
+
+    .zibra-stripes>pre code {
+        display: inline-block;
+    }
+
+    div.font-shadow1,
+    div.font-shadow2,
+    div.font-shadow3 {
+        margin-top: 20px;
+        padding: 40px;
+        font: 24px/24px Consolas, Monaco, monospace;
+        background-color: #F36A6A;
+        color: #000;
+        margin-right: 5px;
+        width: 155px;
+    }
+
+    .font-shadow1:nth-of-type(1) {
+        text-shadow: 0px 1px 1px rgba(255, 255, 255, .5);
+    }
+
+    .font-shadow1:nth-of-type(2) {
+        color: rgba(243, 143, 143, 1);
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, .5);
+    }
+
+    .font-shadow1:nth-of-type(3) {
+        color: white;
+        text-shadow: 0px 1px 1px rgba(0, 0, 0, .5), 0px 1px 1px rgba(0, 0, 0, .5), 0px 1px 1px rgba(0, 0, 0, .5), 0px 1px 1px rgba(0, 0, 0, .5), 0px 1px 1px rgba(0, 0, 0, .5), 0px 1px 1px rgba(0, 0, 0, .5), 0px 1px 1px rgba(0, 0, 0, .5);
+    }
+
+    .font-shadow1:nth-of-type(4) {
+        color: white;
+        text-shadow: 0 0 2px rgba(243, 143, 143, 1), 0 0 2px rgba(243, 143, 143, 1), 0 0 2px rgba(243, 143, 143, 1), 0 0 2px rgba(243, 143, 143, 1), 0 0 2px rgba(243, 143, 143, 1), 0 0 2px rgba(243, 143, 143, 1);
+    }
+
+    .font-shadow1:nth-of-type(5) {
+        color: white;
+        width: 80px;
+        margin-right: 80px;
+    }
+
+    .font-shadow1:nth-of-type(5) text {
+        fill: currentColor;
+    }
+
+    .font-shadow1:nth-of-type(5) svg {
+        overflow: visible;
+    }
+
+    .font-shadow1:nth-of-type(5) use {
+        stroke: rgba(243, 143, 143, .5);
+        stroke-width: 5;
+        stroke-linejoin: round;
+    }
+
+    .font-shadow2:nth-of-type(1) a,
+    .font-shadow2:nth-of-type(2) a,
+    .font-shadow2:nth-of-type(3) a {
+        background-color: inherit;
+        color: white;
+        transition: .5s;
+        text-shadow: 0 0 .1em, 0 0 .3em;
+    }
+
+    .font-shadow2:nth-of-type(1) a:hover {
+        animation: .8s text-blink-effect infinite alternate;
+    }
+
+    .font-shadow2:nth-of-type(2) a:hover {
+        color: transparent;
+        text-shadow: 0 0 .1em white, 0 0 .3em white;
+    }
+
+    .font-shadow2:nth-of-type(3) a:hover {
+        filter: blur(2px);
+    }
+
+    .font-shadow2:nth-of-type(4) {
+        color: white;
+        text-shadow: 0 1px rgb(230, 230, 230),
+            0 1px rgb(230, 230, 230),
+            0 2px 4px rgba(0, 0, 0, .5);
+    }
+
+    .font-shadow2:nth-of-type(5) {
+        color: white;
+        text-shadow: 1px 1px #f40000, 2px 2px #f40000, 3px 3px #f40000, 4px 4px #f40000;
+    }
+
+    div.font-shadow3 {
+        width: 100%;
+        background: linear-gradient(90deg, #b4a078, #333);
+        -webkit-text-fill-color: white;
+        -webkit-text-stroke: 5px transparent;
+        -webkit-background-clip: text;
+    }
+
+    div.text-clip {
+        width: 48%;
+        margin-top: 20px;
+        padding: 0 160px;
+        background-color: #fe4a4a;
+        box-sizing: border-box;
+        font: 14px/24px Consolas, Monaco, monospace;
+        overflow: hidden;
+    }
+
+    .text-clip:nth-of-type(1) {
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+
+    .text-clip:nth-of-type(2) {
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        clip-path: content-box;
+    }
+
+    @keyframes text-blink-effect {
+        50% {
+            text-shadow: 0 0 .1em, 0 0 .3em;
+        }
+
+        to {
+            text-shadow: 0 0 .1em;
+        }
+    }
+
+    div.circle-text {
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
+        font: 12px/24px Consolas, Monaco, monospace;
+    }
+
+    .circle-text svg {
+        overflow: visible;
+    }
+
+    .circle-text text {
+        fill: #fe4a4a;
+    }
+
+    .circle-text path {
+        fill: none;
+    }
+
+    div.insert-br {
+        margin-top: 20px;
+        font: 12px/24px Consolas, Monaco, monospace;
+    }
+
+    .insert-br .key {
+        padding-right: 6px;
+    }
+
+    .insert-br .bold {
+        font-weight: bold;
+    }
+
+    .insert-br .br::before {
+        content: "\00A";
+        white-space: pre;
+    }
+
+    .insert-br .bold+.bold::before {
+        content: ", ";
+        font-weight: 500;
+        margin-left: -.25em;
+    }
+  </style>
+</head>
+
+<body>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-shadow" target="_blank">box-shadow</a>
+  </p>
+  <div class="flex-box">
+    <div class="shadow"></div>
+    <div class="shadow"></div>
+    <div class="shadow"></div>
+    <div class="shadow"></div>
+    <div class="shadow"></div>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter" target="_blank">filter</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/radial-gradient" target="_blank">radial-gradient</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-image" target="_blank">border-image</a>
+  </p>
+  <div class="flex-box">
+    <div class="irregular-shadow"></div>
+    <div class="irregular-shadow"></div>
+    <div class="irregular-shadow"></div>
+    <div class="irregular-shadow"></div>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/color_value" target="_blank">hsla/rgba</a>
+  </p>
+  <div class="flex-box">
+    <div class="gross-glass">
+      <div>
+        "What's in a name? That which we call a rose By any other name would smell as sweet."
+        <footer>——
+          <cite>William Shakespeare</cite>
+        </footer>
+      </div>
+    </div>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/linear-gradient" target="_blank">linear-gradient</a>
+  </p>
+  <div class="flex-box">
+    <div class="zibra-stripes">
+      <pre>
+<code>
+  const pull = (arr, ...args) => {
+    let argState = Array.isArray(args[0]) ? args[0] : args;
+    let pulled = arr.filter((v, i) => !argState.includes(v));
+    arr.length = 0;
+    pulled.forEach(v => arr.push(v));
+  };
+  let myArray = ['a', 'b', 'c', 'a', 'b', 'c'];
+  pull(myArray, 'a', 'c');
+  console.log(myArray);
+</code>
+      </pre>
+    </div>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/text-shadow" target="_blank">text-shadow</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter" target="_blank">filter</a>,
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-text-fill-color" target="_blank">-webkit-text-fill-color</a>,
+    <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/-webkit-text-stroke" target="_blank">-webkit-text-stroke</a>
+  </p>
+  <div class="flex-box">
+    <div class="font-shadow1">Font Shadow</div>
+    <div class="font-shadow1">Font Shadow</div>
+    <div class="font-shadow1">Font Shadow</div>
+    <div class="font-shadow1">Font Shadow</div>
+    <div class="font-shadow1">
+      <svg width="85px" height="24px">
+        <use xlink:href="#text"></use>
+        <text id="text" y="24px">Font Shadow</text>
+      </svg>
+    </div>
+  </div>
+  <div class="flex-box">
+    <div class="font-shadow2"><a href="javascript:;">Font Shadow</a></div>
+    <div class="font-shadow2"><a href="javascript:;">Font Shadow</a></div>
+    <div class="font-shadow2"><a href="javascript:;">Font Shadow</a></div>
+    <div class="font-shadow2">Font Shadow</div>
+    <div class="font-shadow2">Font Shadow</div>
+  </div>
+  <div class="flex-box">
+    <div class="font-shadow3">Font Shadow Font Shadow Font Shadow Font Shadow Font Shadow Font Shadow Font Shadow Font Shadow</div>
+  </div>
+  <div class="flex-box">
+    <div class="text-clip">A paragraph of filler text. La la la de dah de dah de dah de la.</div>
+    <div class="text-clip">A paragraph of filler text. La la la de dah de dah de dah de la la la de dah de dah de dah de lala la de dah de dah de dah de lala la de dah de dah de dah de lala la de dah de dah de dah de lala la de dah de dah de dah de lala la de dah de dah de dah de lala la de dah de dah de dah de la.</div>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/SVG" target="_blank">SVG</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition" target="_blank">transition</a>
+  </p>
+  <div class="flex-box flex-column">
+    <div class="circle-text">
+      <svg viewbox="0 0 100 100">
+        <path d="M 0,50 A 50,50 0 1,1 0,51 Z" id="textpath"></path>
+        <text>
+          <textPath xlink:href="#textpath">
+            What's in a name? That which we call a rose By any other name would smell as sweet.
+          </textPath>
+        </text>
+      </svg>
+    </div>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://en.wikipedia.org/wiki/Unicode" target="_blank">Unicode</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/white-space" target="_blank">white-space</a>
+  </p>
+  <div class="insert-br">
+    <span class="key">Name:</span>
+    <span class="bold">LHammer</span>
+    <span class="key br">GitHub:</span>
+    <span class="bold">https://github.com/l-hammer</span>
+    <span class="bold">https://gitee.com/lhammer</span>
+    <span class="key br">掘金:</span>
+    <span class="bold">https://juejin.im/user/57a3dbb2d342d300574d8369</span>
+  </div>
+</body>
+
+</html>

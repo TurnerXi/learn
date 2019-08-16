@@ -1,0 +1,56 @@
+body,
+div,
+p,
+pre {
+    margin: 0;
+    padding: 0;
+}
+
+code {
+    background-color: transparent;
+    padding: 0;
+}
+
+body {
+    padding: 60px 80px 80px;
+    background: #8be7e7;
+    font-family: Source Sans Pro, Helvetica Neue, Arial, sans-serif;
+}
+
+button {
+    -webkit-appearance: none;
+    outline: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+.emoji {
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+}
+
+.flex-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.br::before {
+    content: "\A";
+}
+
+.warn {
+    padding-bottom: 5px;
+    border-bottom: 1px dashed #333;
+    font: 16px/24px Consolas, monospace;
+}

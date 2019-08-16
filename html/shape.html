@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>shape</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style>
+    div.ellipse {
+        width: 200px;
+        height: 150px;
+        background: #FE6A6A;
+        margin-top: 20px;
+    }
+
+    .ellipse:nth-of-type(1) {
+        width: 300px;
+        border-radius: 50% / 100% 100% 0 0;
+    }
+
+    .ellipse:nth-of-type(2) {
+        width: 150px;
+        border-radius: 100% 0 0 0;
+    }
+
+    .ellipse:nth-of-type(3) {
+        border-radius: 50% / 100% 100% 0 0;
+    }
+
+    .ellipse:nth-of-type(4) {
+        width: 100px;
+        border-radius: 100% 0 0 0;
+    }
+
+    .ellipse:nth-of-type(5) {
+        width: 300px;
+        border-radius: 50%/0 100% 0 100%;
+    }
+
+    .ellipse:nth-of-type(6) {
+        width: 300px;
+        border-radius: 50%/100% 0 100% 0;
+    }
+
+    div.diamond {
+        position: relative;
+        margin-top: 20px;
+        width: 150px;
+        line-height: 80px;
+        text-align: center;
+    }
+
+    .diamond:nth-of-type(1) {
+        background: #FE6A6A;
+        transform: skewX(-45deg);
+    }
+
+    .diamond:nth-of-type(1) span {
+        display: inherit;
+        transform: skewX(45deg);
+    }
+
+    .diamond:nth-of-type(2)::before {
+        content: "";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        background: #FE6A6A;
+        transform: skewX(-45deg);
+        z-index: -1;
+        /* 避免覆盖内容 */
+    }
+
+    .diamond:nth-of-type(3) {
+        width: 300px;
+    }
+
+    .diamond:nth-of-type(3) img {
+        display: block;
+        width: 300px;
+        clip-path: polygon(50% 0, 100% 50%, 50% 100%, 0 50%);
+        transition: clip-path 1s;
+    }
+
+    .diamond:nth-of-type(3) img:hover {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    div.bevel-corners {
+        margin-top: 20px;
+        width: 249px;
+        padding: 20px 36px;
+    }
+
+    .bevel-corners:nth-of-type(1) {
+        background: linear-gradient(-45deg, transparent 12px, #FE6A6A 13px) bottom right,
+            linear-gradient(-135deg, transparent 12px, #FE6A6A 13px) top right,
+            linear-gradient(45deg, transparent 12px, #FE6A6A 13px) bottom left,
+            linear-gradient(135deg, transparent 12px, #FE6A6A 13px) top left;
+        background-size: 51% 51%;
+        background-repeat: no-repeat;
+    }
+
+    .bevel-corners:nth-of-type(2) {
+        background: radial-gradient(circle at left top, transparent 12px, #FE6A6A 12px) left top,
+            radial-gradient(circle at right top, transparent 12px, #FE6A6A 12px) right top,
+            radial-gradient(circle at left bottom, transparent 12px, #FE6A6A 12px) left bottom,
+            radial-gradient(circle at right bottom, transparent 12px, #FE6A6A 12px) right bottom;
+        background-size: 51% 51%;
+        background-repeat: no-repeat;
+    }
+
+    .bevel-corners:nth-of-type(3) {
+        padding: 0 9px;
+        border: 18px solid transparent;
+        border-image: 1 url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="3" height="3" fill="%23fe6a6a"><polygon points="0,1 1,0 2,0 3,1 3,2 2,3 1,3 0,2"/> </svg>');
+        background: #FE6A6A;
+        background-clip: padding-box;
+    }
+
+    .bevel-corners:nth-of-type(4) {
+        clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);
+        background: #FE6A6A;
+        transition: 1s clip-path;
+    }
+
+    .bevel-corners:nth-of-type(4):hover {
+        clip-path: polygon(0 0, 0 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%);
+    }
+
+    div.pie {
+        margin-top: 20px;
+        width: 150px;
+        height: 150px;
+        background-color: #f2c1c1;
+        border-radius: 50%;
+        background-image: linear-gradient(to right, transparent 50%, #FE6A6A 0);
+    }
+
+    .pie:nth-of-type(1)::before {
+        content: "";
+        display: block;
+        height: 100%;
+        border-radius: 0 100% 100% 0/ 0 50% 50% 0;
+        margin-left: 50%;
+        background-color: inherit;
+        transform-origin: 0 50%;
+        transform: rotate(.3turn);
+    }
+
+    .pie:nth-of-type(2)::before {
+        content: "";
+        display: block;
+        height: 100%;
+        border-radius: 0 100% 100% 0/ 0 50% 50% 0;
+        margin-left: 50%;
+        background-color: inherit;
+        transform-origin: 0 50%;
+        animation: pie-spin 3s linear 1.2 forwards,
+            pie-bgcolor 3s step-end forwards;
+    }
+
+    .pie:nth-of-type(3)::before {
+        content: "";
+        display: block;
+        height: 100%;
+        border-radius: 0 100% 100% 0/ 0 50% 50% 0;
+        margin-left: 50%;
+        background-color: inherit;
+        transform-origin: 0 50%;
+        animation: pie-spin 3s linear 1.2 forwards,
+            pie-bgcolor 3s step-end forwards;
+    }
+
+    .pie:nth-of-type(3)::before {
+        animation-delay: -1.5s;
+    }
+
+    .pie:nth-of-type(4),
+    .pie:nth-of-type(5) {
+        background-image: none;
+    }
+
+    .pie:nth-of-type(4)>svg {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        transform: rotate(-90deg);
+    }
+
+    .pie:nth-of-type(4)>svg>circle {
+        fill: #f2c1c1;
+        stroke-width: 32;
+        stroke-dasharray: 0 100;
+        stroke: #FE6A6A;
+        animation: svg-stroke-dasharray 6s linear infinite;
+    }
+
+
+    .pie:nth-of-type(5)>svg {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        transform: rotate(-90deg);
+    }
+
+    .pie:nth-of-type(5)>svg>circle:nth-of-type(1) {
+        fill: #f2c1c1;
+        stroke-width: 32;
+        stroke-dasharray: 0 100;
+        stroke-dashoffset: -64;
+        stroke: #FE6A6A;
+        animation: svg-stroke-dasharray-one 2s linear infinite;
+    }
+
+    .pie:nth-of-type(5)>svg>circle:nth-of-type(2) {
+        fill: transparent;
+        stroke-width: 32;
+        stroke-dasharray: 0 100;
+        stroke-dashoffset: -32;
+        stroke: #A16B6A;
+        animation: svg-stroke-dasharray-two 2s linear infinite;
+    }
+
+    .pie:nth-of-type(5)>svg>circle:nth-of-type(3) {
+        fill: transparent;
+        stroke-width: 32;
+        stroke-dasharray: 0 100;
+        stroke-dashoffset: 0;
+        stroke: #C76C6A;
+        animation: svg-stroke-dasharray-three 2s linear infinite;
+    }
+
+    @keyframes pie-spin {
+        to {
+            transform: rotate(.5turn);
+        }
+    }
+
+    @keyframes pie-bgcolor {
+        to {
+            background-color: #FE6A6A;
+        }
+    }
+
+    @keyframes svg-stroke-dasharray {
+        to {
+            stroke-dasharray: 100 100;
+        }
+    }
+
+    @keyframes svg-stroke-dasharray-one {
+        to {
+            stroke-dasharray: 37 100;
+        }
+    }
+
+    @keyframes svg-stroke-dasharray-two {
+        to {
+            stroke-dasharray: 33 100;
+        }
+    }
+
+    @keyframes svg-stroke-dasharray-three {
+        to {
+            stroke-dasharray: 33 100;
+        }
+    }
+
+    div.cells {
+        padding: 99px 69px;
+
+    }
+
+    div.cell {
+        position: relative;
+        width: calc(33.3% - 5px);
+        margin-bottom: 5px;
+        height: 52px;
+        text-align: center;
+        border-radius: 5px;
+        line-height: 52px;
+        background-color: #F7F5F1;
+    }
+
+    div.cell.empty {
+        background-color: transparent;
+    }
+
+    .cell[class*=poptip--]::before,
+    .cell[class*=poptip--]::after {
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        transform: translate3d(0, 0, 0);
+        transition: all .3s ease .05s;
+    }
+
+    .cell[class*=poptip--]::before {
+        content: "";
+        border: 6px solid transparent;
+        width: 0;
+        height: 0;
+    }
+
+    .cell[class*=poptip--]::after {
+        content: attr(aria-controls);
+        font-size: 12px;
+        padding: 6px 12px;
+        line-height: 12px;
+        color: white;
+        background-color: #FE6A6A;
+        box-shadow: 0 0 3px #FE6A6A;
+        border-radius: 2px;
+    }
+
+    .cell[class*=poptip--]:hover::before,
+    .cell[class*=poptip--]:hover::after {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* top */
+    .cell[class*=poptip--top]::before,
+    .cell[class*=poptip--top]::after {
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    .cell[class*=poptip--top-left]::before,
+    .cell[class*=poptip--top-left]::after {
+        left: 0;
+        transform: translate3d(0, 0, 0);
+    }
+
+    .cell[class*=poptip--top]::before {
+        top: 0;
+        border-top-color: #FE6A6A;
+    }
+
+    .cell[class*=poptip--top]::after {
+        bottom: 100%;
+        margin-bottom: -1px;
+    }
+
+    .cell[class*=poptip--top]:hover::before,
+    .cell[class*=poptip--top]:hover::after {
+        transform: translate3d(-50%, -10px, 0);
+    }
+
+    /* bottom */
+    .cell[class*=poptip--bottom]::before,
+    .cell[class*=poptip--bottom]::after {
+        left: 50%;
+        transform: translate3d(-50%, 0, 0);
+    }
+
+    .cell[class*=poptip--bottom]::before {
+        bottom: 0;
+        border-bottom-color: #FE6A6A;
+    }
+
+    .cell[class*=poptip--bottom]::after {
+        top: 100%;
+        margin-top: -1px;
+    }
+
+    .cell[class*=poptip--bottom]:hover::before,
+    .cell[class*=poptip--bottom]:hover::after {
+        transform: translate3d(-50%, 10px, 0);
+    }
+
+    /* left */
+    .cell[class*=poptip--left]::before,
+    .cell[class*=poptip--left]::after {
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+    }
+
+    .cell[class*=poptip--left]::before {
+        left: 0;
+        border-left-color: #FE6A6A;
+    }
+
+    .cell[class*=poptip--left]::after {
+        right: 100%;
+        margin-right: -1px;
+    }
+
+    .cell[class*=poptip--left]:hover::before,
+    .cell[class*=poptip--left]:hover::after {
+        transform: translate3d(-10px, -50%, 0);
+    }
+
+    /* right */
+    .cell[class*=poptip--right]::before,
+    .cell[class*=poptip--right]::after {
+        top: 50%;
+        transform: translate3d(0, -50%, 0);
+    }
+
+    .cell[class*=poptip--right]::before {
+        right: 0;
+        border-right-color: #FE6A6A;
+    }
+
+    .cell[class*=poptip--right]::after {
+        left: 100%;
+        margin-left: -1px;
+    }
+
+    .cell[class*=poptip--right]:hover::before,
+    .cell[class*=poptip--right]:hover::after {
+        transform: translate3d(10px, -50%, 0);
+    }
+
+    div.shape {
+        position: relative;
+        margin-top: 20px;
+        width: 150px;
+        height: 150px;
+    }
+
+    div.shape .trapezoid {
+        border: 40px solid transparent;
+        border-top: 0px solid;
+        border-bottom: 80px solid #FE6A6A;
+        height: 0;
+    }
+
+    div.shape .star5 {
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: 40px;
+        border: 7.5px solid transparent;
+        border-top: 0;
+        border-bottom: 24.8px solid #FE6A6A;
+    }
+
+    div.shape .star5::before {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 22px;
+        left: -40px;
+        width: 0;
+        height: 0;
+        border: 40px solid transparent;
+        border-top: 0 solid;
+        border-bottom: 29px solid #FE6A6A;
+        transform: rotateZ(36deg);
+    }
+
+    div.shape .star5::after {
+        content: "";
+        position: absolute;
+        display: block;
+        top: 22px;
+        left: -40px;
+        width: 0;
+        height: 0;
+        border: 40px solid transparent;
+        border-top: 0 solid;
+        border-bottom: 29px solid #FE6A6A;
+        transform: rotateZ(-36deg);
+    }
+
+    div.shape .ribon {
+        border: 40px solid #FE6A6A;
+        height: 80px;
+        width: 0;
+        border-top: 0;
+        border-bottom: 28px solid transparent;
+    }
+
+    div.shape .diamond2 {
+        position: relative;
+        width: 80px;
+        height: 0;
+        border: 20px solid transparent;
+        border-top: 0;
+        border-bottom-color: #FE6A6A;
+    }
+
+    div.shape .diamond2::after {
+        content: "";
+        position: absolute;
+        top: 20px;
+        left: -20px;
+        display: block;
+        width: 0;
+        border: 60px solid transparent;
+        border-bottom: 0;
+        border-top-color: #FE6A6A;
+    }
+
+    div.shape .heart::before,
+    div.shape .heart::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 80px;
+        border-radius: 50px 50px 0 0;
+        background-color: #FE6A6A;
+
+    }
+
+    div.shape .heart::before {
+        left: 50px;
+        transform-origin: 0 100%;
+        transform: rotateZ(-45deg);
+    }
+
+    div.shape .heart::after {
+        transform-origin: 100% 100%;
+        transform: rotateZ(45deg);
+    }
+
+    div.shape .book {
+        position: relative;
+    }
+
+    div.shape .book::before,
+    div.shape .book::after {
+        content: "";
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        background-color: #FE6A6A;
+    }
+
+    div.shape .book::before {
+        transform: skewY(10deg);
+    }
+
+    div.shape .book::after {
+        left: 60px;
+        border-left: 1px solid #f3f3f3;
+        transform: skewY(-10deg);
+    }
+  </style>
+</head>
+
+<body>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/border-radius" target="_blank">border-radius</a>
+  </p>
+  <div class="flex-box">
+    <div class="ellipse">半圆</div>
+    <div class="ellipse">1/4圆</div>
+    <div class="ellipse">半椭圆</div>
+    <div class="ellipse">1/4椭圆</div>
+    <div class="ellipse">左叶子</div>
+    <div class="ellipse">右叶子</div>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform" target="_blank">transform</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/clip-path" target="_blank">clip-path</a>
+  </p>
+  <div class="flex-box">
+    <div class="diamond"> <span>嵌套菱形</span> </div>
+    <div class="diamond"> 伪元素菱形 </div>
+    <div class="diamond"> <img src="../images/background.png" /> </div>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient" target="_blank">gradient</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/clip-path" target="_blank">clip-path</a>
+  </p>
+  <div class="flex-box">
+    <div class="bevel-corners">
+      <p>A paragraph of filler text.La la la de dah de dah de dah de la.La la la de dah de dah de dah de la.La la la de dah de dah de dah de la.</p>
+    </div>
+    <div class="bevel-corners">
+      <p>A paragraph of filler text.La la la de dah de dah de dah de la.La la la de dah de dah de dah de la.La la la de dah de dah de dah de la.</p>
+    </div>
+    <div class="bevel-corners">
+      <p>A paragraph of filler text.La la la de dah de dah de dah de la.La la la de dah de dah de dah de la.La la la de dah de dah de dah de la.</p>
+    </div>
+    <div class="bevel-corners">
+      <p>A paragraph of filler text.La la la de dah de dah de dah de la.La la la de dah de dah de dah de la.La la la de dah de dah de dah de la.</p>
+    </div>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/gradient" target="_blank">gradient</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation" target="_blank">animation</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/SVG/Tutorial" target="_blank">SVG</a>
+  </p>
+  <div class="flex-box">
+    <div class="pie"> </div>
+    <div class="pie"> </div>
+    <div class="pie"> </div>
+    <div class="pie">
+      <svg viewbox="0 0 32 32">
+        <circle r="16" cx="16" cy="16"></circle>
+      </svg>
+    </div>
+    <div class="pie">
+      <svg viewbox="0 0 32 32">
+        <circle r="16" cx="16" cy="16"></circle>
+        <circle r="16" cx="16" cy="16"></circle>
+        <circle r="16" cx="16" cy="16"></circle>
+      </svg>
+    </div>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition" target="_blank">transition</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform" target="_blank">transform</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/filter" target="_blank">filter</a>
+  </p>
+  <div class="flex-box cells">
+    <div class="cell poptip--top-left" aria-controls="top-left">top-left</div>
+    <div class="cell poptip--top-center" aria-controls="top-center">top-center</div>
+    <div class="cell poptip--top-right" aria-controls="top-right">top-right</div>
+    <div class="cell poptip--left" aria-controls="left">left</div>
+    <div class="cell empty"></div>
+    <div class="cell poptip--right" aria-controls="right">right</div>
+    <div class="cell poptip--bottom-left" aria-controls="bottom-left">bottom-left</div>
+    <div class="cell poptip--bottom-center" aria-controls="bottom-center">bottom-center</div>
+    <div class="cell poptip--bottom-right" aria-controls="bottom-right">bottom-right</div>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/box-sizing" target="_blank">box-sizing</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform" target="_blank">transform</a>
+  </p>
+  <div class="flex-box">
+    <div class="shape ">
+      <div class="trapezoid"></div>
+    </div>
+    <div class="shape ">
+      <div class="star5"></div>
+    </div>
+    <div class="shape ">
+      <div class="ribon"></div>
+    </div>
+    <div class="shape ">
+      <div class="diamond2"></div>
+    </div>
+    <div class="shape ">
+      <div class="heart"></div>
+    </div>
+    <div class="shape ">
+      <div class="book"></div>
+    </div>
+  </div>
+</body>
+
+</html>
