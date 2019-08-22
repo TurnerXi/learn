@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>animation</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style type="text/css">
+    * {
+        box-sizing: border-box;
+    }
+
+    main.debounce {
+        position: relative;
+        margin-top: 20px;
+        width: 1047px;
+        border-radius: 10px;
+        height: 581px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+        background: url("../images/starry-sky.jpg") no-repeat center bottom / 100% 100%;
+        padding: 52px 39px;
+    }
+
+    .debounce .btn {
+        position: absolute;
+        left: 20px;
+        top: 20px;
+        font-size: 24px;
+        line-height: 24px;
+        color: white;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .debounce .ball {
+        width: 0;
+        margin: auto;
+        padding: 20px;
+        border-radius: 50%;
+        background: radial-gradient(circle at 30% 30%, #fff, #fe6a6a) left top;
+        animation: debounce 2s ease-in forwards;
+    }
+
+    @keyframes debounce {
+
+        40%,
+        60%,
+        80%,
+        to {
+            transform: translateY(380px);
+            animation-timing-function: ease-out;
+        }
+
+        50% {
+            transform: translateY(200px);
+            animation-timing-function: ease-in;
+        }
+
+        70% {
+            transform: translateY(300px);
+            animation-timing-function: ease-in;
+        }
+
+        90% {
+            transform: translateY(360px);
+            animation-timing-function: ease-in;
+        }
+    }
+
+    main.elastic {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+        width: 100%;
+        font: 14px/1.5 Consolas, Monaco, monospace;
+    }
+
+    .elastic label {
+        margin: auto;
+    }
+
+    .elastic input {
+        display: block;
+        width: 225px;
+        padding: .8em;
+        outline: none;
+        border: 1px solid #e3e3e3;
+        border-radius: 2px;
+    }
+
+    .elastic .poptip {
+        position: relative;
+        display: inline-block;
+        width: 236px;
+        font-size: 13px;
+        margin-left: -3px;
+        margin-top: 3px;
+        border-radius: 2px;
+        background-color: #fafafa;
+        filter: drop-shadow(0 0 1px rgba(0, 0, 0, .2));
+        transform-origin: 15px -6px;
+        padding: .6em;
+    }
+
+    .elastic .poptip::before {
+        content: "";
+        display: block;
+        position: absolute;
+        border: 9px solid transparent;
+        top: -6px;
+        left: 10px;
+        border-top-width: 0;
+        border-bottom-color: #fafafa;
+    }
+
+    .elastic input:focus,
+    .elastic input:hover {
+        border-color: #8be7e7;
+    }
+
+    .elastic input:not(:placeholder-shown) {
+        border-color: #fe6a6a;
+        box-shadow: 0 0 2px rgba(206, 109, 109, 0.5);
+    }
+
+    .elastic input:not(:placeholder-shown)+.poptip {
+        color: #fe6a6a;
+    }
+
+    .elastic input:valid {
+        border-color: #8be7e7;
+        box-shadow: 0 0 2px rgba(139, 231, 231, 0.5);
+    }
+
+    .elastic input:valid+.poptip {
+        color: unset;
+    }
+
+    .elastic input:focus+.poptip {
+        transform: scale(1);
+        animation: elastic-grow .45s;
+    }
+
+    .elastic input:not(:focus)+.poptip {
+        transform: scale(0);
+        animation: elastic-dec .25s;
+    }
+
+
+
+    @keyframes elastic-grow {
+        from {
+            transform: scale(0);
+        }
+
+        70% {
+            transform: scale(1.1);
+            animation-timing-function: ease-in-out;
+        }
+    }
+
+    @keyframes elastic-dec {
+        from {
+            transform: scale(1);
+        }
+
+        to {
+            transform: scale(0);
+            animation-timing-function: ease-in-out;
+        }
+    }
+
+    div.blink:first-of-type {
+        margin-top: 20px;
+    }
+
+    div.blink {
+        margin-bottom: 20px;
+        width: 380px;
+        padding: 3px 10px;
+        border-radius: 5px;
+        font: 14px Consolas, Monaco, monospace;
+    }
+
+    div.blink:nth-of-type(1) {
+        background-color: #f4f4f4;
+        color: #909399;
+        animation: 1s blink-normal infinite step-end;
+    }
+
+    div.blink:nth-of-type(2) {
+        background-color: #fdf6ec;
+        color: #e6a23c;
+        animation: .5s blink-alternate infinite;
+        animation-direction: alternate;
+    }
+
+    div.blink:nth-of-type(3) {
+        background-color: #fef0f0;
+        color: #f56c6c;
+        animation: .5s blink-alternate infinite;
+        animation-direction: alternate-reverse;
+    }
+
+    @keyframes blink-normal {
+        50% {
+            color: transparent;
+        }
+    }
+
+    @keyframes blink-alternate {
+        to {
+            color: transparent;
+        }
+    }
+
+    span.typing {
+        display: inline-block;
+        text-align: center;
+        margin-top: 20px;
+        font: bold 200% Cosolas, Monaco, monospace;
+        width: 21ch;
+        font-weight: 500;
+        animation: typing 10s steps(21), caret .5s step-start infinite;
+        border-right: 1px solid transparent;
+        overflow: hidden;
+        white-space: nowrap;
+    }
+
+    @keyframes typing {
+        from {
+            width: 0;
+        }
+    }
+
+    @keyframes caret {
+        50% {
+            border-right-color: #000;
+        }
+    }
+
+    main.shake {
+        margin-top: 20px;
+        background-color: #fe6a6a;
+        border-radius: 3px;
+        padding: .5em 10px;
+        color: #fff;
+        border: 1px solid #fe6a6a;
+        box-shadow: 0 0 0 3px rgba(206, 109, 109, .5);
+        animation-play-state: paused;
+        animation: shake-baidu 2s ease infinite;
+    }
+
+    main.shake:hover {
+        animation-play-state: running;
+    }
+
+    @keyframes shake-baidu {
+
+        from,
+        to,
+        50% {
+            transform: rotate(0deg);
+        }
+
+        12.5%,
+        29%,
+        46% {
+            transform: rotate(5deg);
+        }
+
+        4%,
+        21%,
+        37.5% {
+            transform: rotate(-5deg);
+        }
+    }
+
+    main.smooth {
+        margin-top: 20px;
+        width: 100%;
+        height: 329px;
+        background: url("../images/full-fire-cloud.jpg") repeat-x 0 center/auto 100%;
+        animation: smooth 10s linear infinite;
+    }
+
+    @keyframes smooth {
+        to {
+            background-position: 1970px center;
+        }
+    }
+
+    main.circular-smooth {
+        width: 100%;
+        height: 529px;
+        text-align: center;
+    }
+
+    .circular-smooth .path {
+        position: relative;
+        display: flex;
+        width: 300px;
+        height: 300px;
+        margin: 100px auto;
+        border-radius: 50%;
+        border: 1px solid #fff;
+    }
+
+    .circular-smooth .path .logo {
+        align-self: center;
+        margin: auto;
+        width: 52px;
+        background-color: transparent;
+    }
+
+    .circular-smooth .path .avatar {
+        position: absolute;
+        width: 50px;
+        left: 124px;
+        top: 124px;
+        transform: translateY(-124px);
+        animation: circular-smooth-spin 7.5s infinite linear;
+        animation-play-state: running;
+    }
+
+
+    .circular-smooth .path .avatar img {
+        width: inherit;
+        border-radius: 50%;
+    }
+
+    .circular-smooth .path .avatar span {
+        position: absolute;
+        opacity: 0;
+        left: 50%;
+        top: -50%;
+        padding: 3px 12px;
+        transform-origin: 0 bottom;
+        white-space: nowrap;
+        font-weight: 500;
+        transform: scale(0);
+        transition: opacity, transform .8s;
+    }
+
+    .circular-smooth .path:hover .avatar {
+        animation-play-state: paused;
+    }
+
+    .circular-smooth .path:hover .avatar>span {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .circular-smooth .path .avatar:nth-of-type(2) {
+        animation-delay: -1.5s;
+    }
+
+    .circular-smooth .path .avatar:nth-of-type(3) {
+        animation-delay: -3s;
+    }
+
+    .circular-smooth .path .avatar:nth-of-type(4) {
+        animation-delay: -4.5s;
+    }
+
+    .circular-smooth .path .avatar:nth-of-type(5) {
+        animation-delay: -6s;
+    }
+
+    @keyframes circular-smooth-spin {
+        from {
+            transform: rotate(0turn) translateY(-124px) rotate(1turn);
+        }
+
+        to {
+            transform: rotate(1turn) translateY(-124px) rotate(0turn);
+        }
+    }
+  </style>
+</head>
+
+<body>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation" target="_blank">animation</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/timing-function" target="_blank">timing-function</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform" target="_blank">transform</a>
+  </p>
+  <div class="flex-box flex-column">
+    <main class="debounce">
+      <div class="ball" id="debounceBall"></div>
+      <span class="btn" id="debounceBtn">▶️</span>
+    </main>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation" target="_blank">animation</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition" target="_blank">transition</a>
+  </p>
+  <div class="flex-box">
+    <main class="elastic">
+      <label>
+        <input required type="text" id="username" autocomplete="off" placeholder="请输入内容" pattern="^\w+$" />
+        <span class="poptip">仅支持字母、数字和下划线组合！!</span>
+      </label>
+    </main>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-direction" target="_blank">animation-direction</a>
+  </p>
+  <div class="flex-box flex-column">
+    <div class="blink">info~</div>
+    <div class="blink">warning~warning~</div>
+    <div class="blink">error~error~</div>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation" target="_blank">animation</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-timing-function" target="_blank">animation-timing-function</a>
+  </p>
+  <div class="flex-box flex-column">
+    <span class="typing">You-need-to-know-css!</span>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation" target="_blank">animation</a>
+  </p>
+  <div class="flex-box flex-column">
+    <main class="shake">You-need-to-know-css!</main>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation" target="_blank">animation</a>
+  </p>
+  <div class="flex-box">
+    <main class="smooth"></main>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation" target="_blank">animation</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transition" target="_blank">transition</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/transform" target="_blank">transform</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/animation-delay" target="_blank">animation-delay</a>
+  </p>
+  <div class="flex-box">
+    <main class="circular-smooth">
+      <div class="path">
+        <img class="logo" src="../images/vue-logo.png" />
+        <div class="avatar">
+          <span>Evan You</span>
+          <img src="../images/Evan.jpeg" />
+        </div>
+        <div class="avatar">
+          <span>Damian Dulisz</span>
+          <img src="../images/Dulisz.jpeg" />
+        </div>
+        <div class="avatar">
+          <span>defcc</span>
+          <img src="../images/defcc.png" />
+        </div>
+        <div class="avatar">
+          <span>Edd Yerburgh</span>
+          <img src="../images/Yerburgh.png" />
+        </div>
+        <div class="avatar">
+          <span>Sarah Drasner</span>
+          <img src="../images/Drasner.jpeg" />
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+<script type="text/javascript">
+  var debounceBtn = document.getElementById("debounceBtn");
+  var debounceBall = document.getElementById("debounceBall");
+  debounceBtn.addEventListener("click", function () {
+    if (this.innerText == "▶️") {
+      this.innerText = "■"
+      this.style.color = "red";
+      debounceBall.style.animationName = "debounce";
+    } else {
+      this.innerText = "▶️"
+      this.style.color = "white";
+      debounceBall.style.animationName = "none";
+    }
+  })
+</script>
+
+</html>

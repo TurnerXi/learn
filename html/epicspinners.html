@@ -1,0 +1,1508 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Epic Spinners</title>
+  <link rel="stylesheet" href="../css/reset.css">
+  <style media="screen" type="text/css">
+    body {
+        background-image: linear-gradient(117deg, #3c2747, #222634 98%, #252433);
+    }
+
+    div.flex-box {
+        justify-content: center;
+    }
+
+    div.flex-box>div {
+        margin: 50px;
+        box-sizing: border-box;
+        display: flex;
+        align-items: center;
+    }
+
+    div.container {
+        padding: 50px calc(50% - 600px);
+    }
+
+    .flower-spinner {
+        width: 70px;
+        height: 70px;
+        justify-content: center;
+    }
+
+    .flower-spinner .dots-container {
+        width: 10px;
+        height: 10px;
+    }
+
+    .flower-spinner .bigger-dot {
+        width: 100%;
+        height: 100%;
+        padding: 10%;
+        border-radius: 50%;
+        animation: bigger-spinner 2.5s infinite both;
+
+    }
+
+    .flower-spinner .smaller-dot {
+        width: 100%;
+        height: 100%;
+        background-color: #ff1d5e;
+        border-radius: 50%;
+        animation: smaller-spinner 2.5s infinite both;
+    }
+
+    @keyframes bigger-spinner {
+
+        0%,
+        100% {
+            box-shadow: 0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94);
+        }
+
+        25%,
+        75% {
+            box-shadow: 26px 0 rgb(255, 29, 94),
+                -26px 0 rgb(255, 29, 94),
+                0 26px rgb(255, 29, 94),
+                0 -26px rgb(255, 29, 94),
+                19px 19px rgb(255, 29, 94),
+                19px -19px rgb(255, 29, 94),
+                -19px 19px rgb(255, 29, 94),
+                -19px -19px rgb(255, 29, 94)
+        }
+
+        50% {
+            transform: rotate(180deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+            box-shadow: 0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94);
+        }
+    }
+
+    @keyframes smaller-spinner {
+
+        0%,
+        100% {
+            box-shadow: 0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94);
+        }
+
+        25%,
+        75% {
+            box-shadow: 14px 0 rgb(255, 29, 94),
+                -14px 0 rgb(255, 29, 94),
+                0 14px rgb(255, 29, 94),
+                0 -14px rgb(255, 29, 94),
+                10px 10px rgb(255, 29, 94),
+                10px -10px rgb(255, 29, 94),
+                -10px 10px rgb(255, 29, 94),
+                -10px -10px rgb(255, 29, 94);
+        }
+
+        100% {
+            box-shadow: 0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94),
+                0 0 rgb(255, 29, 94);
+        }
+    }
+
+    .pixel-spinner {
+        width: 70px;
+        height: 70px;
+        justify-content: center;
+    }
+
+    .pixel-spinner .pixel-spinner-inner {
+        width: 10px;
+        height: 10px;
+        background-color: rgb(255, 29, 94);
+        color: rgb(255, 29, 94);
+        box-shadow: 0 15px 0 0,
+            0 -15px 0 0,
+            15px 0 0 0,
+            -15px 0 0 0,
+            15px 15px 0 0,
+            15px -15px 0 0,
+            -15px 15px 0 0,
+            -15px -15px 0 0;
+        animation: pixel-spinner-animation 2s infinite forwards;
+    }
+
+    @keyframes pixel-spinner-animation {
+
+        50%,
+        60% {
+            box-shadow: 0 10px 0 0,
+                0 -10px 0 0,
+                10px 0 0 0,
+                -10px 0 0 0,
+                20px 20px 0 0,
+                20px -20px 0 0,
+                -20px 20px 0 0,
+                -20px -20px 0 0;
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .hollow-dots-spinner {
+        justify-content: space-between;
+        width: 70px;
+        height: 70px;
+    }
+
+    .hollow-dots-spinner .dot {
+        width: 10px;
+        height: 10px;
+        border: 3px solid rgb(255, 29, 94);
+        border-radius: 50%;
+        background-color: transparent;
+        transform: scale(0);
+        animation: hollow-dots-spin-animation 1s ease infinite;
+    }
+
+    .hollow-dots-spinner .dot:nth-of-type(1) {
+        animation-delay: 300ms;
+    }
+
+    .hollow-dots-spinner .dot:nth-of-type(2) {
+        animation-delay: 600ms;
+    }
+
+    .hollow-dots-spinner .dot:nth-of-type(3) {
+        animation-delay: 900ms;
+    }
+
+    @keyframes hollow-dots-spin-animation {
+
+        50% {
+            transform: scale(1);
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+    .intersecting-circles-spinner {
+        justify-content: center;
+        width: 70px;
+        height: 70px;
+    }
+
+    .intersecting-circles-spinner .spinnerBlock {
+        width: 70px;
+        height: 70px;
+        transform-origin: center;
+        border-radius: 50%;
+        /* border: 1px solid; */
+        animation: intersection-circles-spin-animation 1s linear infinite forwards;
+    }
+
+    .intersecting-circles-spinner .spinnerBlock .circle {
+        display: inline-block;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+        transform-origin: center;
+        box-sizing: border-box;
+        background:
+            radial-gradient(circle at 35px 35px, transparent 15px, rgb(255, 30, 90) 16px, rgb(255, 30, 90) 17px, transparent 18px),
+            radial-gradient(circle at 35px 50px, transparent 15px, rgb(255, 30, 90) 16px, rgb(255, 30, 90) 17px, transparent 18px),
+            radial-gradient(circle at 35px 20px, transparent 15px, rgb(255, 30, 90) 16px, rgb(255, 30, 90) 17px, transparent 18px),
+            radial-gradient(circle at 23px 26.5px, transparent 15px, rgb(255, 30, 90) 16px, rgb(255, 30, 90) 17px, transparent 18px),
+            radial-gradient(circle at 47.5px 26.5px, transparent 15px, rgb(255, 30, 90) 16px, rgb(255, 30, 90) 17px, transparent 18px),
+            radial-gradient(circle at 23px 43.5px, transparent 15px, rgb(255, 30, 90) 16px, rgb(255, 30, 90) 17px, transparent 18px),
+            radial-gradient(circle at 47.5px 43.5px, transparent 15px, rgb(255, 30, 90) 16px, rgb(255, 30, 90) 17px, transparent 18px);
+    }
+
+    @keyframes intersection-circles-spin-animation {
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(1turn);
+        }
+    }
+
+    .orbit-spinner {
+        position: relative;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+    }
+
+    .orbit-spinner .orbit {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        animation: orbit-spin-animation 1s infinite linear forwards;
+    }
+
+    .orbit-spinner .orbit:nth-of-type(1) {
+        left: 0;
+        top: 0;
+        border-bottom: 3px solid rgb(255, 30, 90);
+        animation: orbit-spin-animation-one 1s infinite linear forwards;
+    }
+
+    .orbit-spinner .orbit:nth-of-type(2) {
+        left: 0;
+        bottom: 0;
+        border-right: 3px solid rgb(255, 30, 90);
+        animation: orbit-spin-animation-two 1s infinite linear forwards;
+    }
+
+    .orbit-spinner .orbit:nth-of-type(3) {
+        right: 0;
+        bottom: 0;
+        border-top: 3px solid rgb(255, 30, 90);
+        animation: orbit-spin-animation-three 1s infinite linear forwards;
+    }
+
+    @keyframes orbit-spin-animation-one {
+        0% {
+            transform: rotateX(30deg) rotateY(55deg) rotateZ(0);
+        }
+
+        100% {
+            transform: rotateX(30deg) rotateY(55deg) rotateZ(360deg);
+        }
+    }
+
+    @keyframes orbit-spin-animation-two {
+        0% {
+            transform: rotateX(55deg) rotateY(20deg) rotateZ(0);
+        }
+
+        100% {
+            transform: rotateX(55deg) rotateY(20deg) rotateZ(360deg);
+        }
+    }
+
+    @keyframes orbit-spin-animation-three {
+        0% {
+            transform: rotateX(20deg) rotateY(-55deg) rotateZ(0);
+        }
+
+        100% {
+            transform: rotateX(20deg) rotateY(-55deg) rotateZ(360deg);
+        }
+    }
+
+    .radar-spinner {
+        position: relative;
+        width: 60px;
+        height: 60px;
+    }
+
+    .radar-spinner .circle {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        animation: radar-spin-animation 2s infinite forwards;
+    }
+
+    .radar-spinner .circle:nth-of-type(1) {
+        padding: calc(60px * 2 * 5 * 0 / 110);
+        animation-delay: 300ms;
+    }
+
+    .radar-spinner .circle:nth-of-type(2) {
+        padding: calc(60px * 2 * 5 * 1 / 110);
+        animation-delay: 300ms;
+    }
+
+    .radar-spinner .circle:nth-of-type(3) {
+        padding: calc(60px * 2 * 5 * 2 / 110);
+        animation-delay: 300ms;
+    }
+
+    .radar-spinner .circle:nth-of-type(4) {
+        padding: calc(60px * 2 * 5 * 3 / 110);
+        animation-delay: 0;
+    }
+
+    .radar-spinner .circle .circle-inner-container,
+    .radar-spinner .circle .circle-inner {
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 3px solid transparent;
+    }
+
+    .radar-spinner .circle .circle-inner {
+        border-left-color: rgb(255, 30, 90);
+        border-right-color: rgb(255, 30, 90);
+    }
+
+    @keyframes radar-spin-animation {
+        0% {
+            transform: rotate(0deg);
+        }
+
+        50% {
+            transform: rotate(180deg);
+        }
+    }
+
+    .scaling-squares-spinner {
+        width: 65px;
+        height: 65px;
+        justify-content: center;
+        animation: scaling-squares-spin-animation 1.25s infinite forwards;
+    }
+
+    .scaling-squares-spinner .square {
+        position: absolute;
+        box-sizing: border-box;
+        width: calc(65px / 4 / 1.3);
+        height: calc(65px / 4 / 1.3);
+        border: calc(65px / 25 / 1.3) solid rgb(255, 30, 90);
+        animation-duration: 1.25s;
+        animation-iteration-count: infinite;
+    }
+
+    .scaling-squares-spinner .square:nth-of-type(1) {
+        animation-name: scaling-squares-spin-animation-child-1;
+    }
+
+    .scaling-squares-spinner .square:nth-of-type(2) {
+        animation-name: scaling-squares-spin-animation-child-2;
+    }
+
+    .scaling-squares-spinner .square:nth-of-type(3) {
+        animation-name: scaling-squares-spin-animation-child-3;
+    }
+
+    .scaling-squares-spinner .square:nth-of-type(4) {
+        animation-name: scaling-squares-spin-animation-child-4;
+    }
+
+    @keyframes scaling-squares-spin-animation {
+
+        50% {
+            transform: rotate(90deg);
+        }
+
+        100% {
+            transform: rotate(180deg);
+        }
+    }
+
+    @keyframes scaling-squares-spin-animation-child-1 {
+        50% {
+            transform: translate(-150%, 150%) scale(2, 2);
+        }
+    }
+
+    @keyframes scaling-squares-spin-animation-child-2 {
+        50% {
+            transform: translate(150%, 150%) scale(2, 2);
+        }
+    }
+
+    @keyframes scaling-squares-spin-animation-child-3 {
+        50% {
+            transform: translate(-150%, -150%) scale(2, 2);
+        }
+    }
+
+    @keyframes scaling-squares-spin-animation-child-4 {
+        50% {
+            transform: translate(150%, -150%) scale(2, 2);
+        }
+    }
+
+    .half-circle-spinner {
+        position: relative;
+        justify-content: center;
+        width: 60px;
+        height: 60px;
+    }
+
+    .half-circle-spinner .circle {
+        box-sizing: border-box;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border: 5px solid transparent;
+        border-radius: 50%;
+
+
+    }
+
+    .half-circle-spinner .circle:nth-of-type(1) {
+        border-top-color: rgb(255, 30, 90);
+        animation: half-circle-spin-animation 1s infinite forwards;
+    }
+
+    .half-circle-spinner .circle:nth-of-type(2) {
+        border-bottom-color: rgb(255, 30, 90);
+        animation: half-circle-spin-animation 1s infinite alternate;
+    }
+
+    @keyframes half-circle-spin-animation {
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .trinity-rings-spinner {
+        position: relative;
+        width: 65px;
+        height: 65px;
+        justify-content: center;
+        padding: 3px;
+    }
+
+    .trinity-rings-spinner .circle {
+        position: absolute;
+        box-sizing: border-box;
+        border: 3px solid rgb(255, 30, 90);
+        border-radius: 50%;
+    }
+
+    .trinity-rings-spinner .circle:nth-child(1) {
+        width: 100%;
+        height: 100%;
+        animation: trinity-rings-animation-1 1.5s infinite linear;
+    }
+
+    .trinity-rings-spinner .circle:nth-child(2) {
+        width: calc(63%);
+        height: calc(63%);
+        animation: trinity-rings-animation-2 1.5s infinite linear;
+        border-width: 2px;
+    }
+
+    .trinity-rings-spinner .circle:nth-child(3) {
+        width: calc(10%);
+        height: calc(10%);
+        animation: trinity-rings-animation-3 1.5s infinite linear;
+        border-width: 1px;
+    }
+
+    @keyframes trinity-rings-animation-1 {
+        0% {
+            transform: rotateZ(20deg) rotateY(0);
+        }
+
+        100% {
+            transform: rotateZ(100deg) rotateY(360deg);
+        }
+    }
+
+    @keyframes trinity-rings-animation-2 {
+        0% {
+            transform: rotateZ(100deg) rotateY(0);
+        }
+
+        100% {
+            transform: rotateZ(0deg) rotateY(360deg);
+        }
+    }
+
+    @keyframes trinity-rings-animation-3 {
+        0% {
+            transform: rotateZ(100deg) rotateY(360deg);
+        }
+
+        100% {
+            transform: rotateZ(360deg) rotateY(-360deg);
+        }
+    }
+
+    .fulfilling-square-spinner {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        border: 4px solid rgb(255, 30, 90);
+        justify-content: center;
+        animation: fulfilling-square-animation 4s infinite linear;
+    }
+
+    .fulfilling-square-spinner .spinner-inner {
+        width: 42px;
+        height: 42px;
+        box-sizing: border-box;
+        width: 100%;
+        background-color: rgb(255, 30, 90);
+        align-self: flex-start;
+        animation: fulfilling-square-inner-animation 4s infinite linear;
+    }
+
+    @keyframes fulfilling-square-animation {
+        0% {
+            transform: rotate(0);
+        }
+
+        25% {
+            transform: rotate(180deg);
+        }
+
+        50% {
+            transform: rotate(180deg);
+        }
+
+        75% {
+            transform: rotate(360deg);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes fulfilling-square-inner-animation {
+        0% {
+            height: 0%;
+        }
+
+        25% {
+            height: 0%;
+        }
+
+        50% {
+            height: 100%;
+        }
+
+        75% {
+            height: 100%;
+        }
+
+        100% {
+            height: 0%;
+        }
+    }
+
+    .circles-to-rhombuses-spinner {
+        width: 70px;
+        height: 70px;
+        justify-content: space-between;
+    }
+
+    .circles-to-rhombuses-spinner .circle {
+        width: 15px;
+        height: 15px;
+        box-sizing: border-box;
+        border: 3px solid rgb(255, 30, 90);
+        transform: rotate(45deg);
+        animation: circles-to-rhombuses-animation 1.2s infinite linear;
+    }
+
+    .circles-to-rhombuses-spinner .circle:nth-child(1) {
+        animation-delay: 150ms;
+    }
+
+    .circles-to-rhombuses-spinner .circle:nth-child(2) {
+        animation-delay: 300ms;
+    }
+
+    .circles-to-rhombuses-spinner .circle:nth-child(3) {
+        animation-delay: 450ms;
+    }
+
+    @keyframes circles-to-rhombuses-animation {
+        0% {
+            border-radius: 10%;
+        }
+
+        17.5% {
+            border-radius: 10%;
+        }
+
+        50% {
+            border-radius: 100%;
+        }
+
+        82.5% {
+            border-radius: 10%;
+        }
+
+        100% {
+            border-radius: 10%;
+        }
+    }
+
+
+    .semipolar-spinner {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        justify-content: center;
+    }
+
+    .semipolar-spinner .ring {
+        position: absolute;
+        border: 3.5px solid transparent;
+        border-top-color: rgb(255, 30, 90);
+        border-left-color: rgb(255, 30, 90);
+        border-radius: 50%;
+        animation: semipolar-animation 2s infinite;
+    }
+
+    .semipolar-spinner .ring:nth-child(1) {
+        width: 100%;
+        height: 100%;
+    }
+
+    .semipolar-spinner .ring:nth-child(2) {
+        width: calc(70px * 4 / 5);
+        height: calc(70px * 4 / 5);
+        animation-delay: calc(-2000ms * 1 / 10);
+    }
+
+    .semipolar-spinner .ring:nth-child(3) {
+        width: calc(70px * 3 / 5);
+        height: calc(70px * 3 / 5);
+        animation-delay: calc(-2000ms * 3 / 10);
+    }
+
+    .semipolar-spinner .ring:nth-child(4) {
+        width: calc(70px * 2 / 5);
+        height: calc(70px * 2 / 5);
+        animation-delay: calc(-2000ms * 2 / 10);
+    }
+
+    .semipolar-spinner .ring:nth-child(5) {
+        width: calc(70px * 1 / 5);
+        height: calc(70px * 1 / 5);
+        animation-delay: calc(-2000ms * 4 / 10);
+    }
+
+    @keyframes semipolar-animation {
+        50% {
+            transform: rotate(360deg) scale(0.7);
+        }
+    }
+
+    .self-building-square-spinner {
+        position: relative;
+        width: 39px;
+        height: 39px;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        transform: translateY(10px);
+    }
+
+    .self-building-square-spinner .square {
+        width: 10px;
+        height: 10px;
+        transform: translateY(-10px);
+        background-color: rgb(255, 30, 90);
+        opacity: 0;
+        animation: self-building-square-animation 6s linear infinite;
+    }
+
+    .self-building-square-spinner .square:nth-child(1) {
+        animation-delay: calc(300ms * 6);
+    }
+
+    .self-building-square-spinner .square:nth-child(2) {
+        animation-delay: calc(300ms * 7);
+    }
+
+    .self-building-square-spinner .square:nth-child(3) {
+        animation-delay: calc(300ms * 8);
+    }
+
+    .self-building-square-spinner .square:nth-child(4) {
+        animation-delay: calc(300ms * 3);
+    }
+
+    .self-building-square-spinner .square:nth-child(5) {
+        animation-delay: calc(300ms * 4);
+    }
+
+    .self-building-square-spinner .square:nth-child(6) {
+        animation-delay: calc(300ms * 5);
+    }
+
+    .self-building-square-spinner .square:nth-child(7) {
+        animation-delay: calc(300ms * 0);
+    }
+
+    .self-building-square-spinner .square:nth-child(8) {
+        animation-delay: calc(300ms * 1);
+    }
+
+    .self-building-square-spinner .square:nth-child(9) {
+        animation-delay: calc(300ms * 2);
+    }
+
+    @keyframes self-building-square-animation {
+        0% {
+            opacity: 0;
+        }
+
+        5% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        50.9% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        55.9% {
+            opacity: 0;
+            transform: inherit;
+        }
+    }
+
+    .swapping-squares-spinner {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        justify-content: center;
+    }
+
+    .swapping-squares-spinner .square {
+        position: absolute;
+        width: calc(70px / 4 /1.3);
+        height: calc(70px / 4 /1.3);
+        border: 3px solid rgb(255, 30, 90);
+        box-sizing: border-box;
+    }
+
+    .swapping-squares-spinner .square:nth-child(1) {
+        animation: swapping-squares-animation-1 2s infinite linear;
+        animation-delay: 1s;
+    }
+
+    .swapping-squares-spinner .square:nth-child(2) {
+        animation: swapping-squares-animation-2 2s infinite linear;
+    }
+
+    .swapping-squares-spinner .square:nth-child(3) {
+        animation: swapping-squares-animation-3 2s infinite linear;
+    }
+
+    .swapping-squares-spinner .square:nth-child(4) {
+        animation: swapping-squares-animation-4 2s infinite linear;
+        animation-delay: 1s;
+    }
+
+    @keyframes swapping-squares-animation-1 {
+        50% {
+            transform: translate(150%, 150%) scale(2);
+        }
+    }
+
+    @keyframes swapping-squares-animation-2 {
+        50% {
+            transform: translate(150%, -150%) scale(2);
+        }
+    }
+
+    @keyframes swapping-squares-animation-3 {
+        50% {
+            transform: translate(-150%, 150%) scale(2);
+        }
+    }
+
+    @keyframes swapping-squares-animation-4 {
+        50% {
+            transform: translate(-150%, -150%) scale(2);
+        }
+    }
+
+    .fulfilling-bouncing-circle-spinner {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        animation: fulfilling-bouncing-circle-animation 4s infinite ease;
+    }
+
+    .fulfilling-bouncing-circle-spinner div {
+        box-sizing: border-box;
+    }
+
+    .fulfilling-bouncing-circle-spinner .orbit {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 2px solid var(--red);
+        animation: fulfilling-bouncing-circle-orbit-animation 4s infinite ease;
+    }
+
+    .fulfilling-bouncing-circle-spinner .circle {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 6px solid var(--red);
+        transform: rotate(0deg) scale(1);
+        animation: fulfilling-bouncing-circle-spinner-circle-animation 4s infinite ease;
+    }
+
+    @keyframes fulfilling-bouncing-circle-animation {
+        0% {
+            transform: rotate(0);
+        }
+
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    @keyframes fulfilling-bouncing-circle-orbit-animation {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1);
+        }
+
+        62.5% {
+            transform: scale(0.7);
+        }
+
+        75% {
+            transform: scale(1);
+        }
+
+        87.5 {
+            transform: scale(0.7);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes fulfilling-bouncing-circle-spinner-circle-animation {
+        0% {
+            border-color: transparent;
+            border-top-color: var(--red);
+        }
+
+        16.7% {
+            border-color: transparent;
+            border-top-color: var(--red);
+            border-right-color: var(--red);
+        }
+
+        33.4% {
+            border-color: transparent;
+            border-top-color: var(--red);
+            border-right-color: var(--red);
+            border-bottom-color: var(--red);
+        }
+
+        50% {
+            border-color: var(--red);
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        62.5% {
+            border-color: var(--red);
+            transform: scale(1.4);
+        }
+
+        75% {
+            border-color: var(--red);
+            transform: scale(1);
+        }
+
+        87.5% {
+            border-color: var(--red);
+            transform: scale(1.4);
+        }
+
+        100% {
+            border-color: transparent;
+            border-top-color: var(--red);
+            transform: scale(1);
+        }
+    }
+
+    .fingerprint-spinner {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        justify-content: center;
+    }
+
+    .fingerprint-spinner .spinner-ring {
+        position: absolute;
+        border: 1.5px solid transparent;
+        border-top-color: var(--red);
+        border-radius: 50%;
+        animation: fingerprint-spinner-animiation 1500ms cubic-bezier(0.680, -0.750, 0.265, 1.750) infinite forwards;
+    }
+
+    .fingerprint-spinner .spinner-ring:nth-child(1) {
+        width: calc(70px * 1 / 10);
+        height: calc(70px * 1 / 10);
+        animation-delay: calc(50ms * 1);
+    }
+
+    .fingerprint-spinner .spinner-ring:nth-child(2) {
+        width: calc(70px * 2 / 10);
+        height: calc(70px * 2 / 10);
+        animation-delay: calc(50ms * 2);
+    }
+
+    .fingerprint-spinner .spinner-ring:nth-child(3) {
+        width: calc(70px * 3 / 10);
+        height: calc(70px * 3 / 10);
+        animation-delay: calc(50ms * 3);
+    }
+
+    .fingerprint-spinner .spinner-ring:nth-child(4) {
+        width: calc(70px * 4 / 10);
+        height: calc(70px * 4 / 10);
+        animation-delay: calc(50ms * 4);
+    }
+
+    .fingerprint-spinner .spinner-ring:nth-child(5) {
+        width: calc(70px * 5 / 10);
+        height: calc(70px * 5 / 10);
+        animation-delay: calc(50ms * 5);
+    }
+
+    .fingerprint-spinner .spinner-ring:nth-child(6) {
+        width: calc(70px * 6 / 10);
+        height: calc(70px * 6 / 10);
+        animation-delay: calc(50ms * 6);
+    }
+
+    .fingerprint-spinner .spinner-ring:nth-child(7) {
+        width: calc(70px * 7 / 10);
+        height: calc(70px * 7 / 10);
+        animation-delay: calc(50ms * 7);
+    }
+
+    .fingerprint-spinner .spinner-ring:nth-child(8) {
+        width: calc(70px * 8 / 10);
+        height: calc(70px * 8 / 10);
+        animation-delay: calc(50ms * 8);
+    }
+
+    .fingerprint-spinner .spinner-ring:nth-child(9) {
+        width: calc(70px * 9 / 10);
+        height: calc(70px * 9 / 10);
+        animation-delay: calc(50ms * 9);
+    }
+
+    @keyframes fingerprint-spinner-animiation {
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+
+    .spring-spinner {
+        position: relative;
+        flex-direction: column;
+        width: 60px;
+        height: 60px;
+        justify-content: center;
+    }
+
+    .spring-spinner .spring-spinner-part {
+        width: 60px;
+        height: 30px;
+        overflow: hidden;
+        box-sizing: border-box;
+    }
+
+    .spring-spinner .spring-spinner-part .spring-spinner-rotator {
+        width: 60px;
+        height: 60px;
+        border: calc(60px / 7) solid transparent;
+        border-top-color: var(--red);
+        border-right-color: var(--red);
+        border-radius: 50%;
+        box-sizing: border-box;
+        transform: rotate(-200deg);
+        animation: spring-spinner-animiation 3s ease-in-out infinite;
+    }
+
+    .spring-spinner .spring-spinner-part.bottom {
+        transform: rotate(180deg) scale(-1, 1);
+    }
+
+    @keyframes spring-spinner-animiation {
+        0% {
+            border-width: calc(60px / 7);
+        }
+
+        25% {
+            border-width: calc(60px / 23.3);
+        }
+
+
+        50% {
+            transform: rotate(115deg);
+            border-width: calc(60px / 7);
+        }
+
+
+        75% {
+            border-width: calc(60px / 23.3);
+        }
+
+        100% {
+            border-width: calc(60px / 7);
+        }
+    }
+
+    .atom-spinner {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .atom-spinner .spinner-inner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        width: 100%;
+        height: 100%;
+    }
+
+    .atom-spinner .spinner-inner .spinner-line {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        box-sizing: border-box;
+        border: calc(60px / 25) solid transparent;
+        border-radius: 50%;
+        border-top-color: var(--red);
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+
+    .atom-spinner .spinner-inner .spinner-circle {
+        position: absolute;
+        font-size: calc(60px * .24);
+        color: var(--red);
+    }
+
+    .atom-spinner .spinner-inner .spinner-line:nth-child(1) {
+        transform: rotateZ(120deg) rotateX(66deg) rotateZ(0);
+        animation-name: atom-spinner-animation-1;
+    }
+
+    .atom-spinner .spinner-inner .spinner-line:nth-child(2) {
+        transform: rotateZ(240deg) rotateX(66deg) rotateZ(0);
+        animation-name: atom-spinner-animation-2;
+    }
+
+    .atom-spinner .spinner-inner .spinner-line:nth-child(3) {
+        transform: rotateZ(360deg) rotateX(66deg) rotateZ(0);
+        animation-name: atom-spinner-animation-3;
+    }
+
+    @keyframes atom-spinner-animation-1 {
+        100% {
+            transform: rotateZ(120deg) rotateX(66deg) rotateZ(360deg);
+        }
+    }
+
+    @keyframes atom-spinner-animation-2 {
+        100% {
+            transform: rotateZ(240deg) rotateX(66deg) rotateZ(360deg);
+        }
+    }
+
+    @keyframes atom-spinner-animation-3 {
+        100% {
+            transform: rotateZ(360deg) rotateX(66deg) rotateZ(360deg);
+        }
+    }
+
+    .looping-rhombuses-spinner {
+        position: relative;
+        width: 60px;
+        height: 60px;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+
+    .looping-rhombuses-spinner .rhombus {
+        position: absolute;
+        left: 60px;
+        margin: 0 auto;
+        width: 15px;
+        height: 15px;
+        background-color: var(--red);
+        transform: translateX(233%) rotate(45deg) scale(0);
+        border-radius: 2px;
+        animation: looping-rhombuses-spinner 2.5s linear infinite;
+    }
+
+    .looping-rhombuses-spinner .rhombus:nth-child(1) {
+        animation-delay: calc(2500ms * 1 / -1.5);
+    }
+
+    .looping-rhombuses-spinner .rhombus:nth-child(2) {
+        animation-delay: calc(2500ms * 2 / -1.5);
+    }
+
+    .looping-rhombuses-spinner .rhombus:nth-child(3) {
+        animation-delay: calc(2500ms * 3 / -1.5);
+    }
+
+    @keyframes looping-rhombuses-spinner {
+        0% {
+            transform: translateX(0) rotate(45deg) scale(0);
+        }
+
+        50% {
+            transform: translateX(-233%) rotate(45deg) scale(1);
+        }
+
+        100% {
+            transform: translateX(-466%) rotate(45deg) scale(0);
+        }
+    }
+
+    .breeding-rhombus-spinner {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(45deg);
+    }
+
+    .breeding-rhombus-spinner .rhombus {
+        position: absolute;
+        width: 10px;
+        height: 10px;
+        background-color: var(--red);
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        box-sizing: border-box;
+    }
+
+    .breeding-rhombus-spinner .rhombus:nth-child(1) {
+        animation-name: breeding-rhombus-1;
+        animation-delay: calc(100ms * 1)
+    }
+
+    .breeding-rhombus-spinner .rhombus:nth-child(2) {
+        animation-name: breeding-rhombus-2;
+        animation-delay: calc(100ms * 2)
+    }
+
+    .breeding-rhombus-spinner .rhombus:nth-child(3) {
+        animation-name: breeding-rhombus-3;
+        animation-delay: calc(100ms * 3)
+    }
+
+    .breeding-rhombus-spinner .rhombus:nth-child(4) {
+        animation-name: breeding-rhombus-4;
+        animation-delay: calc(100ms * 4)
+    }
+
+    .breeding-rhombus-spinner .rhombus:nth-child(5) {
+        animation-name: breeding-rhombus-5;
+        animation-delay: calc(100ms * 5)
+    }
+
+    .breeding-rhombus-spinner .rhombus:nth-child(6) {
+        animation-name: breeding-rhombus-6;
+        animation-delay: calc(100ms * 6)
+    }
+
+    .breeding-rhombus-spinner .rhombus:nth-child(7) {
+        animation-name: breeding-rhombus-7;
+        animation-delay: calc(100ms * 7)
+    }
+
+    .breeding-rhombus-spinner .rhombus:nth-child(8) {
+        animation-name: breeding-rhombus-8;
+        animation-delay: calc(100ms * 8)
+    }
+
+    .breeding-rhombus-spinner .rhombus.big {
+        width: calc(65px / 3);
+        height: calc(65px / 3);
+        animation-name: breeding-rhombus-big;
+        animation-delay: .5s;
+    }
+
+    @keyframes breeding-rhombus-1 {
+        50% {
+            transform: translate(-325%, -325%);
+        }
+    }
+
+    @keyframes breeding-rhombus-2 {
+        50% {
+            transform: translate(0, -325%);
+        }
+    }
+
+    @keyframes breeding-rhombus-3 {
+        50% {
+            transform: translate(325%, -325%);
+        }
+    }
+
+    @keyframes breeding-rhombus-4 {
+        50% {
+            transform: translate(325%, 0);
+        }
+    }
+
+    @keyframes breeding-rhombus-5 {
+        50% {
+            transform: translate(325%, 325%);
+        }
+    }
+
+    @keyframes breeding-rhombus-6 {
+        50% {
+            transform: translate(0, 325%);
+        }
+    }
+
+    @keyframes breeding-rhombus-7 {
+        50% {
+            transform: translate(-325%, 325%);
+        }
+    }
+
+    @keyframes breeding-rhombus-8 {
+        50% {
+            transform: translate(-325%, 0);
+        }
+    }
+
+    @keyframes breeding-rhombus-big {
+        50% {
+            transform: scale(0.5);
+        }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex-box container">
+    <div class="flower-spinner">
+      <div class="dots-container">
+        <div class="bigger-dot">
+          <div class="smaller-dot"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pixel-spinner">
+      <div class="pixel-spinner-inner"></div>
+    </div>
+
+    <div class="hollow-dots-spinner">
+      <div class="dot"></div>
+      <div class="dot"></div>
+      <div class="dot"></div>
+    </div>
+
+    <div class="intersecting-circles-spinner">
+      <div class="spinnerBlock">
+        <span class="circle"></span>
+      </div>
+    </div>
+
+    <div class="orbit-spinner">
+      <div class="orbit"></div>
+      <div class="orbit"></div>
+      <div class="orbit"></div>
+    </div>
+
+    <div class="radar-spinner">
+      <div class="circle">
+        <div class="circle-inner-container">
+          <div class="circle-inner"></div>
+        </div>
+      </div>
+
+      <div class="circle">
+        <div class="circle-inner-container">
+          <div class="circle-inner"></div>
+        </div>
+      </div>
+
+      <div class="circle">
+        <div class="circle-inner-container">
+          <div class="circle-inner"></div>
+        </div>
+      </div>
+
+      <div class="circle">
+        <div class="circle-inner-container">
+          <div class="circle-inner"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="scaling-squares-spinner">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+
+    <div class="half-circle-spinner">
+      <div class="circle circle-1"></div>
+      <div class="circle circle-2"></div>
+    </div>
+
+    <div class="trinity-rings-spinner">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
+    <div class="fulfilling-square-spinner">
+      <div class="spinner-inner"></div>
+    </div>
+
+    <div class="circles-to-rhombuses-spinner">
+      <div class="circle"></div>
+      <div class="circle"></div>
+      <div class="circle"></div>
+    </div>
+
+    <div class="semipolar-spinner">
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+      <div class="ring"></div>
+    </div>
+
+    <div class="self-building-square-spinner">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+
+    <div class="swapping-squares-spinner">
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+      <div class="square"></div>
+    </div>
+
+    <div class="fulfilling-bouncing-circle-spinner">
+      <div class="circle"></div>
+      <div class="orbit"></div>
+    </div>
+
+    <div class="fingerprint-spinner">
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+      <div class="spinner-ring"></div>
+    </div>
+
+    <div class="spring-spinner">
+      <div class="spring-spinner-part top">
+        <div class="spring-spinner-rotator"></div>
+      </div>
+      <div class="spring-spinner-part bottom">
+        <div class="spring-spinner-rotator"></div>
+      </div>
+    </div>
+
+    <div class="atom-spinner">
+      <div class="spinner-inner">
+        <div class="spinner-line"></div>
+        <div class="spinner-line"></div>
+        <div class="spinner-line"></div>
+        <div class="spinner-circle"> &#9679; </div>
+      </div>
+    </div>
+
+    <div class="looping-rhombuses-spinner">
+      <div class="rhombus"></div>
+      <div class="rhombus"></div>
+      <div class="rhombus"></div>
+    </div>
+
+    <div class="breeding-rhombus-spinner">
+      <div class="rhombus child-1"></div>
+      <div class="rhombus child-2"></div>
+      <div class="rhombus child-3"></div>
+      <div class="rhombus child-4"></div>
+      <div class="rhombus child-5"></div>
+      <div class="rhombus child-6"></div>
+      <div class="rhombus child-7"></div>
+      <div class="rhombus child-8"></div>
+      <div class="rhombus big"></div>
+    </div>
+  </div>
+</body>
+
+</html>

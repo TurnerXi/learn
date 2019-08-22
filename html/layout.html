@@ -8,13 +8,568 @@
   <style media="screen" type="text/css">
     div.clayout {
         margin-top: 20px;
+        width: 80%;
+    }
+
+    div.clayout main {
+        background-color: #fff;
+        font: 14px/1.5 Consolas, Monaco, monospace;
+    }
+
+    div.clayout header,
+    div.clayout section,
+    div.clayout footer {
+        padding: 20px calc(50% - 450px);
+    }
+
+    div.clayout header {
+        background-color: #fe6a6a;
+        color: white;
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    div.clayout footer {
+        background-color: #ccc;
+        color: white;
+    }
+
+    main.stickyfooter {
+        margin-top: 20px;
+        height: 380px;
+        width: 80%;
+        font: 14px / 1.5 Consolas, Monaco, monospace;
+        overflow: auto;
+    }
+
+    .stickyfooter header,
+    .stickyfooter section,
+    .stickyfooter footer {
+        padding: 20px calc(50% - 450px);
+    }
+
+    .stickyfooter header {
+        font-size: 18px;
+        line-height: 20px;
+        background-color: #fe6a6a;
+        color: white;
+        font-weight: 700;
+    }
+
+    .stickyfooter footer {
+        font-size: 14px;
+        background-color: #ccc;
+        color: white;
+    }
+
+    .stickyfooter footer>p {
+        line-height: 20px;
+    }
+
+    .stickyfooter input[type="checkbox"]:checked~p {
+        display: none;
+    }
+
+    .stickyfooter:nth-of-type(1) section {
+        box-sizing: border-box;
+        background-color: #fff;
+        min-height: calc(100% - 60px - 80px);
+    }
+
+    .stickyfooter:nth-of-type(2) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .stickyfooter:nth-of-type(2) section {
+        flex: 1;
+        box-sizing: border-box;
+        background-color: #fff;
+        margin-bottom: 20px;
+    }
+
+    div.centering {
+        margin-top: 20px;
+        min-height: 150px;
+        background-color: #fff;
+        border-radius: 5px;
+        box-shadow: 0 0 5px rgba(0, 0, 0, .5);
+    }
+
+    div.centering p {
+        position: absolute;
+        padding: 10px;
+        font: 12px Cosolas, monospace;
+    }
+
+    .centering span {
+        padding: 10px;
+        text-align: center;
+        background-color: #fe6a6a;
+        border-radius: 5px;
+        font-size: 14px;
+        line-height: 14px;
+        box-shadow: 0 0 .5em #fe6a6a;
+    }
+
+    div.centering:nth-of-type(1) {
+        display: flex;
         width: 100%;
+    }
+
+    .centering:nth-of-type(1) span {
+        margin: auto;
+    }
+
+    div.centering:nth-of-type(2) {
+        display: grid;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+    }
+
+    div.centering:nth-of-type(3),
+    div.centering:nth-of-type(4),
+    div.centering:nth-of-type(5) {
+        display: flex;
+        width: 100%;
+        position: relative;
+    }
+
+    .centering:nth-of-type(3) span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        margin-left: -72px;
+        margin-top: -16px;
+    }
+
+
+    .centering:nth-of-type(4) span {
+        position: absolute;
+        left: calc(50% - 72px);
+        top: calc(50% - 16px);
+    }
+
+    .centering:nth-of-type(5) span {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    div.centering:nth-of-type(6) {
+        width: 100%;
+        display: table;
+    }
+
+    div.centering:nth-of-type(6) div {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    div.centering:nth-of-type(7) {
+        width: 100%;
+    }
+
+    div.centering:nth-of-type(7) div {
+        height: 152px;
+        text-align: center;
+    }
+
+    div.centering:nth-of-type(7) div::before {
+        content: "";
+        vertical-align: middle;
+        display: inline-block;
+        height: 100%;
+    }
+
+    main.holy-grail {
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+        color: white;
+        box-sizing: border-box;
+        padding: 0 129px;
+    }
+
+    input#holyrange {
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    main.holy-grail::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    .holy-grail section {
+        height: 150px;
+        background-color: #fe6a6a;
+        float: left;
+    }
+
+    .holy-grail .left,
+    .holy-grail .right {
+        position: relative;
+        width: 119px;
+    }
+
+    .holy-grail .left {
+        left: -129px;
+        margin-left: -100%;
+    }
+
+    .holy-grail .right {
+        left: 129px;
+        margin-left: -119px;
+    }
+
+    .holy-grail .center {
+        width: 100%;
+    }
+
+    main.double-wing {
+        margin-top: 20px;
+        height: 150px;
+        width: 100%;
+        color: white;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    main.double-wing::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    input#wingrange {
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+    }
+
+    .double-wing>section {
+        float: left;
+        height: 100%;
+        box-sizing: border-box;
+    }
+
+    .double-wing .left,
+    .double-wing .right {
+        width: 119px;
+        background-color: #fe6a6a;
+        padding-top: 29px;
+    }
+
+    .double-wing .left {
+        margin-left: -100%;
+    }
+
+    .double-wing .right {
+        margin-left: -119px;
+    }
+
+    .double-wing .center {
+        width: 100%;
+        text-align: justify;
+    }
+
+    .double-wing .center>.center-inner {
+        box-sizing: border-box;
+        margin: 0 129px;
+        height: 100%;
+        background-color: #fe6a6a;
+        padding: 29px 12px;
+    }
+
+    main.class-order {
+        margin-top: 20px;
+        width: 100%;
+        border: 1px solid #eee;
+        background-color: #fff;
+        white-space: nowrap;
+        overflow: hidden;
+        box-shadow: 0 0 3px rgba(0, 0, 0, .5);
+    }
+
+    main.class-order div {
+        box-sizing: border-box;
+    }
+
+    .class-order:nth-of-type(1)>div {
+        display: inline-block;
+        margin-left: -5px;
+        padding-left: 12px;
+        overflow: hidden;
+        vertical-align: middle;
+    }
+
+    .class-order:nth-of-type(1) .left {
+        width: 45%;
+        margin-left: 0;
+        padding: 12px;
+    }
+
+    .class-order:nth-of-type(1) .center {
+        width: 35%;
+        border: 1px solid #eee;
+        padding-top: 999px;
+        padding-bottom: 999px;
+        margin-top: -999px;
+        margin-bottom: -999px;
+        z-index: 9;
+    }
+
+    .class-order:nth-of-type(1) .right {
+        width: 20%;
+        text-align: center;
+    }
+
+    .class-order:nth-of-type(1) .item {
+        position: relative;
+        width: 100%;
+        height: 85px;
+        background-color: rgba(180, 160, 120, .1);
+        text-align: center;
+        line-height: 85px;
+    }
+
+    .class-order:nth-of-type(1) .item:not(:first-child) {
+        margin-top: 24px;
+    }
+
+    .class-order:nth-of-type(1) .item:not(:first-child)::after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -12px;
+        left: -12px;
+        right: -12px;
+        border-top: 1px solid #eee;
+    }
+
+    .class-order:nth-of-type(2) {
+        display: flex;
+    }
+
+    .class-order:nth-of-type(2)>div {
+        display: flex;
+        align-self: center;
+        padding-left: 12px;
+    }
+
+    .class-order:nth-of-type(2) .left {
+        width: 45%;
+        flex-direction: column;
+        padding: 12px 12px 0;
+    }
+
+    .class-order:nth-of-type(2) .left .item {
+        line-height: 85px;
+        background-color: rgba(180, 160, 120, .1);
+        text-align: center;
+        margin-bottom: 12px;
+    }
+
+    .class-order:nth-of-type(2) .center {
+        width: 35%;
+        padding-top: 999px;
+        padding-bottom: 999px;
+        margin-top: -999px;
+        margin-bottom: -999px;
+        border: 1px solid #eee;
+    }
+
+    .class-order:nth-of-type(2) .right {
+        width: 20%;
+        justify-content: center;
+    }
+
+    main.class-order:nth-of-type(3) {
+        border: none;
+        background: #eee;
+        display: grid;
+        grid-template-columns: 45% 35% calc(20% - 2px);
+        grid-gap: 1px;
+    }
+
+    .class-order:nth-of-type(3)>div {
+        background-color: #fff;
+        text-align: center;
+        display: grid;
+        align-items: center;
+        padding: 12px;
+    }
+
+    .class-order:nth-of-type(3) .left {
+        display: grid;
+        grid-gap: 12px;
+    }
+
+    .class-order:nth-of-type(3) .item {
+        line-height: 85px;
+        background-color: rgba(180, 160, 120, .1);
+        text-align: center;
     }
   </style>
 </head>
 
 <body>
-
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/calc" target="_blank">calc()</a>
+  </p>
+  <div class="flex-box flex-column">
+    <div class="clayout">
+      <main>
+        <header>You-need-to-know-css-tricks</header>
+        <section>
+          <p>A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.</p>
+        </section>
+        <footer>
+          <p>&copy; 2019 Turner</p>
+          <p>CSS Tricks need to know for web developer.</p>
+        </footer>
+      </main>
+    </div>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/calc" target="_blank">calc()</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex" target="_blank">flex</a>
+  </p>
+  <div class="flex-box flex-column ">
+    <main class="stickyfooter">
+      <header>You-need-to-know-css-tricks</header>
+      <section>
+        <input type="checkbox" id="check-1" /><label for="check-1">Toggle contents</label>
+        <p>A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.</p>
+        <p>A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.</p>
+        <p>A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.</p>
+      </section>
+      <footer>
+        <p>&copy; 2019 Turner</p>
+        <p>CSS Tricks need to know for web developer.</p>
+      </footer>
+    </main>
+    <main class="stickyfooter">
+      <header>You-need-to-know-css-tricks</header>
+      <section>
+        <input type="checkbox" id="check-2" /><label for="check-2">Toggle contents</label>
+        <p>A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.</p>
+        <p>A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.</p>
+        <p>A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.A paragraph of filler text. La la la de dah de dah de dah de la.</p>
+      </section>
+      <footer>
+        <p>&copy; 2019 Turner</p>
+        <p>CSS Tricks need to know for web developer.</p>
+      </footer>
+    </main>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/display" target="_blank">display</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/calc" target="_blank">calc()</a>,
+    <a href="https://developer.mozilla.org/zh-CN/docs/Web/CSS/flex" target="_blank">flex</a>
+  </p>
+  <div class="flex-box ">
+    <div class="centering">
+      <p><code>display: flex</code> + <code>margin: auto</code> 不限定宽高 <img src="https://github.githubassets.com/images/icons/emoji/thumbsup.png" alt="thumbsup" class="emoji"></p>
+      <span>Center me, please!</span>
+    </div>
+    <div class="centering">
+      <p><code>display: grid</code> 不限定宽高 <img src="https://github.githubassets.com/images/icons/emoji/thumbsup.png" alt="thumbsup" class="emoji"></p>
+      <span>Center me, please!</span>
+    </div>
+    <div class="centering">
+      <p>绝对定位 <code>position: absolute</code> 限定宽高</p>
+      <span>Center me, please!</span>
+    </div>
+    <div class="centering">
+      <p>绝对定位 <code>position: absolute</code> + <code>calc()</code> 限定宽高</p>
+      <span>Center me, please!</span>
+    </div>
+    <div class="centering">
+      <p>绝对定位 <code>position: absolute</code> + <code>translate</code> 不限定宽高 <img src="https://github.githubassets.com/images/icons/emoji/thumbsup.png" alt="thumbsup" class="emoji"></p>
+      <span>Center me, please!</span>
+    </div>
+    <div class="centering">
+      <p>仿table布局 <code>display: table/table-cell</code> + <code>vertical-align: middle</code> 不限定宽高</p>
+      <div><span>Center me, please!</span></div>
+    </div>
+    <div class="centering">
+      <p>伪元素 <code>:after</code> + <code>vertical-align:middle</code> 不限定宽高</p>
+      <div><span>Center me, please!</span></div>
+    </div>
+  </div>
+  <div class="flex-box ">
+    <input id="holyrange" type="range" value="100" oninput="changeHolyWidth(event)" />
+    <main id="holy" class="holy-grail">
+      <section class="center">A paragraph of filler text. La la la de dah de dah de dah de la.</section>
+      <section class="left">left</section>
+      <section class="right">right</section>
+    </main>
+  </div>
+  <div class="flex-box ">
+    <input id="wingrange" type="range" value="100" oninput="changeWingWidth(event)" />
+    <main id="wing" class="double-wing">
+      <section class="center">
+        <div class="center-inner">A paragraph of filler text. La la la de dah de dah de dah de la.</div>
+      </section>
+      <section class="left">left</section>
+      <section class="right">right</section>
+    </main>
+  </div>
+  <p class="warn">
+    <img src="https://github.githubassets.com/images/icons/emoji/point_right.png" alt="point_right" class="emoji">
+    <a href="#/centering-known">水平垂直居中</a>
+  </p>
+  <div class="flex-box">
+    <main class="class-order">
+      <div class="left">
+        <div class="item">1</div>
+        <div class="item">2</div>
+      </div>
+      <div class="center">Vertical centering<br>Vertical centering Vertical centering</div>
+      <div class="right">Vertical centering</div>
+    </main>
+    <p> vertical-align </p>
+    <main class="class-order">
+      <div class="left">
+        <div class="item">1</div>
+        <div class="item">2</div>
+      </div>
+      <div class="center">Vertical centering<br>Vertical centering Vertical centering</div>
+      <div class="right">Vertical centering</div>
+    </main>
+    <p> flex </p>
+    <main class="class-order">
+      <div class="left">
+        <div class="item">1</div>
+        <div class="item">2</div>
+      </div>
+      <div class="center">Vertical centering<br>Vertical centering Vertical centering</div>
+      <div class="right">Vertical centering</div>
+    </main>
+    <p> grid </p>
+  </div>
 </body>
+<script type="text/javascript">
+  var holy = document.getElementById("holy");
+  var wing = document.getElementById("wing");
+
+  function changeHolyWidth(e) {
+    holy.style.width = (60 + e.target.value * .4) + "%";
+  }
+
+  function changeWingWidth(e) {
+    wing.style.width = (60 + e.target.value * .4) + "%";
+  }
+</script>
 
 </html>
