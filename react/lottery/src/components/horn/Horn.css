@@ -1,0 +1,47 @@
+.c-horn {
+    display: flex;
+    height: 2.5rem;
+    overflow: hidden;
+    background-color: #fff;
+    padding: 0 1.25rem;
+    flex-direction: row;
+    align-items: center;
+}
+
+.c-horn::before {
+    content: "";
+    display: inline-block;
+    background: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAdCAYAAAC9pNwMAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALUSURBVEhL3Ze/axRBFMcXhRRiYRWwFkQQbKwEb2f3xtm7xAQjciYGTTBoQownpBUklZVgYSMcFrFIY+WPSrT1P7AQG0sbBeVyu3u3d4zzffv23CN7ubvFbfzCK+7N3H3mzZt5886aVLpWOxpedR+1l8o/29flt/aKe5aHihOgnRW517kpdWcxtvYN+ZyHi9EA1JiJuEXgWvk1T/n3SqDR6qUYaqLsLJZ3R4F95TzzPbEfKnuGXeML0GgthsKSrR0LXBEfA+VognviDLtHqw9di6GIGj6MjQMGDFCCS/FZz50/xkOHK1pXjeiOgRpwGgoNAwOmd3aO8EcrlM4VgANpTNlP2P1XwYJ7KtqqONGGjC2BEngQCmWBcc3CeVeHVafBLhJyDXDLFZ1QXjxNTl0Tx3t19a635WlY957S3Y3YhkGhTHBVbBP4sqvbM+4yu4lhwN99V+iWI/bI2at7L4wR9AD4rnqZBYWywJgbzjmfAA6q4ldTqWkeokUR2ETdVBemre4Dr8ngp3pVnOibWSV/J1PDcoyUBbOub7ZbY4vZTVEDCngg7XVErGHIL88ZS8PAEOUaYHOi0yfZL4s3APuOeFUIGFEDDAs822W3AdsPabuF/aUQMBTOOD8IjG1lmYiXYrD4XRg4qLpf46jFNrvoTtNWG/u/Ikb1SnLsV+wSu4vPMUojRWvusrnbU+wePNXduucTHPc4NWmUhoHT9zhdm7PucSGVCzlGIeIhc9hEnbbZwPdLpZO0kt59730meMJajR9PajUOErstFJEDtToRmrZoU81Hm94CGd7hvK/TrLvLLtLA6zSqIQCoD0cjcFsOPHWZW23eYXqPU4tE23Poe5ylPpw7kHRHOexwpUUHzZzsiTsQqA/P03NVnQ+5eq5EgOfpMs2VauTuMhMZ+FTnlnw7aV+dznduDcANlMCpvBcqRNBelo8RMf13ulY+x0MTyLL+ACoXWcT13JMEAAAAAElFTkSuQmCC") no-repeat;
+    height: 1.25rem;
+    width: 1.25rem;
+    margin-right: .5rem;
+    background-size: 100%;
+}
+
+.c-horn-container {
+    line-height: 1.25rem;
+}
+
+.c-horn-content {
+    display: block;
+    line-height: 1.25rem;
+}
+
+/* react-transition-group custom */
+.c-horn-slider-enter {
+    transform: translateY(1.25rem);
+}
+
+.c-horn-slider-enter.c-horn-slider-enter-active {
+    transform: translateY(0);
+    transition: transform 500ms ease-in;
+}
+
+.c-horn-slider-exit {
+    transform: translateY(0);
+}
+
+.c-horn-slider-leave.c-horn-slider-exit-active {
+    transform: translateY(-1.25rem);
+    transition: transform 300ms ease-in;
+}

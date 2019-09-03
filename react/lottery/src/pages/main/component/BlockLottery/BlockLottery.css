@@ -1,0 +1,49 @@
+.c-icon {
+    position: relative;
+    box-sizing: border-box;
+    display: inline-block;
+    padding: 1rem 2.8rem;
+}
+
+.c-icon-wrapper {
+    /* padding-bottom: .75rem; */
+}
+
+.c-icon-img {
+    display: block;
+    height: 4rem;
+    width: 4rem;
+    background-size: 4rem auto;
+}
+
+.c-icon-title {
+    margin-top: .5rem;
+    text-align: center;
+    font-size: 1.16rem;
+    line-height: 1.41rem;
+    color: #333;
+}
+
+.c-icon-flag {
+    position: absolute;
+    width: 2.8rem;
+    height: 2.8rem;
+    right: -1rem;
+    top: -1rem;
+}
+
+.o-lottery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    border-radius: 1.25rem 1.25rem 0 0;
+    margin-top: -1.25rem;
+    padding: 2rem 1.5rem 1.5rem;
+    background-color: #fff;
+    z-index: 3;
+}
+
+.o-lottery-container {
+    width: 25%;
+}
