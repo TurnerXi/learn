@@ -1,0 +1,48 @@
+.c-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 1.5rem .5rem .5rem;
+    background-color: #fff;
+    height: 2rem;
+}
+
+.c-header-logo {
+    width: 2.25rem;
+    height: 100%;
+}
+
+.c-logo {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/images/logo192.png');
+    background-size: auto 100%;
+    background-position: 0;
+    background-repeat: no-repeat;
+}
+
+.c-header-searchbar {
+    flex: 1;
+    display: block;
+    margin: 0 .5rem;
+}
+
+.c-header-tools {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #999;
+    font-weight: bold;
+    font-size: 1.25rem;
+}
+
+span[class*="c-tool-"] {
+    display: inline-block;
+    padding: .5rem;
+    font-family: "iconfont";
+}
+
+.c-tool-menu::after {
+    content: "\e6b4";
+}

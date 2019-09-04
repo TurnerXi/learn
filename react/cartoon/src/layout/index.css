@@ -44,8 +44,14 @@
     font-weight: 500;
 }
 
-.c-navbar-list li.active .c-navbar-icon,
-.c-navbar-list li.active .c-navbar-title {
+.c-navbar-link {
+    display: block;
+    width: 3rem;
+    text-align: center;
+}
+
+.c-navbar-list .active .c-navbar-icon,
+.c-navbar-list .active .c-navbar-title {
     color: #8be7e7;
     filter: drop-shadow(1px 1px 1px rgba(139, 231, 231, .8));
 }
@@ -55,9 +61,11 @@
     font-size: 1.5rem;
     line-height: 1.5rem;
     color: #d3d3d3;
+    user-select: none;
 }
 
 .c-navbar-title {
     font-size: .5rem;
     color: #999;
+    user-select: none;
 }
