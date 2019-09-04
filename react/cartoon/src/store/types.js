@@ -1,3 +1,4 @@
-export default {
-  SWITCH_MAIN_PAGE: 'SWITCH_MAIN_PAGE'
+const SWITCH_MAIN_PAGE = 'SWITCH_MAIN_PAGE';
+export {
+  SWITCH_MAIN_PAGE
 }
