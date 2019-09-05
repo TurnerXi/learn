@@ -1,21 +1,10 @@
 import React, { Component, createRef } from 'react';
-import NavLinkItem from '../../../pages/main/containers/NavLinkItem';
+import Nav from './nav';
 import './index.css';
 export default class ScrollNav extends Component {
   constructor(props) {
     super(props);
     this.myRef = createRef();
-    this.state = {
-      navs: [
-        { title: '推荐', page: '' },
-        { title: 'FUN会员', page: 'fun' },
-        { title: '动画', page: 'anim' },
-        { title: '漫画', page: 'cartoon' },
-        { title: '轻小说', page: 'novel' },
-        { title: '免费', page: 'free' },
-        { title: '日轻', page: 'light' }
-      ]
-    }
   }
 
   componentDidMount() {
@@ -46,7 +35,11 @@ export default class ScrollNav extends Component {
     this.isMoving = false;
   }
 
-  onActive(event) {
+  onClickEvent(pageName, event) {
+    let { dispatchPage } = this.props;
+    if (dispatchPage) {
+      dispatchPage(pageName);
+    }
     let rect = event.target.getClientRects()[0];
     let left = (rect.x + rect.width / 2 + this.left) - this.pWidth / 2;
     this.left = left < 0 ? 0 : (left > this.max ? this.max : left);
@@ -58,8 +51,7 @@ export default class ScrollNav extends Component {
   }
 
   render() {
-    let { className: classNameProp } = this.props;
-    let { navs } = this.state;
+    let { className: classNameProp, list, current } = this.props;
     let wrapperStyle = {
       overflow: 'hidden'
     }
@@ -71,19 +63,20 @@ export default class ScrollNav extends Component {
           onTouchMove={this.onTouchMove.bind(this)}
           onTouchEnd={this.onTouchEnd.bind(this)}
         >
-        {
-          navs.map((item) => (
-            <NavLinkItem
-              className="c-nav-item"
-              activeClassName="c-nav-active"
-              pageName={item.page}
-              key={item.page}
-              onActive={this.onActive.bind(this)}
-            >
-              {item.title}
-            </NavLinkItem>
-          ))
-        }
+          {
+            list.map((item) => (
+              <Nav
+                current={current}
+                className="c-nav-item"
+                activeClassName="c-nav-active"
+                pageName={item.page}
+                key={item.page}
+                onClick={this.onClickEvent.bind(this, item.page)}
+              >
+                {item.title}
+              </Nav>
+            ))
+          }
         </ul>
       </div>
     )

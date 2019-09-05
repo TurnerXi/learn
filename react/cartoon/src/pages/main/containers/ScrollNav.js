@@ -1,4 +1,4 @@
-import Nav from '../components/Nav';
+import ScrollNav from '../../../assets/components/scrollnav';
 import { connect } from 'react-redux';
 import { switchMainPage } from '../../../store/actions';
 const mapStateToProps = ({ mainPage }) => {
@@ -7,12 +7,12 @@ const mapStateToProps = ({ mainPage }) => {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
   return {
-    onClickEvent: function () {
-      dispatch(switchMainPage(ownProps.pageName));
+    dispatchPage: function (pagename) {
+      dispatch(switchMainPage(pagename));
     }
   }
 }
 
-const NavLinkItem = connect(mapStateToProps, mapDispatchToProps)(Nav);
+const Scroller = connect(mapStateToProps, mapDispatchToProps)(ScrollNav);
 
-export default NavLinkItem;
+export default Scroller;
