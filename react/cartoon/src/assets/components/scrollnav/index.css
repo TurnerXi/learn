@@ -1,0 +1,10 @@
+.c-scrollnav-list {
+    float: left;
+    white-space: nowrap;
+}
+
+.c-scrollnav-list li {
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0 .25rem;
+}

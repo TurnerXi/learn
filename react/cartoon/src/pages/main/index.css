@@ -46,3 +46,27 @@ span[class*="c-tool-"] {
 .c-tool-menu::after {
     content: "\e6b4";
 }
+
+.c-nav {
+    position: relative;
+    top: 0;
+    font-weight: bold;
+    color: #999;
+    background-color: #fff;
+}
+
+.c-nav-list {
+    overflow: hidden;
+    width: 100%;
+    box-sizing: border-box;
+    padding: .25rem 0 .25rem .25rem;
+}
+
+.c-nav-list li:first-child {
+    margin-left: 0;
+}
+
+.c-nav-list li {
+    margin: 0 .5rem;
+    padding: .25rem;
+}
