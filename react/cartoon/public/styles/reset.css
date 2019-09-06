@@ -24,9 +24,7 @@ a, a:hover, a:active, a:visited, a:link, a:focus {
 
 body {
     background-color: #eee;
-    font-family: -apple-system, BlinkMacSystemFont, "Consolas", "monospace", "Monaco",
-        "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-        sans-serif;
+    font-family: "Microsoft YaHei", 微软雅黑, "MicrosoftJhengHei", 华文细黑, STHeiti, MingLiu, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
