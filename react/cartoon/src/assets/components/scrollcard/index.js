@@ -10,12 +10,15 @@ export default class Swiper extends Component {
     super(props);
     this.slick = React.createRef();
     this.transX = 0;
+    this.state = {
+      activeIdx: 0
+    }
   }
   init() {
     this.slickDOM = this.slick.current;
     let rect = this.slickDOM.getClientRects()[0];
     this.width = rect.width;
-    this.slickDOM.style.width = `${this.width*4}px`;
+    this.slickDOM.style.width = `${this.width * 4}px`;
     for (var child of this.slickDOM.children) {
       child.style.width = `${this.width}px`;
     }
@@ -23,14 +26,15 @@ export default class Swiper extends Component {
 
   componentDidMount() {
     this.init();
-    // setTimeout(() => {
-    //   this.slickDOM.style.transform = `translate3d(${-this.width*3}px,0,0)`;
-    // }, 2000);
+  }
+
+  componentDidUpdate() {
   }
 
   onTouchStartEvent(e) {
     this.isMoving = true;
     this.startX = e.touches[0].clientX + this.transX;
+    this.slickDOM.style.transition = "";
   }
 
   onTouchMoveEvent(e) {
@@ -52,11 +56,13 @@ export default class Swiper extends Component {
     let innerMargin = parseFloat(innerStyleMap['marginLeft']);
     let idx = parseInt(this.transX / this.width);
     let offset = this.transX % this.width;
-    if (offset > innerMargin * 2) {
+    if (offset > innerMargin * 2 && (idx >= this.state.activeIdx)) {
       idx += 1;
     }
     this.transX = idx * this.width;
+    this.slickDOM.style.transition = "transform .3s ease-in-out";
     this.slickDOM.style.transform = `translate3d(${-this.transX}px,0,0)`;
+    this.setState({ activeIdx: idx });
   }
 
   render() {
@@ -76,17 +82,18 @@ export default class Swiper extends Component {
     return (
       <div className="c-slick-wrapper">
         <div ref={this.slick} className="c-slick" {...listProps}>
-            {
-              list.map((item,idx)=>(
-                <InnerSlick
-                  {...item}
-                  key={idx}
-                  className="c-slick-item"
-                  activeClassName="c-slick-item-active"
-                  >
-                </InnerSlick>
-              ))
-            }
+          {
+            list.map((item, idx) => (
+              <InnerSlick
+                {...item}
+                key={idx}
+                isActive={this.state.activeIdx === idx}
+                className="c-slick-item"
+                activeClassName="c-slick-item-active"
+              >
+              </InnerSlick>
+            ))
+          }
         </div>
       </div>
     )
