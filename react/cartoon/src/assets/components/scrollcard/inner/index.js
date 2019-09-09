@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { joinClassName } from '../../../utils/dom';
+import { joinClassName } from '../../../../utils/dom';
+import './index.css';
 export default class InnterSlick extends Component {
   onClickEvent(e) {
     if (this.clickable === false) {
@@ -14,7 +15,11 @@ export default class InnterSlick extends Component {
     this.clickable = isActive;
     return (
       <div onClick={this.onClickEvent.bind(this)} className={className} >
-          <img src={img} alt={title} className="c-slick-img"/>
+          <img src={img} alt={title} className="c-slick-inner-img"/>
+          <div className="c-slick-inner-text">
+            <h3 className="c-slick-inner-title">{title}</h3>
+            <p className="c-slick-inner-desc">{desc}</p>
+          </div>
       </div>
     )
   }

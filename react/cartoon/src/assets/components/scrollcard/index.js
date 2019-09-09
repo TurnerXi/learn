@@ -28,8 +28,7 @@ export default class Swiper extends Component {
     this.init();
   }
 
-  componentDidUpdate() {
-  }
+  componentDidUpdate() {}
 
   onTouchStartEvent(e) {
     this.isMoving = true;
@@ -67,10 +66,10 @@ export default class Swiper extends Component {
 
   render() {
     let list = [
-      { "href": "/manhua/detail_18yzmsei91.html", "title": "在座的都是废物", "img": link1, isActive: false },
-      { "href": "/manhua/detail_18yzmjunad.html", "title": "爱在西元前", "img": link2, isActive: false },
-      { "href": "/manhua/detail_18yzrkae8l.html", "title": "晴霁何处", "img": link3, isActive: false },
-      { "href": "/manhua/detail_18yzmpfv2t.html", "title": "君非君", "img": link4, isActive: false }
+      { "href": "/manhua/detail_18yzmsei91.html", "title": "在座的都是废物", "img": link1, "desc": '欲擒故纵，到底谁才是赢家？', isActive: false },
+      { "href": "/manhua/detail_18yzmjunad.html", "title": "爱在西元前", "img": link2, "desc": '跨越时空的爱恋，铃声解开了羁绊', isActive: false },
+      { "href": "/manhua/detail_18yzrkae8l.html", "title": "晴霁何处", "img": link3, "desc": '吸血鬼大人，请放过我', isActive: false },
+      { "href": "/manhua/detail_18yzmpfv2t.html", "title": "君非君", "img": link4, "desc": '穿越成皇后接了个烂剧本也要逆袭', isActive: false }
     ]
 
     let listProps = {

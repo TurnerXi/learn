@@ -1,0 +1,22 @@
+.c-slick-inner-img {
+    height: 12.25rem;
+    width: 100%;
+    vertical-align: middle;
+}
+
+.c-slick-inner-text {
+    padding: .6rem .85rem;
+    background-color: #fff;
+}
+
+.c-slick-inner-title {
+    font-size: .85rem;
+    margin-bottom: .5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.c-slick-inner-desc {
+    font-size: .35rem;
+    color: #999;
+}

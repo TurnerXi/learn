@@ -1,11 +1,11 @@
 .c-slick-wrapper {
     overflow: hidden;
-    padding: 0 2rem;
+    padding: 0 1.35rem;
 }
 
 .c-slick {
-    height: 15rem;
     display: flex;
+    padding: .5rem 0 1rem;
     align-items: center;
     flex-direction: row;
     justify-content: space-between;
@@ -16,15 +16,9 @@
 .c-slick-item {
     display: inline-block;
     margin: 0 .5rem;
-}
-
-.c-slick-item img {
-    height: 10rem;
-    width: 100%;
     border-radius: 5px;
-    vertical-align: middle;
+    overflow: hidden;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, .1);
 }
 
-.c-slick-item-active img {
-    box-shadow: 0 1px 5px 2px rgba(0, 0, 0, .5);
-}
+.c-slick-item-active {}

@@ -33,6 +33,7 @@
     ]
   },
   "devDependencies": {
+    "http-proxy-middleware": "^0.20.0",
     "redux-devtools": "^3.5.0"
   }
 }
