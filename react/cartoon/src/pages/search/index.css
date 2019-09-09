@@ -1,0 +1,77 @@
+.c-search {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  border-bottom: 1px solid #eee;
+}
+
+.c-backbtn {
+  display: block;
+  width: 3rem;
+  text-align: center;
+  font-size: 1.75rem;
+  height: 3rem;
+  line-height: 3rem;
+}
+
+.c-search-btn {
+  display: block;
+  width: 3rem;
+  height: 3rem;
+  text-align: center;
+  line-height: 3rem;
+  padding-right: .5rem;
+  color: #666;
+}
+
+.c-search-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  flex: 1;
+  margin: 0 .5rem;
+  height: 2rem;
+  border-radius: 1.25rem;
+  background-color: #f3f3f3;
+}
+
+.c-search-wrapper::before {
+  content: "\e6ac";
+  display: block;
+  font-family: 'iconfont';
+  margin-left: .5rem;
+  font-weight: bold;
+  color: #999;
+}
+
+.c-search-wrapper input {
+  display: block;
+  flex: 1;
+  margin: 0 .25rem;
+  background-color: #f3f3f3;
+  border: none;
+  height: 1.25rem;
+}
+
+.c-search-wrapper input:focus {
+  outline: none;
+  -webkit-text-stroke-width: 0;
+}
+
+.c-search-wrapper::after {
+  content: "\e69a";
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  margin: .5rem;
+  border-radius: 50%;
+  background-color: #d3d3d3;
+  text-align: center;
+  font-size: .5rem;
+  line-height: 1rem;
+  font-family: 'iconfont';
+  color: #fff;
+}
