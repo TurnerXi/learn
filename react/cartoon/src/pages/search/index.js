@@ -8,7 +8,8 @@ export default class Search extends Component {
     this.state = {
       search: '',
       suggest: [],
-      result: []
+      result: [],
+      history: []
     }
   }
   render() {
@@ -16,11 +17,11 @@ export default class Search extends Component {
     return (
       <div className="o-page-search">
         <div className="c-search">
-          <span className="c-backbtn iconfont" onClick={() => this.props.history.goBack()}>&#xe697;</span>
           <div className="c-search-wrapper">
-            <input type="text" placeholder="漫画" onInput={this.onInputEvent.bind(this)} />
+            <input type="text" placeholder="漫画" onChange={this.onChangeEvent.bind(this)} value={this.state.search} />
+            {this.state.search && (<span className="c-search-clear iconfont" onClick={this.clearSearch.bind(this)}>&#xe69a;</span>)}
           </div>
-          <span className="c-search-btn" onClick={this.doSearchEvent.bind(this)}>搜索</span>
+          <span className="c-search-btn" onClick={() => { this.props.history.goBack() }}>取消</span>
         </div>
         <div className="c-search-container">
           {this.searchContent()}
@@ -48,34 +49,50 @@ export default class Search extends Component {
       </div>
     )
   }
-  onInputEvent(e) {
+  onChangeEvent(e) {
     let search = e.target.value;
     let suggest = search ? Suggest : null;
     this.setState({ search, suggest });
   }
 
-  doSearchEvent() {
-    let result = this.state.search ? Result : null;
+  doSearchEvent(search) {
+    let result = search ? Result : null;
     this.setState({ result });
   }
-
+  clearHistory() {
+    this.setState({ history: [] });
+  }
+  clearSearch() {
+    this.setState({ search: '' });
+  }
   searchContent() {
     if (!this.state.search) {
       return (
-        <div className="c-search-hot">
-          <h5>热门搜索</h5>
-          <ul className="list">
-            <li className="cell" rseat="斗罗大陆"> 斗罗大陆 </li>
-            <li className="cell" rseat="航海王"> 航海王 </li>
-            <li className="cell" rseat="天价宠妻总裁夫人休想逃"> 天价宠妻总裁夫人休想逃 </li>
-            <li className="cell" rseat="王牌校草"> 王牌校草 </li>
-            <li className="cell" rseat="斗罗大陆番外篇"> 斗罗大陆番外篇 </li>
-            <li className="cell" rseat="帝少专宠霸道妻"> 帝少专宠霸道妻 </li>
-            <li className="cell" rseat="我的血族大人"> 我的血族大人 </li>
-            <li className="cell" rseat="少帅每天都在吃醋"> 少帅每天都在吃醋 </li>
-            <li className="cell" rseat="恶魔专宠：总裁的头号甜妻"> 恶魔专宠：总裁的头号甜妻 </li>
-            <li className="cell" rseat="少帅你老婆又跑了"> 少帅你老婆又跑了 </li>
-          </ul>
+        <div className="c-search-items">
+          <div className="c-search-items-wrapper">
+            <h5>热门搜索</h5>
+            <ul className="c-search-items-list">
+              <li rseat="斗罗大陆"> 斗罗大陆 <span className="c-search-tag c-search-tag-hot fs-8"></span></li>
+              <li rseat="航海王"> 航海王 <span className="c-search-tag c-search-tag-hot fs-8"></span></li>
+              <li rseat="王牌校草"> 王牌校草<span className="c-search-tag c-search-tag-hot fs-8"></span></li>
+              <li rseat="天价宠妻总裁夫人休想逃"> 天价宠妻总裁夫人休想逃 <span className="c-search-tag c-search-tag-recom fs-8"></span></li>
+              <li rseat="斗罗大陆番外篇"> 斗罗大陆番外篇 <span className="c-search-tag c-search-tag-new fs-8"></span></li>
+              <li rseat="帝少专宠霸道妻"> 帝少专宠霸道妻 <span className="c-search-tag c-search-tag-new fs-8"></span></li>
+              <li rseat="我的血族大人"> 我的血族大人 <span className="c-search-tag c-search-tag-recom fs-8"></span></li>
+              <li rseat="少帅每天都在吃醋"> 少帅每天都在吃醋 <span className="c-search-tag c-search-tag-new fs-8"></span></li>
+              <li rseat="恶魔专宠：总裁的头号甜妻"> 恶魔专宠：总裁的头号甜妻 <span className="c-search-tag c-search-tag-recom fs-8"></span></li>
+              <li rseat="少帅你老婆又跑了"> 少帅你老婆又跑了 <span className="c-search-tag c-search-tag-recom fs-8"></span></li>
+            </ul>
+          </div>
+          {this.state.history.length > 0 ? (
+            <div className="c-search-items-wrapper mt-5">
+              <h5>搜索历史<span className="c-search-items-del" onClick={this.clearHistory.bind(this)}></span></h5>
+              <ul className="c-search-items-list">
+                <li rseat="大主宰"> 大主宰 </li>
+                <li rseat="地错2"> 地错2</li>
+              </ul>
+            </div>
+          ) : ''}
         </div>
       );
     } else if (this.state.suggest.length > 0) {
@@ -84,7 +101,7 @@ export default class Search extends Component {
           <ul className="c-search-suggest-list">
             {
               this.state.suggest.map(item => (
-                <li key={item.name}>{item.name}</li>
+                <li key={item.name} onClick={this.doSearchEvent.bind(this, item.name)}>{item.name}</li>
               ))
             }
           </ul>

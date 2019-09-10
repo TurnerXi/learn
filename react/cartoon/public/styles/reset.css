@@ -39,10 +39,11 @@ a:focus {
 }
 
 body {
-    background-color: #fff;
+    background-color: #fefefe;
     font-family: Tahoma, Helvetica, Arial, \5fae\8f6f\96c5\9ed1, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    -webkit-text-size-adjust: none;
 }
 
 @font-face {
@@ -67,4 +68,18 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
+}
+
+.fs-10 {
+    font-size: 12px;
+    transform: scale(0.82) translate(-9%, 0px);
+}
+
+.fs-8 {
+    font-size: 12px;
+    transform: scale(0.75) translate(-9%, 0px);
+}
+
+.mt-5 {
+    margin-top: 1.25rem;
 }

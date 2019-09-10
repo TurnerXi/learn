@@ -3,27 +3,20 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  height: 3rem;
-  border-bottom: 1px solid #eee;
-}
-
-.c-backbtn {
-  display: block;
-  width: 3rem;
-  text-align: center;
-  font-size: 1.75rem;
-  height: 3rem;
-  line-height: 3rem;
+  padding-top: 1.75rem;
+  height: 2rem;
 }
 
 .c-search-btn {
   display: block;
-  width: 3rem;
-  height: 3rem;
+  width: 2rem;
+  height: 2rem;
   text-align: center;
-  line-height: 3rem;
-  padding-right: .5rem;
-  color: #666;
+  line-height: 2rem;
+  padding-right: .75rem;
+  font-weight: 400;
+  font-size: .8rem;
+  color: #333;
 }
 
 .c-search-wrapper {
@@ -33,7 +26,7 @@
   position: relative;
   flex: 1;
   margin: 0 .5rem;
-  height: 2rem;
+  height: 1.75rem;
   border-radius: 1.25rem;
   background-color: #f3f3f3;
 }
@@ -45,15 +38,21 @@
   margin-left: .5rem;
   font-weight: bold;
   color: #999;
+  font-size: .5rem;
 }
 
 .c-search-wrapper input {
   display: block;
   flex: 1;
-  margin: 0 .25rem;
+  margin: 0 .5rem;
   background-color: #f3f3f3;
   border: none;
   height: 1.25rem;
+  caret-color: #1cdd74;
+}
+
+.c-search-wrapper input::placeholder {
+  color: #aaa;
 }
 
 .c-search-wrapper input:focus {
@@ -61,17 +60,103 @@
   -webkit-text-stroke-width: 0;
 }
 
-.c-search-wrapper::after {
-  content: "\e69a";
+.c-search-clear {
   display: block;
-  width: 1rem;
-  height: 1rem;
-  margin: .5rem;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 1rem .5rem;
   border-radius: 50%;
-  background-color: #d3d3d3;
+  background-color: #b3b3b3;
   text-align: center;
   font-size: .5rem;
-  line-height: 1rem;
-  font-family: 'iconfont';
+  line-height: 1.5rem;
   color: #fff;
+  font-weight: bold;
+  transform: scale(.5) translateX(50%);
+}
+
+.c-search-items {
+  margin: 1rem 0;
+  padding: 0 1rem;
+}
+
+.c-search-items h5 {
+  font-size: .95rem;
+  font-weight: bold;
+  line-height: 2rem;
+}
+
+.c-search-items-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: .5rem;
+  font-size: .75rem;
+}
+
+.c-search-items-list>li {
+  display: inline-block;
+  text-align: center;
+  padding: .35rem 1rem;
+  background-color: #f6f6f6;
+  border-radius: 2rem;
+  margin: .5rem;
+  margin-left: 0;
+  line-height: 1.3rem;
+  box-sizing: border-box;
+}
+
+.c-search-tag {
+  display: inline-block;
+}
+
+.c-search-tag::after {
+  font-size: .35rem;
+  height: .5rem;
+  line-height: .35rem;
+  padding: .075rem .25rem;
+  border-radius: .5rem;
+  box-sizing: border-box;
+  color: #fff;
+}
+
+.c-search-tag-hot::after {
+  content: "HOT";
+  background-color: #fd6c52;
+}
+
+.c-search-tag-new::after {
+  content: "新作";
+  background-color: #ff9f37;
+}
+
+.c-search-tag-recom::after {
+  content: "力荐";
+  background-color: #1cdd74;
+}
+
+.c-search-items-del {
+  display: relative;
+  float: right;
+  color: #999;
+  font-family: 'iconfont';
+}
+
+.c-search-items-del::after {
+  content: "\e69d";
+}
+
+.c-search-suggest {
+  padding: 0 1rem;
+}
+
+.c-search-suggest-list {
+  font-size: .75rem;
+}
+
+.c-search-suggest-list>li {
+  height: 2rem;
+  line-height: 2rem;
+  border-bottom: 1px solid #f6f6f6;
 }
