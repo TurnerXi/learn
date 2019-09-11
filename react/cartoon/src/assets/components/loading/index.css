@@ -1,0 +1,69 @@
+.atom-spinner {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    justify-content: center;
+    overflow: hidden;
+    --color: rgba(28, 221, 116, .5);
+}
+
+.atom-spinner .spinner-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+.atom-spinner .spinner-inner .spinner-line {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    border: calc(60px / 25) solid transparent;
+    border-radius: 50%;
+    border-top-color: var(--color);
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.atom-spinner .spinner-inner .spinner-circle {
+    position: absolute;
+    font-size: calc(60px * .24);
+    color: var(--color);
+}
+
+.atom-spinner .spinner-inner .spinner-line:nth-child(1) {
+    transform: rotateZ(120deg) rotateX(66deg) rotateZ(0);
+    animation-name: atom-spinner-animation-1;
+}
+
+.atom-spinner .spinner-inner .spinner-line:nth-child(2) {
+    transform: rotateZ(240deg) rotateX(66deg) rotateZ(0);
+    animation-name: atom-spinner-animation-2;
+}
+
+.atom-spinner .spinner-inner .spinner-line:nth-child(3) {
+    transform: rotateZ(360deg) rotateX(66deg) rotateZ(0);
+    animation-name: atom-spinner-animation-3;
+}
+
+@keyframes atom-spinner-animation-1 {
+    100% {
+        transform: rotateZ(120deg) rotateX(66deg) rotateZ(360deg);
+    }
+}
+
+@keyframes atom-spinner-animation-2 {
+    100% {
+        transform: rotateZ(240deg) rotateX(66deg) rotateZ(360deg);
+    }
+}
+
+@keyframes atom-spinner-animation-3 {
+    100% {
+        transform: rotateZ(360deg) rotateX(66deg) rotateZ(360deg);
+    }
+}

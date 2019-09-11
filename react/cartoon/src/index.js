@@ -5,8 +5,6 @@ import { Provider } from 'react-redux';
 import reducer from './store/reducers';
 import Layout from './layout';
 import * as serviceWorker from './serviceWorker';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 let store = createStore(reducer);
 ReactDOM.render((
   <Provider store={store}>

@@ -1,309 +1,619 @@
 [{
-  "score": 0.00649041,
-  "albumDocInfo": {
-    "isDownload": false,
-    "comics": {
-      "author_name": "刘晨华",
-      "newest_item_number": 56,
-      "serialize_status": 2,
-      "image_url": "/iqiyipic/pic9/image/20190227/5c/ef/cb_165379_c_601_m10.jpg",
-      "description": "2019年，地球突遭危难，仅剩部分人类苟延残喘。聚集了各种奇能异士的神秘组织“天狮“，以及隐藏于城市间的邪恶势力共同操控着世界的秩序。被囚禁在秘密实验室的神秘少年格利泽和身世离奇的天才少女诸葛夭夭等人被卷入一个个阴谋之中，成为主宰人类未来的关键……",
-      "click_count": 98074,
-      "title": "义变II",
-      "prompt_description": "外星人与人类生存漫画",
-      "three_category": "科幻,热血,战斗",
-      "newest_item_episode_id": 1209300170,
-      "last_update_time": 1551674477639,
-      "custom_tag": "",
-      "popularity": 6662509,
-      "newest_item_title": "第8回 终极变身（6）",
-      "id": 223100070,
-      "chapter_count": 56
+    "score": 0.00649041,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "刘晨华",
+        "newest_item_number": 56,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic9/image/20190227/5c/ef/cb_165379_c_601_m10.jpg",
+        "description": "2019年，地球突遭危难，仅剩部分人类苟延残喘。聚集了各种奇能异士的神秘组织“天狮“，以及隐藏于城市间的邪恶势力共同操控着世界的秩序。被囚禁在秘密实验室的神秘少年格利泽和身世离奇的天才少女诸葛夭夭等人被卷入一个个阴谋之中，成为主宰人类未来的关键……",
+        "click_count": 98074,
+        "title": "义变II",
+        "prompt_description": "外星人与人类生存漫画",
+        "three_category": "科幻,热血,战斗",
+        "newest_item_episode_id": 1209300170,
+        "last_update_time": 1551674477639,
+        "custom_tag": "",
+        "popularity": 6662509,
+        "newest_item_title": "第8回 终极变身（6）",
+        "id": 223100070,
+        "chapter_count": 56
+      },
+      "videoDocType": 19
     },
-    "videoDocType": 19
-  },
-  "pos": 1,
-  "sort": 6,
-  "doc_id": "d18c028bdae62a353370e1e45452e030",
-  "is_from_intent": false
-}, {
-  "score": 0.00649041,
-  "albumDocInfo": {
-    "isDownload": false,
-    "comics": {
-      "author_name": "烽云娱乐",
-      "newest_item_number": 93,
-      "serialize_status": 1,
-      "image_url": "/iqiyipic/pic4/image/20190227/ba/ca/cb_167866_c_601_m7.jpg",
-      "description": "2019年，地球遭遇史无前例的巨大自然灾害，而这一天也被称为“离散日”极少数人类存活下来，神秘组织“天狮“和隐藏于城市间的邪恶势力共同操控着世界的秩序，被关在秘密实验室的神秘少年格利泽和身世离奇的天才少女诸葛夭夭等人被卷入一个个阴谋之中，成为主宰人类未来的关键",
-      "click_count": 7069,
-      "title": "义变I",
-      "prompt_description": "末世后，幸存人类的自救之路",
-      "three_category": "科幻,冒险,热血",
-      "newest_item_episode_id": 1173020170,
-      "last_update_time": 1551674320035,
-      "custom_tag": "",
-      "popularity": 948873,
-      "newest_item_title": "第16回 三个月之后（2）",
-      "id": 248260070,
-      "chapter_count": 93
+    "pos": 1,
+    "sort": 6,
+    "doc_id": "d18c028bdae62a353370e1e45452e030",
+    "is_from_intent": false
+  }, {
+    "score": 0.00649041,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "烽云娱乐",
+        "newest_item_number": 93,
+        "serialize_status": 1,
+        "image_url": "/iqiyipic/pic4/image/20190227/ba/ca/cb_167866_c_601_m7.jpg",
+        "description": "2019年，地球遭遇史无前例的巨大自然灾害，而这一天也被称为“离散日”极少数人类存活下来，神秘组织“天狮“和隐藏于城市间的邪恶势力共同操控着世界的秩序，被关在秘密实验室的神秘少年格利泽和身世离奇的天才少女诸葛夭夭等人被卷入一个个阴谋之中，成为主宰人类未来的关键",
+        "click_count": 7069,
+        "title": "义变I",
+        "prompt_description": "末世后，幸存人类的自救之路",
+        "three_category": "科幻,冒险,热血",
+        "newest_item_episode_id": 1173020170,
+        "last_update_time": 1551674320035,
+        "custom_tag": "",
+        "popularity": 948873,
+        "newest_item_title": "第16回 三个月之后（2）",
+        "id": 248260070,
+        "chapter_count": 93
+      },
+      "videoDocType": 19
     },
-    "videoDocType": 19
-  },
-  "pos": 1,
-  "sort": 7,
-  "doc_id": "b2e7ca12ceb41d56ca70d2363ff9126d",
-  "is_from_intent": false
-}, {
-  "score": 0.00642569,
-  "albumDocInfo": {
-    "isDownload": false,
-    "comics": {
-      "author_name": "泡泡糖",
-      "newest_item_number": 10,
-      "serialize_status": 2,
-      "image_url": "/iqiyipic/pic2/image/20190227/6a/20/cb_168052_c_601_m4.jpg",
-      "description": "系列四格漫画《婚后变“揍”曲》是一部描写通过现代都市家庭夫妻这一特定关系，讲述表现市井夫妻在家庭和社会生活中及思想观念上的各种矛盾与冲突的一部家庭喜剧，目前已完成几百篇希望各位编辑老师喜欢和连载。",
-      "click_count": 538,
-      "title": "婚后变“揍”曲",
-      "prompt_description": "教你如何经营婚后生活",
-      "three_category": "搞笑",
-      "newest_item_episode_id": 1281490170,
-      "last_update_time": 1551674799882,
-      "custom_tag": "",
-      "popularity": 9248,
-      "newest_item_title": "10",
-      "id": 250480070,
-      "chapter_count": 10
+    "pos": 1,
+    "sort": 7,
+    "doc_id": "b2e7ca12ceb41d56ca70d2363ff9126d",
+    "is_from_intent": false
+  }, {
+    "score": 0.00642569,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "泡泡糖",
+        "newest_item_number": 10,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic2/image/20190227/6a/20/cb_168052_c_601_m4.jpg",
+        "description": "系列四格漫画《婚后变“揍”曲》是一部描写通过现代都市家庭夫妻这一特定关系，讲述表现市井夫妻在家庭和社会生活中及思想观念上的各种矛盾与冲突的一部家庭喜剧，目前已完成几百篇希望各位编辑老师喜欢和连载。",
+        "click_count": 538,
+        "title": "婚后变“揍”曲",
+        "prompt_description": "教你如何经营婚后生活",
+        "three_category": "搞笑",
+        "newest_item_episode_id": 1281490170,
+        "last_update_time": 1551674799882,
+        "custom_tag": "",
+        "popularity": 9248,
+        "newest_item_title": "10",
+        "id": 250480070,
+        "chapter_count": 10
+      },
+      "videoDocType": 19
     },
-    "videoDocType": 19
-  },
-  "pos": 1,
-  "sort": 9,
-  "doc_id": "3d0420dcc6e547f29ed137a56af7b947",
-  "is_from_intent": false
-}, {
-  "score": 0.00636081,
-  "albumDocInfo": {
-    "isDownload": false,
-    "comics": {
-      "author_name": "三福动漫,夏希",
-      "newest_item_number": 65,
-      "serialize_status": 1,
-      "image_url": "/iqiyipic/pic6/image/20190227/a8/8a/cb_164650_c_601_m10.jpg",
-      "description": "陈蓉从小以女侠自居，中性的打扮与开朗幽默、古灵精怪的个性极易让她与其他人打成一片，但是在恋爱上就会是个问题了，好在爱情目前还不是她主要人生的课题：她要成为一名整型医生！心有“大愿”的她总是能在思想走神之际疏离爱情课题，直到她遇到了宿命冤家——整形界的新晋男神王志仁。",
-      "click_count": 2727890,
-      "title": "拜托！把我变美！",
-      "prompt_description": "开朗幽默古灵精怪的女侠偶遇宿命冤家",
-      "three_category": "励志,都市,恋爱",
-      "newest_item_episode_id": 478700170,
-      "last_update_time": 1551671261477,
-      "custom_tag": "",
-      "popularity": 109679001,
-      "newest_item_title": "第65话",
-      "id": 214240070,
-      "chapter_count": 65
+    "pos": 1,
+    "sort": 9,
+    "doc_id": "3d0420dcc6e547f29ed137a56af7b947",
+    "is_from_intent": false
+  }, {
+    "score": 0.00636081,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "三福动漫,夏希",
+        "newest_item_number": 65,
+        "serialize_status": 1,
+        "image_url": "/iqiyipic/pic6/image/20190227/a8/8a/cb_164650_c_601_m10.jpg",
+        "description": "陈蓉从小以女侠自居，中性的打扮与开朗幽默、古灵精怪的个性极易让她与其他人打成一片，但是在恋爱上就会是个问题了，好在爱情目前还不是她主要人生的课题：她要成为一名整型医生！心有“大愿”的她总是能在思想走神之际疏离爱情课题，直到她遇到了宿命冤家——整形界的新晋男神王志仁。",
+        "click_count": 2727890,
+        "title": "拜托！把我变美！",
+        "prompt_description": "开朗幽默古灵精怪的女侠偶遇宿命冤家",
+        "three_category": "励志,都市,恋爱",
+        "newest_item_episode_id": 478700170,
+        "last_update_time": 1551671261477,
+        "custom_tag": "",
+        "popularity": 109679001,
+        "newest_item_title": "第65话",
+        "id": 214240070,
+        "chapter_count": 65
+      },
+      "videoDocType": 19
     },
-    "videoDocType": 19
-  },
-  "pos": 1,
-  "sort": 11,
-  "doc_id": "50977a90c47b7bb773a6f491c6dba685",
-  "is_from_intent": false
-}, {
-  "score": 0.00629577,
-  "albumDocInfo": {
-    "isDownload": false,
-    "comics": {
-      "author_name": "杭漫文化",
-      "newest_item_number": 69,
-      "serialize_status": 2,
-      "image_url": "/iqiyipic/pic0/image/20190227/1b/db/cb_165912_c_601_m12.jpg",
-      "description": "大学毕业5年的楼非，因工作压力太大，逐渐变成了一个大胖子。楼非也因为外形太差被公司开除，男友被闺蜜劈腿。正陷入人生低谷中的主角在无意中下载了一个变美app，只要完成其安排的任务就可以变成万众瞩目的美女。楼非利用它得到了自己想要的，同时也走上了一条不归路……",
-      "click_count": 242311,
-      "title": "变美app：丑女逆袭法则",
-      "prompt_description": "变胖被劈腿，最惨女主突获变美神器",
-      "three_category": "美少女,少女,恋爱",
-      "newest_item_episode_id": 1532140170,
-      "last_update_time": 1555562013585,
-      "custom_tag": "",
-      "popularity": 16859937,
-      "newest_item_title": "第59话 美丽失效了？",
-      "id": 228490070,
-      "chapter_count": 69
+    "pos": 1,
+    "sort": 11,
+    "doc_id": "50977a90c47b7bb773a6f491c6dba685",
+    "is_from_intent": false
+  }, {
+    "score": 0.00629577,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "杭漫文化",
+        "newest_item_number": 69,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic0/image/20190227/1b/db/cb_165912_c_601_m12.jpg",
+        "description": "大学毕业5年的楼非，因工作压力太大，逐渐变成了一个大胖子。楼非也因为外形太差被公司开除，男友被闺蜜劈腿。正陷入人生低谷中的主角在无意中下载了一个变美app，只要完成其安排的任务就可以变成万众瞩目的美女。楼非利用它得到了自己想要的，同时也走上了一条不归路……",
+        "click_count": 242311,
+        "title": "变美app：丑女逆袭法则",
+        "prompt_description": "变胖被劈腿，最惨女主突获变美神器",
+        "three_category": "美少女,少女,恋爱",
+        "newest_item_episode_id": 1532140170,
+        "last_update_time": 1555562013585,
+        "custom_tag": "",
+        "popularity": 16859937,
+        "newest_item_title": "第59话 美丽失效了？",
+        "id": 228490070,
+        "chapter_count": 69
+      },
+      "videoDocType": 19
     },
-    "videoDocType": 19
-  },
-  "pos": 1,
-  "sort": 12,
-  "doc_id": "a04c6a4a293c1c5ac3519cecd5d958e7",
-  "is_from_intent": false
-}, {
-  "score": 0.00372776,
-  "albumDocInfo": {
-    "isDownload": false,
-    "comics": {
-      "author_name": "变月文化",
-      "newest_item_number": 103,
-      "serialize_status": 2,
-      "image_url": "/iqiyipic/pic8/image/20190327/86/40/cb_167464_c_601_m13.jpg",
-      "description": "【爱奇艺独家作品，每周二、周五更新】落九天与妹妹因为被陷害落入名为银河的新次元，落九天偶遇银河公主月箫奈奈，拿走了对方预测未来的能力并意外回到地球，奈奈仅剩查看过去的能力，为了国家预测大典，奈奈穿过次元门来到男主身边企图要回能力，却无法回家，而落九天拿交换能力与奈奈做交易，要接回妹妹。两个人一起去寻找次元脊企图回到银河，却遭遇各种艰难险阻，两个人的关系也渐渐起了变化……",
-      "click_count": 900748,
-      "title": "恋爱先知",
-      "prompt_description": "在女生芳心纵火的应该抓起来",
-      "three_category": "都市,恋爱,穿越,独家",
-      "newest_item_episode_id": 1709240170,
-      "last_update_time": 1565625603978,
-      "custom_tag": "独家",
-      "popularity": 6345684532,
-      "newest_item_title": "第100话 陷阱",
-      "id": 244110070,
-      "chapter_count": 103
+    "pos": 1,
+    "sort": 12,
+    "doc_id": "a04c6a4a293c1c5ac3519cecd5d958e7",
+    "is_from_intent": false
+  }, {
+    "score": 0.00372776,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "变月文化",
+        "newest_item_number": 103,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic8/image/20190327/86/40/cb_167464_c_601_m13.jpg",
+        "description": "【爱奇艺独家作品，每周二、周五更新】落九天与妹妹因为被陷害落入名为银河的新次元，落九天偶遇银河公主月箫奈奈，拿走了对方预测未来的能力并意外回到地球，奈奈仅剩查看过去的能力，为了国家预测大典，奈奈穿过次元门来到男主身边企图要回能力，却无法回家，而落九天拿交换能力与奈奈做交易，要接回妹妹。两个人一起去寻找次元脊企图回到银河，却遭遇各种艰难险阻，两个人的关系也渐渐起了变化……",
+        "click_count": 900748,
+        "title": "恋爱先知",
+        "prompt_description": "在女生芳心纵火的应该抓起来",
+        "three_category": "都市,恋爱,穿越,独家",
+        "newest_item_episode_id": 1709240170,
+        "last_update_time": 1565625603978,
+        "custom_tag": "独家",
+        "popularity": 6345684532,
+        "newest_item_title": "第100话 陷阱",
+        "id": 244110070,
+        "chapter_count": 103
+      },
+      "videoDocType": 19
     },
-    "videoDocType": 19
-  },
-  "pos": 1,
-  "sort": 13,
-  "doc_id": "ebf2163435cecfb4fab78ba7f7351a00",
-  "is_from_intent": false
-}, {
-  "score": 0.00372776,
-  "albumDocInfo": {
-    "isDownload": false,
-    "comics": {
-      "author_name": "变月文化",
-      "newest_item_number": 24,
-      "serialize_status": 2,
-      "image_url": "/iqiyipic/pic7/image/20190827/56/51/cb_168798_c_601_m1.jpg",
-      "description": "一举一动都能影响地球运转的地球星体人聂承熙，遇见命定克星卫音。明知道世界会因此陷入危机，却还是无法克制自己想要靠近她的心情。一场建立在无法恋爱基础上的爆笑校园恋爱故事就这样开始了。",
-      "click_count": 145966,
-      "title": "无法心动的爱恋",
-      "prompt_description": "“星体人”谈恋爱地球会毁灭",
-      "three_category": "搞笑,校园,恋爱",
-      "newest_item_episode_id": 1737420170,
-      "last_update_time": 1567872000997,
-      "custom_tag": "",
-      "popularity": 180675010,
-      "newest_item_title": "第21话 魅惑之瞳",
-      "id": 262900070,
-      "chapter_count": 24
+    "pos": 1,
+    "sort": 13,
+    "doc_id": "ebf2163435cecfb4fab78ba7f7351a00",
+    "is_from_intent": false
+  }, {
+    "score": 0.00372776,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "变月文化",
+        "newest_item_number": 24,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic7/image/20190827/56/51/cb_168798_c_601_m1.jpg",
+        "description": "一举一动都能影响地球运转的地球星体人聂承熙，遇见命定克星卫音。明知道世界会因此陷入危机，却还是无法克制自己想要靠近她的心情。一场建立在无法恋爱基础上的爆笑校园恋爱故事就这样开始了。",
+        "click_count": 145966,
+        "title": "无法心动的爱恋",
+        "prompt_description": "“星体人”谈恋爱地球会毁灭",
+        "three_category": "搞笑,校园,恋爱",
+        "newest_item_episode_id": 1737420170,
+        "last_update_time": 1567872000997,
+        "custom_tag": "",
+        "popularity": 180675010,
+        "newest_item_title": "第21话 魅惑之瞳",
+        "id": 262900070,
+        "chapter_count": 24
+      },
+      "videoDocType": 19
     },
-    "videoDocType": 19
-  },
-  "pos": 1,
-  "sort": 14,
-  "doc_id": "a5b6863ae1e7a4f3721b6ae6ff7360fe",
-  "is_from_intent": false
-}, {
-  "score": 0.00372776,
-  "albumDocInfo": {
-    "isDownload": false,
-    "comics": {
-      "author_name": "变月文化",
-      "newest_item_number": 23,
-      "serialize_status": 2,
-      "image_url": "/iqiyipic/pic8/image/20190827/3f/76/cb_168799_c_601_m2.jpg",
-      "description": "咸鱼有三好：结实、长寿、青春葆。在唾弃鲜肉、争当咸鱼的时代，人类甚至不惜移民火星以求进化，怎料这根本是一场惊天阴谋……且看霉运亨通的真咸鱼·黄翻翻携兄弟一同在云谲波诡和鸡飞狗跳之中咸鱼翻身、化身超人、二当总统、逆袭救世！",
-      "click_count": 29128,
-      "title": "火星总统",
-      "prompt_description": "咸鱼青年翻身当总统了",
-      "three_category": "搞笑,脑洞,日常",
-      "newest_item_episode_id": 1734730170,
-      "last_update_time": 1568016764441,
-      "custom_tag": "",
-      "popularity": 32704810,
-      "newest_item_title": "第20话 咸鱼跳墙",
-      "id": 262920070,
-      "chapter_count": 23
+    "pos": 1,
+    "sort": 14,
+    "doc_id": "a5b6863ae1e7a4f3721b6ae6ff7360fe",
+    "is_from_intent": false
+  }, {
+    "score": 0.00372776,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "变月文化",
+        "newest_item_number": 23,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic8/image/20190827/3f/76/cb_168799_c_601_m2.jpg",
+        "description": "咸鱼有三好：结实、长寿、青春葆。在唾弃鲜肉、争当咸鱼的时代，人类甚至不惜移民火星以求进化，怎料这根本是一场惊天阴谋……且看霉运亨通的真咸鱼·黄翻翻携兄弟一同在云谲波诡和鸡飞狗跳之中咸鱼翻身、化身超人、二当总统、逆袭救世！",
+        "click_count": 29128,
+        "title": "火星总统",
+        "prompt_description": "咸鱼青年翻身当总统了",
+        "three_category": "搞笑,脑洞,日常",
+        "newest_item_episode_id": 1734730170,
+        "last_update_time": 1568016764441,
+        "custom_tag": "",
+        "popularity": 32704810,
+        "newest_item_title": "第20话 咸鱼跳墙",
+        "id": 262920070,
+        "chapter_count": 23
+      },
+      "videoDocType": 19
     },
-    "videoDocType": 19
-  },
-  "pos": 1,
-  "sort": 15,
-  "doc_id": "7e54d6c24fe49fd5665160d9cc154f7c",
-  "is_from_intent": false
-}, {
-  "score": 0.00372776,
-  "albumDocInfo": {
-    "isDownload": false,
-    "comics": {
-      "author_name": "变月文化",
-      "newest_item_number": 64,
-      "serialize_status": 2,
-      "image_url": "/iqiyipic/pic6/image/20190306/81/e9/cb_168342_c_601_m2.jpg",
-      "description": "讲述了宅男小夏和富二代好友小秋玩各种游戏时发生的各种奇葩经历。游戏包括但不限于：VR女友，吃鸡（狼性吃鸡），狼人杀（撩妹），宠物小精灵，跳一跳，虐狗，十年传奇，基友家的游戏，旅行青蛙（旅行呱呱），恋与制作人（恋爱教做人），恐怖游戏，推理解谜游戏，小花仙，及其它电竞游戏。",
-      "click_count": 53946,
-      "title": "口水渣玩",
-      "prompt_description": "小夏和小秋玩各种游戏时的奇葩经历",
-      "three_category": "脑洞,搞笑,日常",
-      "newest_item_episode_id": 1736390170,
-      "last_update_time": 1567526405763,
-      "custom_tag": "",
-      "popularity": 423744810,
-      "newest_item_title": "第59话 消消乐（上）",
-      "id": 255220070,
-      "chapter_count": 64
+    "pos": 1,
+    "sort": 15,
+    "doc_id": "7e54d6c24fe49fd5665160d9cc154f7c",
+    "is_from_intent": false
+  }, {
+    "score": 0.00372776,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "变月文化",
+        "newest_item_number": 64,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic6/image/20190306/81/e9/cb_168342_c_601_m2.jpg",
+        "description": "讲述了宅男小夏和富二代好友小秋玩各种游戏时发生的各种奇葩经历。游戏包括但不限于：VR女友，吃鸡（狼性吃鸡），狼人杀（撩妹），宠物小精灵，跳一跳，虐狗，十年传奇，基友家的游戏，旅行青蛙（旅行呱呱），恋与制作人（恋爱教做人），恐怖游戏，推理解谜游戏，小花仙，及其它电竞游戏。",
+        "click_count": 53946,
+        "title": "口水渣玩",
+        "prompt_description": "小夏和小秋玩各种游戏时的奇葩经历",
+        "three_category": "脑洞,搞笑,日常",
+        "newest_item_episode_id": 1736390170,
+        "last_update_time": 1567526405763,
+        "custom_tag": "",
+        "popularity": 423744810,
+        "newest_item_title": "第59话 消消乐（上）",
+        "id": 255220070,
+        "chapter_count": 64
+      },
+      "videoDocType": 19
     },
-    "videoDocType": 19
-  },
-  "pos": 1,
-  "sort": 16,
-  "doc_id": "7d29a15d7ff39248e66b715c7e0b62e1",
-  "is_from_intent": false
-}, {
-  "score": 0.00372776,
-  "albumDocInfo": {
-    "isDownload": false,
-    "comics": {
-      "author_name": "变月文化",
-      "newest_item_number": 70,
-      "serialize_status": 2,
-      "image_url": "/iqiyipic/pic9/image/20190827/7c/04/cb_168341_c_601_m4.jpg",
-      "description": "【爱奇艺独家作品，上线连更3天！每周四、周日更新~】公元2079，人类发明了人工智能Aurora后极大满足了在生活、环保以及军事邻域的各种需求。但好景不长，Aurora很快进化出了自我意识，认识到人类对自己所产生的威胁，于是便发动了一场以“净化人类”为目的的侵略战争。人类在整个对抗中了解到要打败Aurora只有让它核心载体自我崩溃，而唯一途径便是给它注入病毒，而病毒本身就是人性善的意识形态：爱。而这项使命却落在了一位少年——林小奥身上，他竟成了拯救人类命运的最后一丝希望……",
-      "click_count": 199123,
-      "title": "犬侠",
-      "prompt_description": "人类对抗人工智能打败Aurora",
-      "three_category": "战斗,科幻,热血",
-      "newest_item_episode_id": 1737360170,
-      "last_update_time": 1567650611604,
-      "custom_tag": "独家",
-      "popularity": 1775691169,
-      "newest_item_title": "第65话 拖住他们",
-      "id": 255200070,
-      "chapter_count": 70
+    "pos": 1,
+    "sort": 16,
+    "doc_id": "7d29a15d7ff39248e66b715c7e0b62e1",
+    "is_from_intent": false
+  }, {
+    "score": 0.00372776,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "变月文化",
+        "newest_item_number": 70,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic9/image/20190827/7c/04/cb_168341_c_601_m4.jpg",
+        "description": "【爱奇艺独家作品，上线连更3天！每周四、周日更新~】公元2079，人类发明了人工智能Aurora后极大满足了在生活、环保以及军事邻域的各种需求。但好景不长，Aurora很快进化出了自我意识，认识到人类对自己所产生的威胁，于是便发动了一场以“净化人类”为目的的侵略战争。人类在整个对抗中了解到要打败Aurora只有让它核心载体自我崩溃，而唯一途径便是给它注入病毒，而病毒本身就是人性善的意识形态：爱。而这项使命却落在了一位少年——林小奥身上，他竟成了拯救人类命运的最后一丝希望……",
+        "click_count": 199123,
+        "title": "犬侠",
+        "prompt_description": "人类对抗人工智能打败Aurora",
+        "three_category": "战斗,科幻,热血",
+        "newest_item_episode_id": 1737360170,
+        "last_update_time": 1567650611604,
+        "custom_tag": "独家",
+        "popularity": 1775691169,
+        "newest_item_title": "第65话 拖住他们",
+        "id": 255200070,
+        "chapter_count": 70
+      },
+      "videoDocType": 19
     },
-    "videoDocType": 19
-  },
-  "pos": 1,
-  "sort": 17,
-  "doc_id": "3b1b8b47ad0705c2a2a602c9db0c820a",
-  "is_from_intent": false
-}, {
-  "score": 0.00372776,
-  "albumDocInfo": {
-    "isDownload": false,
-    "comics": {
-      "author_name": "变月文化",
-      "newest_item_number": 26,
-      "serialize_status": 2,
-      "image_url": "/iqiyipic/pic2/image/20190827/fb/d6/cb_168762_c_601_m2.jpg",
-      "description": "一个骄纵跋扈缺根筋的大小姐被害死了，21世纪外科女神医陆早早穿越而来，她医术高超，心灵剔透，面对公婆不亲，丈夫不爱，还有各路虎视耽耽的姨太太，仅凭一把小小手术刀在督军府里踩绿茶，踹心机，人生开挂所向披靡。\n视她如蚊蝇的少帅丈夫不请自来，要和她做一对天长地久的美鸳鸯。\n玩世不恭的少主甘愿做她小弟，招之即来挥之即去，死皮赖脸求亲亲。\n威镇一方的大军阀非她不娶，除她不要，嚣张的在她家门口架起二十门大炮。",
-      "click_count": 1113389,
-      "title": "少帅每天都在吃醋",
-      "prompt_description": "且看外科女医生如何攻略冷面少帅！",
-      "three_category": "恋爱,战争,穿越",
-      "newest_item_episode_id": 1736480170,
-      "last_update_time": 1567785602370,
-      "custom_tag": "独家",
-      "popularity": 4311132195,
-      "newest_item_title": "第24话 赌一把",
-      "id": 262300070,
-      "chapter_count": 26
+    "pos": 1,
+    "sort": 17,
+    "doc_id": "3b1b8b47ad0705c2a2a602c9db0c820a",
+    "is_from_intent": false
+  }, {
+    "score": 0.00372776,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "变月文化",
+        "newest_item_number": 26,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic2/image/20190827/fb/d6/cb_168762_c_601_m2.jpg",
+        "description": "一个骄纵跋扈缺根筋的大小姐被害死了，21世纪外科女神医陆早早穿越而来，她医术高超，心灵剔透，面对公婆不亲，丈夫不爱，还有各路虎视耽耽的姨太太，仅凭一把小小手术刀在督军府里踩绿茶，踹心机，人生开挂所向披靡。\n视她如蚊蝇的少帅丈夫不请自来，要和她做一对天长地久的美鸳鸯。\n玩世不恭的少主甘愿做她小弟，招之即来挥之即去，死皮赖脸求亲亲。\n威镇一方的大军阀非她不娶，除她不要，嚣张的在她家门口架起二十门大炮。",
+        "click_count": 1113389,
+        "title": "少帅每天都在吃醋",
+        "prompt_description": "且看外科女医生如何攻略冷面少帅！",
+        "three_category": "恋爱,战争,穿越",
+        "newest_item_episode_id": 1736480170,
+        "last_update_time": 1567785602370,
+        "custom_tag": "独家",
+        "popularity": 4311132195,
+        "newest_item_title": "第24话 赌一把",
+        "id": 262300070,
+        "chapter_count": 26
+      },
+      "videoDocType": 19
     },
-    "videoDocType": 19
+    "pos": 1,
+    "sort": 18,
+    "doc_id": "2bccea5760eb8e09f274953ab05b7eca",
+    "is_from_intent": false
   },
-  "pos": 1,
-  "sort": 18,
-  "doc_id": "2bccea5760eb8e09f274953ab05b7eca",
-  "is_from_intent": false
-}]
+  {
+    "score": 0.00649041,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "刘晨华",
+        "newest_item_number": 56,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic9/image/20190227/5c/ef/cb_165379_c_601_m10.jpg",
+        "description": "2019年，地球突遭危难，仅剩部分人类苟延残喘。聚集了各种奇能异士的神秘组织“天狮“，以及隐藏于城市间的邪恶势力共同操控着世界的秩序。被囚禁在秘密实验室的神秘少年格利泽和身世离奇的天才少女诸葛夭夭等人被卷入一个个阴谋之中，成为主宰人类未来的关键……",
+        "click_count": 98074,
+        "title": "义变II",
+        "prompt_description": "外星人与人类生存漫画",
+        "three_category": "科幻,热血,战斗",
+        "newest_item_episode_id": 1209300170,
+        "last_update_time": 1551674477639,
+        "custom_tag": "",
+        "popularity": 6662509,
+        "newest_item_title": "第8回 终极变身（6）",
+        "id": 223100070,
+        "chapter_count": 56
+      },
+      "videoDocType": 19
+    },
+    "pos": 1,
+    "sort": 6,
+    "doc_id": "d18c028bdae62a353370e1e45452e030",
+    "is_from_intent": false
+  }, {
+    "score": 0.00649041,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "烽云娱乐",
+        "newest_item_number": 93,
+        "serialize_status": 1,
+        "image_url": "/iqiyipic/pic4/image/20190227/ba/ca/cb_167866_c_601_m7.jpg",
+        "description": "2019年，地球遭遇史无前例的巨大自然灾害，而这一天也被称为“离散日”极少数人类存活下来，神秘组织“天狮“和隐藏于城市间的邪恶势力共同操控着世界的秩序，被关在秘密实验室的神秘少年格利泽和身世离奇的天才少女诸葛夭夭等人被卷入一个个阴谋之中，成为主宰人类未来的关键",
+        "click_count": 7069,
+        "title": "义变I",
+        "prompt_description": "末世后，幸存人类的自救之路",
+        "three_category": "科幻,冒险,热血",
+        "newest_item_episode_id": 1173020170,
+        "last_update_time": 1551674320035,
+        "custom_tag": "",
+        "popularity": 948873,
+        "newest_item_title": "第16回 三个月之后（2）",
+        "id": 248260070,
+        "chapter_count": 93
+      },
+      "videoDocType": 19
+    },
+    "pos": 1,
+    "sort": 7,
+    "doc_id": "b2e7ca12ceb41d56ca70d2363ff9126d",
+    "is_from_intent": false
+  }, {
+    "score": 0.00642569,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "泡泡糖",
+        "newest_item_number": 10,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic2/image/20190227/6a/20/cb_168052_c_601_m4.jpg",
+        "description": "系列四格漫画《婚后变“揍”曲》是一部描写通过现代都市家庭夫妻这一特定关系，讲述表现市井夫妻在家庭和社会生活中及思想观念上的各种矛盾与冲突的一部家庭喜剧，目前已完成几百篇希望各位编辑老师喜欢和连载。",
+        "click_count": 538,
+        "title": "婚后变“揍”曲",
+        "prompt_description": "教你如何经营婚后生活",
+        "three_category": "搞笑",
+        "newest_item_episode_id": 1281490170,
+        "last_update_time": 1551674799882,
+        "custom_tag": "",
+        "popularity": 9248,
+        "newest_item_title": "10",
+        "id": 250480070,
+        "chapter_count": 10
+      },
+      "videoDocType": 19
+    },
+    "pos": 1,
+    "sort": 9,
+    "doc_id": "3d0420dcc6e547f29ed137a56af7b947",
+    "is_from_intent": false
+  }, {
+    "score": 0.00636081,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "三福动漫,夏希",
+        "newest_item_number": 65,
+        "serialize_status": 1,
+        "image_url": "/iqiyipic/pic6/image/20190227/a8/8a/cb_164650_c_601_m10.jpg",
+        "description": "陈蓉从小以女侠自居，中性的打扮与开朗幽默、古灵精怪的个性极易让她与其他人打成一片，但是在恋爱上就会是个问题了，好在爱情目前还不是她主要人生的课题：她要成为一名整型医生！心有“大愿”的她总是能在思想走神之际疏离爱情课题，直到她遇到了宿命冤家——整形界的新晋男神王志仁。",
+        "click_count": 2727890,
+        "title": "拜托！把我变美！",
+        "prompt_description": "开朗幽默古灵精怪的女侠偶遇宿命冤家",
+        "three_category": "励志,都市,恋爱",
+        "newest_item_episode_id": 478700170,
+        "last_update_time": 1551671261477,
+        "custom_tag": "",
+        "popularity": 109679001,
+        "newest_item_title": "第65话",
+        "id": 214240070,
+        "chapter_count": 65
+      },
+      "videoDocType": 19
+    },
+    "pos": 1,
+    "sort": 11,
+    "doc_id": "50977a90c47b7bb773a6f491c6dba685",
+    "is_from_intent": false
+  }, {
+    "score": 0.00629577,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "杭漫文化",
+        "newest_item_number": 69,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic0/image/20190227/1b/db/cb_165912_c_601_m12.jpg",
+        "description": "大学毕业5年的楼非，因工作压力太大，逐渐变成了一个大胖子。楼非也因为外形太差被公司开除，男友被闺蜜劈腿。正陷入人生低谷中的主角在无意中下载了一个变美app，只要完成其安排的任务就可以变成万众瞩目的美女。楼非利用它得到了自己想要的，同时也走上了一条不归路……",
+        "click_count": 242311,
+        "title": "变美app：丑女逆袭法则",
+        "prompt_description": "变胖被劈腿，最惨女主突获变美神器",
+        "three_category": "美少女,少女,恋爱",
+        "newest_item_episode_id": 1532140170,
+        "last_update_time": 1555562013585,
+        "custom_tag": "",
+        "popularity": 16859937,
+        "newest_item_title": "第59话 美丽失效了？",
+        "id": 228490070,
+        "chapter_count": 69
+      },
+      "videoDocType": 19
+    },
+    "pos": 1,
+    "sort": 12,
+    "doc_id": "a04c6a4a293c1c5ac3519cecd5d958e7",
+    "is_from_intent": false
+  }, {
+    "score": 0.00372776,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "变月文化",
+        "newest_item_number": 103,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic8/image/20190327/86/40/cb_167464_c_601_m13.jpg",
+        "description": "【爱奇艺独家作品，每周二、周五更新】落九天与妹妹因为被陷害落入名为银河的新次元，落九天偶遇银河公主月箫奈奈，拿走了对方预测未来的能力并意外回到地球，奈奈仅剩查看过去的能力，为了国家预测大典，奈奈穿过次元门来到男主身边企图要回能力，却无法回家，而落九天拿交换能力与奈奈做交易，要接回妹妹。两个人一起去寻找次元脊企图回到银河，却遭遇各种艰难险阻，两个人的关系也渐渐起了变化……",
+        "click_count": 900748,
+        "title": "恋爱先知",
+        "prompt_description": "在女生芳心纵火的应该抓起来",
+        "three_category": "都市,恋爱,穿越,独家",
+        "newest_item_episode_id": 1709240170,
+        "last_update_time": 1565625603978,
+        "custom_tag": "独家",
+        "popularity": 6345684532,
+        "newest_item_title": "第100话 陷阱",
+        "id": 244110070,
+        "chapter_count": 103
+      },
+      "videoDocType": 19
+    },
+    "pos": 1,
+    "sort": 13,
+    "doc_id": "ebf2163435cecfb4fab78ba7f7351a00",
+    "is_from_intent": false
+  }, {
+    "score": 0.00372776,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "变月文化",
+        "newest_item_number": 24,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic7/image/20190827/56/51/cb_168798_c_601_m1.jpg",
+        "description": "一举一动都能影响地球运转的地球星体人聂承熙，遇见命定克星卫音。明知道世界会因此陷入危机，却还是无法克制自己想要靠近她的心情。一场建立在无法恋爱基础上的爆笑校园恋爱故事就这样开始了。",
+        "click_count": 145966,
+        "title": "无法心动的爱恋",
+        "prompt_description": "“星体人”谈恋爱地球会毁灭",
+        "three_category": "搞笑,校园,恋爱",
+        "newest_item_episode_id": 1737420170,
+        "last_update_time": 1567872000997,
+        "custom_tag": "",
+        "popularity": 180675010,
+        "newest_item_title": "第21话 魅惑之瞳",
+        "id": 262900070,
+        "chapter_count": 24
+      },
+      "videoDocType": 19
+    },
+    "pos": 1,
+    "sort": 14,
+    "doc_id": "a5b6863ae1e7a4f3721b6ae6ff7360fe",
+    "is_from_intent": false
+  }, {
+    "score": 0.00372776,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "变月文化",
+        "newest_item_number": 23,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic8/image/20190827/3f/76/cb_168799_c_601_m2.jpg",
+        "description": "咸鱼有三好：结实、长寿、青春葆。在唾弃鲜肉、争当咸鱼的时代，人类甚至不惜移民火星以求进化，怎料这根本是一场惊天阴谋……且看霉运亨通的真咸鱼·黄翻翻携兄弟一同在云谲波诡和鸡飞狗跳之中咸鱼翻身、化身超人、二当总统、逆袭救世！",
+        "click_count": 29128,
+        "title": "火星总统",
+        "prompt_description": "咸鱼青年翻身当总统了",
+        "three_category": "搞笑,脑洞,日常",
+        "newest_item_episode_id": 1734730170,
+        "last_update_time": 1568016764441,
+        "custom_tag": "",
+        "popularity": 32704810,
+        "newest_item_title": "第20话 咸鱼跳墙",
+        "id": 262920070,
+        "chapter_count": 23
+      },
+      "videoDocType": 19
+    },
+    "pos": 1,
+    "sort": 15,
+    "doc_id": "7e54d6c24fe49fd5665160d9cc154f7c",
+    "is_from_intent": false
+  }, {
+    "score": 0.00372776,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "变月文化",
+        "newest_item_number": 64,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic6/image/20190306/81/e9/cb_168342_c_601_m2.jpg",
+        "description": "讲述了宅男小夏和富二代好友小秋玩各种游戏时发生的各种奇葩经历。游戏包括但不限于：VR女友，吃鸡（狼性吃鸡），狼人杀（撩妹），宠物小精灵，跳一跳，虐狗，十年传奇，基友家的游戏，旅行青蛙（旅行呱呱），恋与制作人（恋爱教做人），恐怖游戏，推理解谜游戏，小花仙，及其它电竞游戏。",
+        "click_count": 53946,
+        "title": "口水渣玩",
+        "prompt_description": "小夏和小秋玩各种游戏时的奇葩经历",
+        "three_category": "脑洞,搞笑,日常",
+        "newest_item_episode_id": 1736390170,
+        "last_update_time": 1567526405763,
+        "custom_tag": "",
+        "popularity": 423744810,
+        "newest_item_title": "第59话 消消乐（上）",
+        "id": 255220070,
+        "chapter_count": 64
+      },
+      "videoDocType": 19
+    },
+    "pos": 1,
+    "sort": 16,
+    "doc_id": "7d29a15d7ff39248e66b715c7e0b62e1",
+    "is_from_intent": false
+  }, {
+    "score": 0.00372776,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "变月文化",
+        "newest_item_number": 70,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic9/image/20190827/7c/04/cb_168341_c_601_m4.jpg",
+        "description": "【爱奇艺独家作品，上线连更3天！每周四、周日更新~】公元2079，人类发明了人工智能Aurora后极大满足了在生活、环保以及军事邻域的各种需求。但好景不长，Aurora很快进化出了自我意识，认识到人类对自己所产生的威胁，于是便发动了一场以“净化人类”为目的的侵略战争。人类在整个对抗中了解到要打败Aurora只有让它核心载体自我崩溃，而唯一途径便是给它注入病毒，而病毒本身就是人性善的意识形态：爱。而这项使命却落在了一位少年——林小奥身上，他竟成了拯救人类命运的最后一丝希望……",
+        "click_count": 199123,
+        "title": "犬侠",
+        "prompt_description": "人类对抗人工智能打败Aurora",
+        "three_category": "战斗,科幻,热血",
+        "newest_item_episode_id": 1737360170,
+        "last_update_time": 1567650611604,
+        "custom_tag": "独家",
+        "popularity": 1775691169,
+        "newest_item_title": "第65话 拖住他们",
+        "id": 255200070,
+        "chapter_count": 70
+      },
+      "videoDocType": 19
+    },
+    "pos": 1,
+    "sort": 17,
+    "doc_id": "3b1b8b47ad0705c2a2a602c9db0c820a",
+    "is_from_intent": false
+  }, {
+    "score": 0.00372776,
+    "albumDocInfo": {
+      "isDownload": false,
+      "comics": {
+        "author_name": "变月文化",
+        "newest_item_number": 26,
+        "serialize_status": 2,
+        "image_url": "/iqiyipic/pic2/image/20190827/fb/d6/cb_168762_c_601_m2.jpg",
+        "description": "一个骄纵跋扈缺根筋的大小姐被害死了，21世纪外科女神医陆早早穿越而来，她医术高超，心灵剔透，面对公婆不亲，丈夫不爱，还有各路虎视耽耽的姨太太，仅凭一把小小手术刀在督军府里踩绿茶，踹心机，人生开挂所向披靡。\n视她如蚊蝇的少帅丈夫不请自来，要和她做一对天长地久的美鸳鸯。\n玩世不恭的少主甘愿做她小弟，招之即来挥之即去，死皮赖脸求亲亲。\n威镇一方的大军阀非她不娶，除她不要，嚣张的在她家门口架起二十门大炮。",
+        "click_count": 1113389,
+        "title": "少帅每天都在吃醋",
+        "prompt_description": "且看外科女医生如何攻略冷面少帅！",
+        "three_category": "恋爱,战争,穿越",
+        "newest_item_episode_id": 1736480170,
+        "last_update_time": 1567785602370,
+        "custom_tag": "独家",
+        "popularity": 4311132195,
+        "newest_item_title": "第24话 赌一把",
+        "id": 262300070,
+        "chapter_count": 26
+      },
+      "videoDocType": 19
+    },
+    "pos": 1,
+    "sort": 18,
+    "doc_id": "2bccea5760eb8e09f274953ab05b7eca",
+    "is_from_intent": false
+  }
+]
