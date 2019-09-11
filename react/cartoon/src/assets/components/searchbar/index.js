@@ -5,7 +5,7 @@ export default class Searchbar extends Component {
     return (
       <div className="c-searchbar">
         <div className="c-searchbar-wrapper">
-          <span className="c-searchbar-placeholder">{this.props.children}</span>
+          <span className="c-searchbar-placeholder fs-10">{this.props.children}</span>
         </div>
       </div>
     )

@@ -118,31 +118,43 @@
 
 .c-search-tag {
     display: inline-block;
-}
-
-.c-search-tag::after {
-    font-size: .35rem;
-    height: .5rem;
-    line-height: .35rem;
-    padding: .075rem .25rem;
+    height: .75rem;
+    line-height: .75rem;
+    padding: 0 .1rem;
     border-radius: .5rem;
+    margin-left: .5rem;
     box-sizing: border-box;
     color: #fff;
 }
 
+span[class*="c-search-tag-"]::after {
+    display: block;
+    font-size: 12px;
+    transform: scale(.6);
+}
+
+.c-search-tag-hot {
+    background-color: #fd6c52;
+}
+
 .c-search-tag-hot::after {
     content: "HOT";
-    background-color: #fd6c52;
+}
+
+.c-search-tag-new {
+    background-color: #ff9f37;
 }
 
 .c-search-tag-new::after {
     content: "新作";
-    background-color: #ff9f37;
+}
+
+.c-search-tag-recom {
+    background-color: #1cdd74;
 }
 
 .c-search-tag-recom::after {
     content: "力荐";
-    background-color: #1cdd74;
 }
 
 .c-search-tips-del {

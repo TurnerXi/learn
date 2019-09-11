@@ -96,16 +96,16 @@ export default class Search extends Component {
       <div className="c-search-tips-wrapper">
         <h5>热门搜索</h5>
         <ul className="c-search-tips-list">
-          <li rseat="斗罗大陆"> 斗罗大陆 <span className="c-search-tag c-search-tag-hot fs-8"></span></li>
-          <li rseat="航海王"> 航海王 <span className="c-search-tag c-search-tag-hot fs-8"></span></li>
-          <li rseat="王牌校草"> 王牌校草<span className="c-search-tag c-search-tag-hot fs-8"></span></li>
-          <li rseat="天价宠妻总裁夫人休想逃"> 天价宠妻总裁夫人休想逃 <span className="c-search-tag c-search-tag-recom fs-8"></span></li>
-          <li rseat="斗罗大陆番外篇"> 斗罗大陆番外篇 <span className="c-search-tag c-search-tag-new fs-8"></span></li>
-          <li rseat="帝少专宠霸道妻"> 帝少专宠霸道妻 <span className="c-search-tag c-search-tag-new fs-8"></span></li>
-          <li rseat="我的血族大人"> 我的血族大人 <span className="c-search-tag c-search-tag-recom fs-8"></span></li>
-          <li rseat="少帅每天都在吃醋"> 少帅每天都在吃醋 <span className="c-search-tag c-search-tag-new fs-8"></span></li>
-          <li rseat="恶魔专宠：总裁的头号甜妻"> 恶魔专宠：总裁的头号甜妻 <span className="c-search-tag c-search-tag-recom fs-8"></span></li>
-          <li rseat="少帅你老婆又跑了"> 少帅你老婆又跑了 <span className="c-search-tag c-search-tag-recom fs-8"></span></li>
+          <li rseat="斗罗大陆">斗罗大陆<span className="c-search-tag c-search-tag-hot"></span></li>
+          <li rseat="航海王">航海王<span className="c-search-tag c-search-tag-hot"></span></li>
+          <li rseat="王牌校草">王牌校草<span className="c-search-tag c-search-tag-hot"></span></li>
+          <li rseat="天价宠妻总裁夫人休想逃">天价宠妻总裁夫人休想逃<span className="c-search-tag c-search-tag-recom"></span></li>
+          <li rseat="斗罗大陆番外篇">斗罗大陆番外篇<span className="c-search-tag c-search-tag-new"></span></li>
+          <li rseat="帝少专宠霸道妻">帝少专宠霸道妻<span className="c-search-tag c-search-tag-new"></span></li>
+          <li rseat="我的血族大人">我的血族大人<span className="c-search-tag c-search-tag-recom"></span></li>
+          <li rseat="少帅每天都在吃醋">少帅每天都在吃醋<span className="c-search-tag c-search-tag-new"></span></li>
+          <li rseat="恶魔专宠：总裁的头号甜妻">恶魔专宠：总裁的头号甜妻<span className="c-search-tag c-search-tag-recom"></span></li>
+          <li rseat="少帅你老婆又跑了">少帅你老婆又跑了<span className="c-search-tag c-search-tag-recom"></span></li>
         </ul>
       </div>
     );

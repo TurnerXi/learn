@@ -1,0 +1,102 @@
+.o-page-fav {}
+
+.c-fav-header {
+  position: fixed;
+  width: 100%;
+  height: 3.75rem;
+  padding: 1.75rem .75rem .5rem;
+  box-sizing: border-box;
+  background-color: #fff;
+  z-index: 1;
+}
+
+.c-fav-header>h2 {
+  position: relative;
+  color: #1cdd74;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.c-fav-header>h2::after {
+  content: '\e68d';
+  display: inline-block;
+  position: absolute;
+  right: .5rem;
+  font-family: 'iconfont';
+  color: #666;
+}
+
+.c-fav-content {
+  padding: 3.75rem 1rem;
+}
+
+.c-fav-list {}
+
+.c-fav-item {
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.c-fav-img {
+  width: 100%;
+  height: 11rem;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #f3f3f3;
+}
+
+.c-fav-img>img {
+  width: 100%;
+}
+
+.c-fav-info {
+  padding-top: .75rem;
+}
+
+.c-fav-info-title {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: bold;
+}
+
+.c-fav-info-title-tag::before {
+  content: "漫画";
+  font-size: .5rem;
+  color: #9ce2bc;
+  background-color: #e4fff1;
+  display: inline-block;
+  height: 1rem;
+  line-height: 1rem;
+  padding: .1rem .5rem;
+  vertical-align: middle;
+  transform: scale(.85);
+  border-radius: .1rem;
+}
+
+.c-fav-newest {
+  position: relative;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  font-size: .5rem;
+  color: #aaa;
+}
+
+.c-fav-spliter {
+  display: inline-block;
+  font-size: 1rem;
+  line-height: 1rem;
+  padding: 0 .35rem;
+}
+
+.c-fav-newest-go {
+  position: absolute;
+  right: 0;
+}
+
+.c-fav-newest-go::after {
+  content: "\e6a7";
+  font-family: "iconfont";
+  font-weight: bold;
+}

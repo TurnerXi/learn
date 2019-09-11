@@ -9,7 +9,7 @@ export default class LazyImage extends Component {
   }
   render() {
     return (
-      <img {...this.props} style={this.styles} onLoad={this.onLoadEvent.bind(this)} alt={this.props.alt}/>
+      <img {...this.props} style={LazyImage.styles} onLoad={this.onLoadEvent.bind(this)} alt={this.props.alt}/>
     )
   }
 }
