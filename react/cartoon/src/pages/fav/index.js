@@ -27,11 +27,12 @@ export default class Fav extends Component {
   }
 }
 
-function FavItem({ img_url, title, newest, date }) {
+function FavItem({ img_url, title, newest, date, desc }) {
   return (
     <li className="c-fav-item" >
       <div className="c-fav-img">
         <LazyImage src={img_url} alt="" />
+        <p className="c-fav-desc"><span>{desc}</span></p>
       </div>
       <div className="c-fav-info">
         <h3 className="c-fav-info-title c-fav-info-title-tag">{title}</h3>
