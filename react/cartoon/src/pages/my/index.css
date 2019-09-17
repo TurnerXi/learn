@@ -1,54 +1,54 @@
 .c-my-header {
-  position: fixed;
-  padding-top: 1.75rem;
-  height: 3.75rem;
-  width: 100%;
-  box-sizing: border-box;
-  background: #fff;
-  text-align: center;
-  font-size: 1rem;
-  line-height: 1rem;
-  font-weight: bold;
-  z-index: 1;
+    position: fixed;
+    padding-top: 1.5rem;
+    height: 3.5rem;
+    width: 100%;
+    box-sizing: border-box;
+    background: #fff;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
+    font-weight: bold;
+    z-index: 1;
 }
 
 .c-my-container {
-  padding: 3.75rem 1rem;
+    padding: 3.75rem 1rem;
 }
 
 .c-list {
-  color: #999;
+    color: #999;
 }
 
 .c-list-item {
-  position: relative;
-  height: 2rem;
-  line-height: 2rem;
+    position: relative;
+    height: 2rem;
+    line-height: 2rem;
 }
 
 .c-list-icon {
-  margin-right: .5rem;
-  font-size: 1.25rem;
-  vertical-align: bottom;
+    margin-right: .5rem;
+    font-size: 1.25rem;
+    vertical-align: bottom;
 }
 
 .c-list-item-name {
-  font-size: .85rem;
-  color: #000;
+    font-size: .85rem;
+    color: #000;
 }
 
 .c-list-desc {
-  position: absolute;
-  right: 1.25rem;
-  display: inline-block;
-  font-size: .75rem;
+    position: absolute;
+    right: 1.25rem;
+    display: inline-block;
+    font-size: .75rem;
 }
 
 .c-list-item::after {
-  content: "\e6a7";
-  position: absolute;
-  right: 0;
-  font-family: "iconfont";
-  font-weight: bold;
-  font-size: .5rem;
+    content: "\e6a7";
+    position: absolute;
+    right: 0;
+    font-family: "iconfont";
+    font-weight: bold;
+    font-size: .5rem;
 }

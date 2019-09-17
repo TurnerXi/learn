@@ -27,7 +27,7 @@ function NavRoute(WrapedComponent) {
     render() {
       return (
         <React.Fragment>
-          <WrapedComponent></WrapedComponent>
+          <WrapedComponent {...this.props}></WrapedComponent>
           <div className="c-navbar">
             <ul className="c-navbar-list">
               <li><NavLink exact className="c-navbar-link" activeClassName="active" to="/"><i className="iconfont c-navbar-icon">&#xe6d7;</i><span className="c-navbar-title">首页</span></NavLink></li>

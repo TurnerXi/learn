@@ -6,9 +6,10 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 2rem .5rem 0;
+    padding: 1.5rem .5rem 0;
     background-color: transparent;
-    height: 2rem;
+    height: 3.5rem;
+    box-sizing: border-box;
 }
 
 .c-header-logo {
@@ -19,7 +20,7 @@
 .c-logo {
     width: 100%;
     height: 100%;
-    background-image: url('../../assets/images/logo192.png');
+    background-image: url('../../assets/images/nav_logo_black.png');
     background-size: auto 100%;
     background-position: 0;
     background-repeat: no-repeat;
@@ -28,7 +29,7 @@
 .c-header-searchbar {
     flex: 1;
     display: block;
-    margin: 0 .5rem;
+    margin: 0 .25rem;
 }
 
 .c-header-tools {
@@ -37,18 +38,16 @@
     align-items: center;
     justify-content: space-between;
     color: #999;
-    font-weight: bold;
-    font-size: 1.25rem;
+    font-size: 1.5rem;
 }
 
 span[class*="c-tool-"] {
     display: inline-block;
-    padding: .5rem;
     font-family: "iconfont";
 }
 
 .c-tool-menu::after {
-    content: "\e6b4";
+    content: "\e68e";
 }
 
 .c-nav {
