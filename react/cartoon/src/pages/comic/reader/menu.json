@@ -1,0 +1,316 @@
+  {
+    "allCatalog":
+    {
+      "serializeStatus": 2,
+      "monthlyMemberBenefitType": 0,
+      "pageCount": 2107,
+      "isMonthlyMemberFreeRead": 0,
+      "episodeCount": 29,
+      "comicPriorEpisodeCount": 0,
+      "comicLastUpdateTime": 1568776153828,
+      "paidEpisodeNum": 0,
+      "pic": "http://pic2.iqiyipic.com/image/20190827/fb/d6/cb_168762_c_601_m2.jpg",
+      "title": "少帅每天都在吃醋",
+      "autoBuy": 0,
+      "bossStatus": 0,
+      "comicId": "18yzmh285h",
+      "authorsName": "变月文化",
+      "etag": "32611dc414ce8283202d7c8ef612e816",
+      "category": "[{\"level\":2,\"name\":\"恋爱\",\"categoryId\":100022333},{\"level\":1,\"name\":\"题材\",\"categoryId\":100009933},{\"level\":1,\"name\":\"标签\",\"categoryId\":100010033},{\"level\":2,\"name\":\"战争\",\"categoryId\":100020433},{\"level\":2,\"name\":\"IP\",\"categoryId\":100029733},{\"level\":2,\"name\":\"穿越\",\"categoryId\":100019933},{\"level\":2,\"name\":\"穿越\",\"categoryId\":100022133},{\"level\":2,\"name\":\"恋爱\",\"categoryId\":100018433},{\"level\":2,\"name\":\"开挂\",\"categoryId\":100023533}]",
+      "isMonthlyMember": false,
+      "comicType": 2,
+      "episodes": [
+      {
+        "bossStatus": 0,
+        "episodeTitle": "预告篇1",
+        "pageCount": 1,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 1,
+        "episodeId": "18yywapozd",
+        "episodeCover": "http://pic8.iqiyipic.com/image/20190614/72/b2/cch_2332931_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "预告篇2",
+        "pageCount": 9,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 2,
+        "episodeId": "18yywann1l",
+        "episodeCover": "http://pic7.iqiyipic.com/image/20190614/26/73/cch_2332932_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第1话 生还（上）",
+        "pageCount": 79,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 3,
+        "episodeId": "18yyw7kgmx",
+        "episodeCover": "http://pic7.iqiyipic.com/image/20190618/37/66/cch_2333243_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第2话 生还（下）",
+        "pageCount": 69,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 4,
+        "episodeId": "18yyw7l9g9",
+        "episodeCover": "http://pic7.iqiyipic.com/image/20190618/2c/5c/cch_2333245_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第3话 下药",
+        "pageCount": 59,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 5,
+        "episodeId": "18yywe4t9l",
+        "episodeCover": "http://pic4.iqiyipic.com/image/20190719/48/ba/cch_2333815_c_601_m1_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第4话 红袖",
+        "pageCount": 83,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 6,
+        "episodeId": "18yywe4lkp",
+        "episodeCover": "http://pic8.iqiyipic.com/image/20190719/c3/09/cch_2333819_c_601_m1_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第5话 赴宴",
+        "pageCount": 62,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 7,
+        "episodeId": "18yyx3komx",
+        "episodeCover": "http://pic5.iqiyipic.com/image/20190702/49/00/cch_2334787_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第6话 初见",
+        "pageCount": 51,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 8,
+        "episodeId": "18yyx3kz15",
+        "episodeCover": "http://pic1.iqiyipic.com/image/20190719/57/ff/cch_2334792_c_601_m1_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第7话 帅府好声音",
+        "pageCount": 72,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 9,
+        "episodeId": "18yyx7lwp5",
+        "episodeCover": "http://pic9.iqiyipic.com/image/20190708/1b/3d/cch_2335582_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第8话 啪啪打脸",
+        "pageCount": 81,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 10,
+        "episodeId": "18yyx7lnl5",
+        "episodeCover": "http://pic4.iqiyipic.com/image/20190722/a0/18/cch_2335585_c_601_m1_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第9话 客人",
+        "pageCount": 95,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 11,
+        "episodeId": "18yywz9d55",
+        "episodeCover": "http://pic4.iqiyipic.com/image/20190715/f3/2d/cch_2336957_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第10话 警告",
+        "pageCount": 76,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 12,
+        "episodeId": "18yywz9415",
+        "episodeCover": "http://pic0.iqiyipic.com/image/20190715/fe/00/cch_2336960_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第11话 甜蜜蜜",
+        "pageCount": 65,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 13,
+        "episodeId": "18yyxmfd0p",
+        "episodeCover": "http://pic4.iqiyipic.com/image/20190723/56/11/cch_2338335_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第12话 歌声何处来",
+        "pageCount": 63,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 14,
+        "episodeId": "18yyxm84hl",
+        "episodeCover": "http://pic6.iqiyipic.com/image/20190723/3f/c2/cch_2338339_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第13话 麻雀变凤凰",
+        "pageCount": 80,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 15,
+        "episodeId": "18yyxs7mvd",
+        "episodeCover": "http://pic4.iqiyipic.com/image/20190730/7d/40/cch_2339042_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第14话 留宿",
+        "pageCount": 80,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 16,
+        "episodeId": "18yyxs778p",
+        "episodeCover": "http://pic7.iqiyipic.com/image/20190730/d9/3d/cch_2339043_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第15话 失眠",
+        "pageCount": 74,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 17,
+        "episodeId": "18yyxak3gp",
+        "episodeCover": "http://pic8.iqiyipic.com/image/20190806/73/ce/cch_2340114_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第16话 流言蜚语",
+        "pageCount": 85,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 18,
+        "episodeId": "18yyxakmyx",
+        "episodeCover": "http://pic6.iqiyipic.com/image/20190806/7d/84/cch_2340118_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第17话 耳光",
+        "pageCount": 91,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 19,
+        "episodeId": "18yyxg0ro9",
+        "episodeCover": "http://pic2.iqiyipic.com/image/20190813/07/61/cch_2341085_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第18话 辩护",
+        "pageCount": 80,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 20,
+        "episodeId": "18yyxfsd2h",
+        "episodeCover": "http://pic1.iqiyipic.com/image/20190813/10/47/cch_2341097_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第19话  你倒自在",
+        "pageCount": 80,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 21,
+        "episodeId": "18yyyd2hpl",
+        "episodeCover": "http://pic1.iqiyipic.com/image/20190820/0f/f9/cch_2342009_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第20话 西医",
+        "pageCount": 70,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 22,
+        "episodeId": "18yyydg6zt",
+        "episodeCover": "http://pic7.iqiyipic.com/image/20190822/41/5b/cch_2342180_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第21话 驱邪",
+        "pageCount": 75,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 23,
+        "episodeId": "18yyxyayah",
+        "episodeCover": "http://pic1.iqiyipic.com/image/20190827/f7/17/cch_2342845_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第22话 一命换一命",
+        "pageCount": 85,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 24,
+        "episodeId": "18yyxyacqh",
+        "episodeCover": "http://pic1.iqiyipic.com/image/20190827/e3/a2/cch_2342847_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第23话 独处",
+        "pageCount": 80,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 25,
+        "episodeId": "18yyxupopl",
+        "episodeCover": "http://pic5.iqiyipic.com/image/20190903/bf/6c/cch_2343657_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第24话 赌一把",
+        "pageCount": 91,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 26,
+        "episodeId": "18yyy39e4p",
+        "episodeCover": "http://pic2.iqiyipic.com/image/20190903/a5/f5/cch_2343663_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第25话 绿帽子",
+        "pageCount": 85,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 27,
+        "episodeId": "18yyxz7e2x",
+        "episodeCover": "http://pic0.iqiyipic.com/image/20190910/50/0f/cch_2344363_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第26话 少帅来了",
+        "pageCount": 91,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 28,
+        "episodeId": "18yyud3qax",
+        "episodeCover": "http://pic4.iqiyipic.com/image/20190912/c1/47/cch_2344620_c_601_320_180.jpg"
+      },
+      {
+        "bossStatus": 0,
+        "episodeTitle": "第27话 出门",
+        "pageCount": 95,
+        "episodePrior": false,
+        "authStatus": 1,
+        "episodeOrder": 29,
+        "episodeId": "18yyu9mkyh",
+        "episodeCover": "http://pic9.iqiyipic.com/image/20190917/a0/2d/cch_2344997_c_601_320_180.jpg"
+      }]
+    },
+    "hasGeneralAuth": 0,
+    "etag": "32611dc414ce8283202d7c8ef612e816"
+  }

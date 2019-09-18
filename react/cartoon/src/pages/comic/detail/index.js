@@ -1,11 +1,22 @@
 import React, { Component } from 'react';
+// import { Link } from 'react-router-dom';
 import DetailData from './detail.json';
 import { formatNum } from '../../../utils/number';
 import { formatDate } from '../../../utils/date';
 import './index.css';
 export default class Detail extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { isCollect: false };
+  }
+
+  toggleCollectEvent() {
+    this.setState({ isCollect: !this.state.isCollect });
+  }
+
   render() {
     let { id } = this.props.match.params;
+    let { isCollect } = this.state;
     let {
       pic,
       title,
@@ -14,6 +25,7 @@ export default class Detail extends Component {
       favorites,
       clickCount,
       brief,
+      firstEpisodeId,
       latestEpisodeTitle,
       lastUpdateTime,
       episodeCount,
@@ -50,7 +62,11 @@ export default class Detail extends Component {
             </p>
           </div>
           <div className="c-detail-newest">
-            <h2 className="c-detail-title mr-1">更新中</h2><span className="c-detail-subtitle">{formatDate(lastUpdateTime, 'yyyy.MM.dd')} 更新至{episodeCount}话</span>
+            <div className="c-detail-title-wrapper">
+              <h2 className="c-detail-title mr-1">更新中</h2>
+              <span className="c-detail-subtitle">{formatDate(lastUpdateTime, 'yyyy.MM.dd')} 更新至{episodeCount}话</span>
+              <span className="c-detail-showall iconfont">全部&#xe6a7;</span>
+            </div>
             <div className="c-detail-newest-chapter">
               <img src={lastEpisodeCover} alt="" />
               <span>{latestEpisodeTitle}</span>
@@ -58,10 +74,13 @@ export default class Detail extends Component {
           </div>
         </div>
         <div className="c-detail-footer">
-          <span>已关注</span>
-          <span>续看第19话</span>
+          <span className={isCollect?'c-detail-footer-left active':'c-detail-footer-left'} onClick={this.toggleCollectEvent.bind(this)}>
+            <em className="c-detail-tag c-tag-footer-collect"></em>
+            <span>{isCollect?'已关注':'关注'}</span>
+          </span>
+          <span onClick={()=>{this.props.history.push(`/comic/reader/${id}/${firstEpisodeId}`)}} className="c-detail-footer-right">续看第19话</span>
         </div>
-      </div >
+      </div>
     )
   }
 }
