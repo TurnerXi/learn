@@ -15,6 +15,10 @@ ul, li, ol {
   margin: 0;
 }
 
+em, i {
+  font-style: unset;
+}
+
 a, a:hover, a:active, a:visited, a:link, a:focus {
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   -webkit-tap-highlight-color: transparent;

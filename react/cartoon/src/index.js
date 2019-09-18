@@ -5,6 +5,7 @@ import { Provider } from 'react-redux';
 import reducer from './store/reducers';
 import Layout from './layout';
 import * as serviceWorker from './serviceWorker';
+import './assets/css/common.css';
 let store = createStore(reducer);
 ReactDOM.render((
   <Provider store={store}>

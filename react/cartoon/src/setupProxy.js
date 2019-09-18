@@ -3,6 +3,7 @@ const proxy = require("http-proxy-middleware");
 module.exports = function (app) {
   proxyIqiyipic(app);
   proxyMIqiyipic(app);
+  proxyManHuaIqiyipic(app);
 };
 
 function proxyIqiyipic(app) {
@@ -36,4 +37,18 @@ function proxyMIqiyipic(app) {
     }
   }
   app.use(proxy('/iqiyipic/pic/**', options));
+}
+
+function proxyManHuaIqiyipic(app) {
+  let options = {
+    target: 'http://manhua.iqiyipic.com',
+    changeOrigin: true,
+    pathRewrite: function (path, req) {
+      return path.replace(/^\/manhuaiqiyi\/pic\//, '/');
+    },
+    onProxyReq(proxyReq, req, res) {
+      proxyReq.setHeader('Referer', 'http://manhua.iqiyipic.com');
+    }
+  }
+  app.use(proxy('/manhuaiqiyi/pic/**', options));
 }

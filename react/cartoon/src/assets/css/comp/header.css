@@ -1,0 +1,23 @@
+.c-header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.5rem .5rem 0;
+  height: 3.5rem;
+  box-sizing: border-box;
+  background-color: transparent;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  color: #666;
+  z-index: 1;
+}
+
+.c-header__title {
+  position: relative;
+  color: #333;
+  text-align: center;
+  line-height: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+}

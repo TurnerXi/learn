@@ -10,7 +10,8 @@
   },
   "css": {
     "indent_char": " ",
-    "indent_size": 2
+    "indent_size": 2,
+    "selector_separator_newline": false
   },
   "js": {
     "indent_size": 2,

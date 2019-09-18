@@ -1,0 +1,35 @@
+[class*="c-icon"] {
+  font-size: inherit;
+  font-family: "iconfont";
+}
+
+.c-icon--backbtn::before {
+  content: "\e6d3";
+}
+
+.c-icon--collect::before {
+  content: '\e6e9';
+}
+
+.c-icon--dots::before {
+  content: '\e602';
+}
+
+.c-icon--category::before {
+  content: '\e699';
+  display: inline-block;
+  transform: scale(.8);
+  font-weight: bold;
+}
+
+.c-icon--last::before {
+  content: '\e6c9';
+}
+
+.c-icon--next::before {
+  content: '\e6cb';
+}
+
+.c-icon--preference::before {
+  content: '\e6d1';
+}
