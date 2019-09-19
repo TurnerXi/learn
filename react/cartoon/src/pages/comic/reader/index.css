@@ -10,6 +10,29 @@
   vertical-align: top;
 }
 
-.c-reader__header {
-  
+.c-reader__mask {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #000;
+  opacity: .5;
+  z-index: 6;
+}
+
+.c-reader__menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: 9;
+}
+
+.c-reader__menu--inner {
+  width: 80%;
+  height: 100%;
+  background-color: #fff;
+  box-shadow: 1px 0 3px #999;
 }

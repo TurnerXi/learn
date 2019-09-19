@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { joinClassName } from '../../../../utils/dom';
+import { mergeClassName } from '../../../../utils/dom';
 import LazyImage from '../../lazyimage';
 import './index.css';
 export default class InnterSlick extends Component {
@@ -12,7 +12,7 @@ export default class InnterSlick extends Component {
   }
   render() {
     let { className: classNameProp, link, img, title, desc, isActive, activeClassName } = this.props;
-    let className = isActive ? joinClassName(classNameProp, activeClassName) : classNameProp;
+    let className = isActive ? mergeClassName(classNameProp, activeClassName) : classNameProp;
     this.clickable = isActive;
     return (
       <div onClick={this.onClickEvent.bind(this)} className={className} >

@@ -4,7 +4,7 @@
 }
 
 .c-icon--backbtn::before {
-  content: "\e6d3";
+  content: "\e667";
 }
 
 .c-icon--collect::before {
@@ -23,13 +23,21 @@
 }
 
 .c-icon--last::before {
-  content: '\e6c9';
+  content: '\e664';
 }
 
 .c-icon--next::before {
-  content: '\e6cb';
+  content: '\e66e';
 }
 
 .c-icon--preference::before {
-  content: '\e6d1';
+  content: '\e66c';
+}
+
+.c-icon--ascending::before {
+  content: '\e67e';
+}
+
+.c-icon--descending::before {
+  content: '\e688';
 }

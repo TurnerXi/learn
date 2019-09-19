@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
-import Lists from './lists';
-import ListItem from './list-item';
-import Chapter from './chapter.json';
-import Menu from './menu.json';
+import Menu from './menu';
+import Lists from '../../../assets/components/lists';
+import ListItem from '../../../assets/components/lists/list-item';
+import ChapterData from './chapter.json';
+import MenuData from './menu.json';
 import './index.css';
 export default class Reader extends Component {
 
   render() {
-    let { episodeTitle, content } = Chapter;
+    let { episodeTitle, content } = ChapterData;
     return (
       <div className="c-container">
         <div className="c-header u-bgcolor__white u-opactity__9">
@@ -50,6 +51,10 @@ export default class Reader extends Component {
               <span className="c-footer__txt">设置</span>
             </div>
           </div>
+        </div>
+        <div className="c-reader__mask"></div>
+        <div className="c-reader__menu">
+          <Menu className="c-reader__menu--inner" current="18yzd2aupl" {...MenuData}></Menu>
         </div>
       </div>
     )
