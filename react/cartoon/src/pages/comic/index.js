@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Detail from './detail';
 import Reader from './reader';
-import { Switch, Route, Link } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 export default class Comic extends Component {
   render() {
     let { path } = this.props.match;

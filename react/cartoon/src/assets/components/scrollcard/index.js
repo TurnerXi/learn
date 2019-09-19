@@ -28,7 +28,7 @@ export default class Swiper extends Component {
     this.init();
   }
 
-  componentDidUpdate() {}
+  componentDidUpdate() { }
 
   onTouchStartEvent(e) {
     this.isMoving = true;
@@ -77,7 +77,7 @@ export default class Swiper extends Component {
       onTouchMove: this.onTouchMoveEvent.bind(this),
       onTouchEnd: this.onTouchEndEvent.bind(this)
     }
-
+    let { onClick } = this.props;
     return (
       <div className="c-slick-wrapper">
         <div ref={this.slick} className="c-slick" {...listProps}>
@@ -89,6 +89,7 @@ export default class Swiper extends Component {
                 isActive={this.state.activeIdx === idx}
                 className="c-slick-item"
                 activeClassName="c-slick-item-active"
+                onClick={onClick}
               >
               </InnerSlick>
             ))

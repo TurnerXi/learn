@@ -1,37 +1,80 @@
-import React, { Component } from 'react';
-import { mergeClassName } from '../../../utils/dom';
-import Lists from '../../../assets/components/lists';
-import ListItem from '../../../assets/components/lists/list-item';
-export default class Menu extends Component {
+import React, { Component, Fragment } from 'react';
+import Menu from '../../../assets/components/menu';
+export default class ReaderMenu extends Component {
+
   constructor(props) {
     super(props);
-    this.state = { order: 1 };
+    this.trans = 0;
+    this.totalWidth = document.documentElement.offsetWidth * 0.8;
+    this.maskRef = React.createRef();
+    this.menuRef = React.createRef();
+  }
+  componentDidUpdate() {
+    this.debounce(this.trans);
+  }
+
+  debounce(pos) {
+    this.trans = pos;
+    this.maskRef.current.style = `transition: opacity .3s ease; opacity: ${0.5 * this.trans};display: ${this.trans === 0 ? 'none' : 'block'}`
+    this.menuRef.current.style = `transition: transform .3s ease; transform: translateX(${(this.trans - 1) * 100}%);`
+    setTimeout(() => {
+      this.maskRef.current.style.transition = '';
+      this.menuRef.current.style.transition = '';
+    }, 300);
+  }
+
+  onTouchStartEvent(e) {
+    e.stopPropagation();
+    this.touchBegin = e.changedTouches[0].clientX;
+  }
+  onTouchMoveEvent(e) {
+    e.stopPropagation();
+    this.isMoving = true;
+    this.touchMove = e.changedTouches[0].clientX - this.touchBegin;
+    this.trans = Math.min(1 + this.touchMove / this.totalWidth, 1);
+    this.maskRef.current.style.opacity = 0.5 * this.trans;
+    this.menuRef.current.style.transform = `translateX(${(this.trans - 1) * 100}%)`;
+  }
+  onTouchEndEvent(e) {
+    if (this.isMoving) {
+      e.stopPropagation();
+      this.isMoving = false;
+      if (this.trans > 0.5) {
+        this.debounce(1);
+      } else {
+        this.debounce(0);
+        this.props.onClick(false);
+      }
+    }
+  }
+  onMaskClickEvent() {
+    this.props.onClick(false);
+  }
+
+  getMaskStyles() {
+    return { opacity: 0.8 * this.trans, display: this.trans === 0 && 'none' };
+  }
+
+  getMenuStyles() {
+    return { transform: `translateX(${(this.trans - 1) * 100}%)` };
   }
   render() {
-    let { order } = this.state;
-    let { serializeStatus, episodeCount, episodes, current, className: clzName, activeClassName } = this.props;
-    // comicId,
-    let title = ['已完结', '连载中'].indexOf(serializeStatus - 1);
-    let subtitle = serializeStatus === 1 ? `全${episodeCount}话` : `更新至${episodeCount}话`;
+    let { current, catalogs, isShow } = this.props;
+    let { serializeStatus, episodeCount, episodes } = catalogs;
+    this.trans = isShow ? 1 : 0;
     return (
-      <div className={mergeClassName('c-menu',clzName)}>
-        <div className="c-menu__header">
-            <h2 className="c-menu__title">{title}</h2>
-            <span className="c-menu__subtitle">{subtitle}</span>
-            <span className="c-menu__tools">
-              { order ? (<span>正序<em className="c-icon--ascending"></em></span>) : (<span>倒序<em className="c-icon--descending"></em></span>) }
-            </span>
-        </div>
-        <div className="c-menu__content">
-          <Lists>
-            {
-              episodes && episodes.map(({ episodeTitle, episodeOrder,episodeId }) => {
-                return <ListItem key={episodeId} isActive={current===episodeId} activeClassName={activeClassName}>{episodeOrder} {episodeTitle}</ListItem>;
-              })
-            }
-          </Lists>
-        </div>
-      </div>
+      <Fragment>
+        <div ref={this.maskRef} className="c-reader__mask" onClick={this.onMaskClickEvent.bind(this)}></div>
+        <Menu forwardedRef={this.menuRef} className="c-reader__menu"
+          activeClassName="c-header__menu-active"
+          serializeStatus={serializeStatus}
+          episodeCount={episodeCount}
+          episodes={episodes}
+          current={current}
+          onTouchStart={this.onTouchStartEvent.bind(this)}
+          onTouchMove={this.onTouchMoveEvent.bind(this)}
+          onTouchEnd={this.onTouchEndEvent.bind(this)}></Menu>
+      </Fragment >
     )
   }
 }

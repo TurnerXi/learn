@@ -29,7 +29,7 @@ export default class Main extends Component {
         <div className="c-nav">
           <ScrollNav className="c-nav-list" list={data}></ScrollNav>
         </div>
-        <MainPage></MainPage>
+        <MainPage history={this.props.history}></MainPage>
       </main>
     )
   }
