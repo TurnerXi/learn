@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LazyImage from '@/components/lazyimage';
+import LazyImage from '@/assets/components/lazyimage';
 import './index.css';
 import Result from './result.json';
 import Suggest from './suggest.json';

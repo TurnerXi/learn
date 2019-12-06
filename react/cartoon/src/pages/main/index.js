@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import Searchbar from '@/components/searchbar';
+import Searchbar from '@/assets/components/searchbar';
 import ScrollNav from './containers/ScrollNav';
 import MainPage from './containers/MainPage';
 import './index.css';

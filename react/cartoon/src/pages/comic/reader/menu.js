@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Menu from '@/components/menu';
+import Menu from '@/assets/components/menu';
 export default class ReaderMenu extends Component {
 
   constructor(props) {

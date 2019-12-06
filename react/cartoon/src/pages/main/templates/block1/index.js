@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import LazyImage from '@/components/lazyimage';
+import LazyImage from '@/assets/components/lazyimage';
 import './index.css';
 export default class Block1 extends Component {
   render() {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReaderMenu from './menu';
-import Lists from '@/components/lists';
-import ListItem from '@/components/lists/list-item';
+import Lists from '@/assets/components/lists';
+import ListItem from '@/assets/components/lists/list-item';
 import ChapterData from './chapter.json';
 import MenuData from './menu.json';
 import './index.css';
