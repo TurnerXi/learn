@@ -26,7 +26,11 @@ export default class Menu extends Component {
           <Lists>
             {
               episodes && episodes.map(({ episodeTitle, episodeOrder, episodeId }) => {
-                return <ListItem key={episodeId} isActive={current === episodeId} activeClassName={activeClassName}>{episodeOrder} {episodeTitle}</ListItem>;
+                return (
+                  <ListItem className="c-menu__listItem" key={episodeId} isActive={current === episodeId} activeClassName={activeClassName}>
+                    <span className="c-menu__listIdx">{episodeOrder}</span> {episodeTitle}
+                  </ListItem>
+                );
               })
             }
           </Lists>

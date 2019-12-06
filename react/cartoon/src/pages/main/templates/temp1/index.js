@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './index.css';
-import CardBanner from '../../../../assets/components/scrollcard';
+import CardBanner from '@/components/scrollcard';
 import Block1 from '../block1';
 import Block1Data from './block1.json';
 export default class Temp1 extends Component {

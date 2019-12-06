@@ -1,11 +1,46 @@
-.c-menu {}
+.c-menu {
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem;
+}
 
-.c-menu__title {}
+.c-menu__header {
+  display: flex;
+  flex-direction: row;
+  font-size: .8rem;
+  line-height: 1rem;
+}
 
-.c-menu__header {}
+.c-menu__title {
+  font-size: 1rem;
+  font-weight: bold;
+}
 
-.c-menu__content {}
+.c-menu__subtitle {
+  margin-left: .5rem;
+  margin-right: auto;
+}
 
-.c-menu__subtitle {}
+.c-menu__tools {
+  color: #666;
+}
 
-.c-menu__tools {}
+.c-menu__content {
+  flex: 1;
+  margin-top: 1rem;
+  overflow-y: scroll;
+}
+
+.c-menu__content::-webkit-scrollbar {
+  color: transparent;
+}
+
+.c-menu__listItem {
+  font-size: .8rem;
+  line-height: 2.4rem;
+  border-bottom: 1px solid #eee;
+}
+
+.c-menu__listIdx {
+  margin-right: .5rem;
+}

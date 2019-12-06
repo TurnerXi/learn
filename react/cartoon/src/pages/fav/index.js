@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LazyImage from '../../assets/components/lazyimage';
+import LazyImage from '@/components/lazyimage';
 import './index.css';
 export default class Fav extends Component {
 

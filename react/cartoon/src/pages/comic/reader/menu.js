@@ -1,5 +1,5 @@
 import React, { Component, Fragment } from 'react';
-import Menu from '../../../assets/components/menu';
+import Menu from '@/components/menu';
 export default class ReaderMenu extends Component {
 
   constructor(props) {
@@ -25,17 +25,29 @@ export default class ReaderMenu extends Component {
 
   onTouchStartEvent(e) {
     e.stopPropagation();
-    this.touchBegin = e.changedTouches[0].clientX;
+    this.touchBeginX = e.changedTouches[0].clientX;
+    this.touchBeginY = e.changedTouches[0].clientY;
+    this.moveDirectX = true;
   }
   onTouchMoveEvent(e) {
     e.stopPropagation();
-    this.isMoving = true;
-    this.touchMove = e.changedTouches[0].clientX - this.touchBegin;
-    this.trans = Math.min(1 + this.touchMove / this.totalWidth, 1);
-    this.maskRef.current.style.opacity = 0.5 * this.trans;
-    this.menuRef.current.style.transform = `translateX(${(this.trans - 1) * 100}%)`;
+    if (this.moveDirectX) {
+      this.isMoving = true;
+      this.touchMoveX = e.changedTouches[0].clientX - this.touchBeginX;
+      this.touchMoveY = e.changedTouches[0].clientY - this.touchBeginY;
+      if (Math.abs(this.touchMoveY) > Math.abs(this.touchMoveX)) {
+        this.moveDirectX = false;
+        return;
+      }
+      this.trans = Math.min(1 + this.touchMoveX / this.totalWidth, 1);
+      this.maskRef.current.style.opacity = 0.5 * this.trans;
+      this.menuRef.current.style.transform = `translateX(${(this.trans - 1) * 100}%)`;
+    } else {
+      this.isMoving = false;
+    }
   }
   onTouchEndEvent(e) {
+    this.moveDirectX = true;
     if (this.isMoving) {
       e.stopPropagation();
       this.isMoving = false;
@@ -66,7 +78,7 @@ export default class ReaderMenu extends Component {
       <Fragment>
         <div ref={this.maskRef} className="c-reader__mask" onClick={this.onMaskClickEvent.bind(this)}></div>
         <Menu forwardedRef={this.menuRef} className="c-reader__menu"
-          activeClassName="c-header__menu-active"
+          activeClassName="c-reader__menu-active"
           serializeStatus={serializeStatus}
           episodeCount={episodeCount}
           episodes={episodes}

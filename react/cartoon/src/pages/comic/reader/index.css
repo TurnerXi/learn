@@ -1,4 +1,25 @@
-.c-reader__content {}
+.c-reader__header {
+  background-color: #fff;
+  opacity: .98;
+  transition: transform .2s ease-in-out;
+  transform: translateY(-100%);
+}
+
+.c-reader__footer {
+  background-color: #fff;
+  opacity: .98;
+  transition: transform .2s ease-in-out;
+  transform: translateY(100%);
+}
+
+.c-reader__content {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow: scroll;
+}
 
 .c-reader__list {
   width: 100%;
@@ -32,4 +53,28 @@
   border-right: 1px solid #999;
   transform: translate(-100%);
   z-index: 9;
+}
+
+.c-reader__menu-active {
+  color: #1CDD74;
+}
+
+.c-reader__tile {
+  position: fixed;
+  bottom: 1rem;
+  font-size: .5rem;
+}
+
+.c-reader__tile--left {
+  left: 0;
+  color: #fff;
+  background-color: rgba(0, 0, 0, .25);
+  border-radius: 0 3px 3px 0;
+  line-height: 1.25rem;
+  padding-left: .75rem;
+  padding-right: 2rem;
+}
+
+.c-reader__tile--right {
+  right: 0;
 }

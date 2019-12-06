@@ -1,6 +1,6 @@
-import ScrollNav from '../../../assets/components/scrollnav';
+import ScrollNav from '@/components/scrollnav';
 import { connect } from 'react-redux';
-import { switchMainPage } from '../../../store/actions';
+import { switchMainPage } from '@/store/actions';
 const mapStateToProps = ({ mainPage }) => {
   return { current: mainPage }
 }
